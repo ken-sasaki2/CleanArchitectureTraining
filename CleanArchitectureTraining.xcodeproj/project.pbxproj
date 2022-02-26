@@ -17,6 +17,8 @@
 		D83D001E27C9DBFB008905F3 /* CleanArchitectureTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D001D27C9DBFB008905F3 /* CleanArchitectureTrainingTests.swift */; };
 		D83D002827C9DBFB008905F3 /* CleanArchitectureTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D002727C9DBFB008905F3 /* CleanArchitectureTrainingUITests.swift */; };
 		D83D002A27C9DBFB008905F3 /* CleanArchitectureTrainingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D002927C9DBFB008905F3 /* CleanArchitectureTrainingUITestsLaunchTests.swift */; };
+		D84C6CCC27C9EEA7004B7F9B /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84C6CCB27C9EEA7004B7F9B /* GoogleService-Info-Release.plist */; };
+		D84C6CCE27C9F13B004B7F9B /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84C6CCD27C9F13B004B7F9B /* GoogleService-Info-Debug.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D83D002327C9DBFB008905F3 /* CleanArchitectureTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83D002727C9DBFB008905F3 /* CleanArchitectureTrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureTrainingUITests.swift; sourceTree = "<group>"; };
 		D83D002927C9DBFB008905F3 /* CleanArchitectureTrainingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureTrainingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D84C6CCB27C9EEA7004B7F9B /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
+		D84C6CCD27C9F13B004B7F9B /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +100,6 @@
 				908C066C8D0154FA271EBB98 /* Pods-CleanArchitectureTrainingTests.debug.xcconfig */,
 				D6C745BAB7A032DB776998BF /* Pods-CleanArchitectureTrainingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +141,7 @@
 				D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */,
 				D83D000E27C9DBFA008905F3 /* ContentView.swift */,
 				D83D001027C9DBFB008905F3 /* Assets.xcassets */,
+				D84C6CCA27C9EE02004B7F9B /* SupportFiles */,
 				D83D001227C9DBFB008905F3 /* Preview Content */,
 			);
 			path = CleanArchitectureTraining;
@@ -166,6 +170,15 @@
 				D83D002927C9DBFB008905F3 /* CleanArchitectureTrainingUITestsLaunchTests.swift */,
 			);
 			path = CleanArchitectureTrainingUITests;
+			sourceTree = "<group>";
+		};
+		D84C6CCA27C9EE02004B7F9B /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D84C6CCB27C9EEA7004B7F9B /* GoogleService-Info-Release.plist */,
+				D84C6CCD27C9F13B004B7F9B /* GoogleService-Info-Debug.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83D001427C9DBFB008905F3 /* Preview Assets.xcassets in Resources */,
+				D84C6CCC27C9EEA7004B7F9B /* GoogleService-Info-Release.plist in Resources */,
 				D83D001127C9DBFB008905F3 /* Assets.xcassets in Resources */,
+				D84C6CCE27C9F13B004B7F9B /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
