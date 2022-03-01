@@ -14,7 +14,7 @@ struct CleanArchitectureTrainingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserProfileView()
         }
     }
 }
