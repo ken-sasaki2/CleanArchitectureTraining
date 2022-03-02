@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserUseCaseInterface {
-    func saveUser(inputData: UserAddInputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void
 }
 
 final class UserUseCase: UserUseCaseInterface {
@@ -22,7 +22,12 @@ final class UserUseCase: UserUseCaseInterface {
         self.init(userRepository: RepositoryLocator.shared.getUserRepository())
     }
     
-    func saveUser(inputData: UserAddInputData) {
-        userRepository.saveUser(inputData: inputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void {
+        do {
+            try await userRepository.saveUser(inputData: inputData)
+            print("send presenter.")
+        } catch  {
+            print("error!")
+        }
     }
 }

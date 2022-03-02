@@ -20,6 +20,8 @@ final class UserController {
     
     func createUser(name: String, gender: String, birthday: String) {
         let inputData = UserAddInputData(name: name, gender: gender, birthday: birthday)
-        userUseCase.saveUser(inputData: inputData)
+        Task {
+            try await userUseCase.saveUser(inputData: inputData)
+        }
     }
 }

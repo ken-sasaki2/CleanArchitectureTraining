@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserDataStoreInterface {
-    func saveUser(inputData: UserAddInputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void 
     func fetchUser()
     func deleteUser()
 }
@@ -16,8 +16,13 @@ protocol UserDataStoreInterface {
 final class UserDataStore: UserDataStoreInterface {
     private let userRequest = UserRequestToFirestore()
     
-    func saveUser(inputData: UserAddInputData) {
-        userRequest.saveUser(inputData: inputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void {
+        do {
+            try await userRequest.saveUser(inputData: inputData)
+            return ()
+        } catch {
+            throw error
+        }
     }
     
     func fetchUser() {

@@ -10,9 +10,23 @@ import Firebase
 final class UserRequestToFirestore {
     private let db = Firestore.firestore()
     
-    func saveUser(inputData: UserAddInputData) {
-        // 保存処理
-        print("inputData:", inputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void {
+        return try await withCheckedThrowingContinuation { continuation in
+            db.collection("user").document().setData([
+                "name" : inputData.name,
+                "gender" : inputData.gender,
+                "birthday" : inputData.birthday,
+                "createdAt" : Date().timeIntervalSince1970
+            ]) { error in
+                if let error = error {
+                    print("Error writing document:", error)
+                    continuation.resume(throwing: error)
+                } else {
+                    print("Success write document.")
+                    continuation.resume(returning: ())
+                }
+            }
+        }
     }
     
     

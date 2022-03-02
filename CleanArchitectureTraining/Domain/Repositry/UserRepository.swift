@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserRepositoryInterface {
-    func saveUser(inputData: UserAddInputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void
 }
 
 final class UserRepository: UserRepositoryInterface {
@@ -22,7 +22,12 @@ final class UserRepository: UserRepositoryInterface {
         self.init(userDataStore: RepositoryLocator.shared.getUserDataStoreImpl())
     }
     
-    func saveUser(inputData: UserAddInputData) {
-        userDataStore.saveUser(inputData: inputData)
+    func saveUser(inputData: UserAddInputData) async throws -> Void {
+        do {
+            try await userDataStore.saveUser(inputData: inputData)
+            return ()
+        } catch {
+            throw error
+        }
     }
 }
