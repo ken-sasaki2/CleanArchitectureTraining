@@ -16,7 +16,7 @@ final class UserRequestToFirestore {
                 "name" : inputData.name,
                 "gender" : inputData.gender,
                 "birthday" : inputData.birthday,
-                "createdAt" : Date().timeIntervalSince1970
+                "createdAt" : inputData.createdAt
             ]) { error in
                 if let error = error {
                     print("Error writing document:", error)

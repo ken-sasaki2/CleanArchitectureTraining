@@ -11,11 +11,13 @@ struct UserAddInputData {
     var name: String
     var gender: String
     var birthday: String
+    var createdAt: TimeInterval
     
-    init(name: String, gender: String, birthday: String) {
+    init(name: String, gender: String, birthday: String, createdAt: TimeInterval) {
         self.name = name
         self.gender = gender
         self.birthday = birthday
+        self.createdAt = createdAt
     }
 }
 
