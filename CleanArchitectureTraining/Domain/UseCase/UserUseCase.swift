@@ -26,7 +26,7 @@ final class UserUseCase: UserUseCaseInterface {
         do {
             try await userRepository.saveUser(inputData: inputData)
             print("send presenter.")
-        } catch  {
+        } catch {
             print("error!")
         }
     }

@@ -18,7 +18,8 @@ final class UserDataStore: UserDataStoreInterface {
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
-            try await userRequest.saveUser(inputData: inputData)
+            let inputEntity = UserAddInputEntity(inputData: inputData)
+            try await userRequest.saveUser(inputEntity: inputEntity)
             return ()
         } catch {
             throw error
