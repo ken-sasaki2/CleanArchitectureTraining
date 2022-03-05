@@ -24,10 +24,25 @@ final class UserUseCase: UserUseCaseInterface {
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
+            if !isValidateUserName(inputData: inputData) {
+                // presenterへvalidate失敗を通知
+                return
+            }
             try await userRepository.saveUser(inputData: inputData)
-            print("send presenter.")
+            // presenterへ保存成功を通知
         } catch {
-            print("error!")
+            // presenterへ保存失敗を通知
+        }
+    }
+    
+    private func isValidateUserName(inputData: UserAddInputData) -> Bool {
+        let isMin = inputData.name.count >= 2
+        let isMax = inputData.name.count <= 10
+        
+        if isMin && isMax {
+            return true
+        } else {
+            return false
         }
     }
 }
