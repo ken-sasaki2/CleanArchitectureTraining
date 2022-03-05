@@ -18,7 +18,7 @@ final class UserController {
         self.init(userUseCase: RepositoryLocator.shared.getUserUseCase())
     }
     
-    func createUser(name: String, gender: String, birthday: String) {
+    func createUser(name: String, gender: Int, birthday: String) {
         let inputData = UserAddInputData(name: name, gender: gender, birthday: birthday, createdAt: Date().timeIntervalSince1970)
         Task {
             try await userUseCase.saveUser(inputData: inputData)

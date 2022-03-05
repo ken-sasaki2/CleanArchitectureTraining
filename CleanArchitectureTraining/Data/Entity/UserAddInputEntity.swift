@@ -9,7 +9,7 @@ import Foundation
 
 struct UserAddInputEntity {
     var name: String
-    var gender: String
+    var gender: Int
     var birthday: String
     var createdAt: TimeInterval
     
