@@ -18,20 +18,19 @@ class UserAddUseCaseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testIsValidateUserName() throws {
+    func testIsValidUserName() throws {
         XCTContext.runActivity(named: "nameが2文字以上10文字以下の場合") { _ in
-            let inputData = UserAddInputData(name: TestHelper.name, gender: TestHelper.gender, createdAt: TestHelper.createdAt)
-            let result = userAddUseCase.isValidUserName(inputData: inputData)
+            let result = userAddUseCase.isValidUserName(name: TestHelper.name)
             XCTAssert(result == true)
         }
         XCTContext.runActivity(named:"nameが2文字未満の場合") { _ in
-            let inputData = UserAddInputData(name: "A", gender: 1, createdAt: Date().timeIntervalSince1970)
-            let result = userAddUseCase.isValidUserName(inputData: inputData)
+            let input = "x"
+            let result = userAddUseCase.isValidUserName(name: input)
             XCTAssert(result == false)
         }
         XCTContext.runActivity(named:"nameが10文字超過の場合") { _ in
-            let inputData = UserAddInputData(name: "sasaki.test", gender: 1, createdAt: Date().timeIntervalSince1970)
-            let result = userAddUseCase.isValidUserName(inputData: inputData)
+            let input = "xxxxx_xxxxx"
+            let result = userAddUseCase.isValidUserName(name: input)
             XCTAssert(result == false)
         }
     }
