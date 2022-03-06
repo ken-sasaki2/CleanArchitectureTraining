@@ -13,17 +13,17 @@ protocol UserAddUseCaseInterface {
 
 final class UserAddUseCase: UserAddUseCaseInterface {
     private let userRepository: UserRepositoryInterface
-    private let userPresenter: UserPresenterInterface
+    private let userAddPresenter: UserAddPresenterInterface
     
-    init(userRepository: UserRepositoryInterface, userPresenter: UserPresenterInterface) {
+    init(userRepository: UserRepositoryInterface, userAddPresenter: UserAddPresenterInterface) {
         self.userRepository = userRepository
-        self.userPresenter = userPresenter
+        self.userAddPresenter = userAddPresenter
     }
     
     convenience init() {
         self.init(
             userRepository: RepositoryLocator.shared.getUserRepository(),
-            userPresenter: RepositoryLocator.shared.getUserPresenter()
+            userAddPresenter: RepositoryLocator.shared.getUserAddPresenter()
         )
     }
     
@@ -33,19 +33,19 @@ final class UserAddUseCase: UserAddUseCaseInterface {
             let isValidGender = isValidGender(gender: inputData.gender)
             
             if !isValidUserName {
-                userPresenter.invalidUserName()
+                userAddPresenter.invalidUserName()
                 return
             }
             
             if !isValidGender {
-                userPresenter.invalidGender()
+                userAddPresenter.invalidGender()
                 return
             }
             
             try await userRepository.saveUser(inputData: inputData)
-            userPresenter.successSaveUser()
+            userAddPresenter.successSaveUser()
         } catch {
-            userPresenter.failSaveUser()
+            userAddPresenter.failSaveUser()
         }
     }
     

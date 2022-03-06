@@ -25,7 +25,7 @@
 		D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */; };
 		D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
-		D858366227D3632D003C207E /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserPresenter.swift */; };
+		D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
 		D85946D127D36F9D00ABA72A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserViewModel.swift */; };
 		D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */; };
 		D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */; };
@@ -36,7 +36,7 @@
 		D85946DB27D49BAE00ABA72A /* RepositoryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0CF6A27CE371C00CD4AA0 /* RepositoryLocator.swift */; };
 		D85946DC27D49BBC00ABA72A /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D85946DD27D49BC400ABA72A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD927CA178A004B7F9B /* UserDataStore.swift */; };
-		D85946DE27D49BFE00ABA72A /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserPresenter.swift */; };
+		D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
 		D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FE62B27D4C756007231C9 /* TestHelper.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
 		D8B0CF6B27CE371C00CD4AA0 /* RepositoryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0CF6A27CE371C00CD4AA0 /* RepositoryLocator.swift */; };
@@ -86,7 +86,7 @@
 		D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCase.swift; sourceTree = "<group>"; };
 		D858365827D23DF5003C207E /* RegistrationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationButtonView.swift; sourceTree = "<group>"; };
-		D858366127D3632D003C207E /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		D858366127D3632D003C207E /* UserAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddPresenter.swift; sourceTree = "<group>"; };
 		D85946D027D36F9D00ABA72A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanArchitectureTrainingTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestoreTests.swift; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		D858366027D36300003C207E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D858366127D3632D003C207E /* UserPresenter.swift */,
+				D858366127D3632D003C207E /* UserAddPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -653,7 +653,7 @@
 				D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */,
 				D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */,
 				D85946D127D36F9D00ABA72A /* UserViewModel.swift in Sources */,
-				D858366227D3632D003C207E /* UserPresenter.swift in Sources */,
+				D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */,
 				D83D000D27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift in Sources */,
 				D8B0CF6B27CE371C00CD4AA0 /* RepositoryLocator.swift in Sources */,
 			);
@@ -666,7 +666,7 @@
 				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
-				D85946DE27D49BFE00ABA72A /* UserPresenter.swift in Sources */,
+				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
 				D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */,
 				D85946DD27D49BC400ABA72A /* UserDataStore.swift in Sources */,
 				D85946D927D49B1900ABA72A /* UserAddUseCaseTests.swift in Sources */,
