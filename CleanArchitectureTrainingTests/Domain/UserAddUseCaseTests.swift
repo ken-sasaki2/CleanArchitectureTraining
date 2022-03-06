@@ -34,4 +34,23 @@ class UserAddUseCaseTests: XCTestCase {
             XCTAssert(result == false)
         }
     }
+    
+    func testIsValidGender() throws {
+        XCTContext.runActivity(named: "genderが0の場合") { _ in
+            let result = userAddUseCase.isValidGender(gender: 0)
+            XCTAssert(result == false)
+        }
+        XCTContext.runActivity(named: "genderが1の場合") { _ in
+            let result = userAddUseCase.isValidGender(gender: 1)
+            XCTAssert(result == true)
+        }
+        XCTContext.runActivity(named: "genderが2の場合") { _ in
+            let result = userAddUseCase.isValidGender(gender: 2)
+            XCTAssert(result == true)
+        }
+        XCTContext.runActivity(named: "genderが3の場合") { _ in
+            let result = userAddUseCase.isValidGender(gender: 3)
+            XCTAssert(result == true)
+        }
+    }
 }
