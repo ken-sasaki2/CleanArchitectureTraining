@@ -21,7 +21,7 @@
 		D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */; };
 		D84C6CDA27CA178A004B7F9B /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD927CA178A004B7F9B /* UserDataStore.swift */; };
 		D84C6CE427CA2FFC004B7F9B /* UserAddInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */; };
-		D84C6CE927CA474D004B7F9B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserController.swift */; };
+		D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserProfileController.swift */; };
 		D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */; };
 		D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
@@ -82,7 +82,7 @@
 		D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestore.swift; sourceTree = "<group>"; };
 		D84C6CD927CA178A004B7F9B /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputData.swift; sourceTree = "<group>"; };
-		D84C6CE827CA474D004B7F9B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		D84C6CE827CA474D004B7F9B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCase.swift; sourceTree = "<group>"; };
 		D858365827D23DF5003C207E /* RegistrationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationButtonView.swift; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		D84C6CE627CA46CA004B7F9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D84C6CE827CA474D004B7F9B /* UserController.swift */,
+				D84C6CE827CA474D004B7F9B /* UserProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -645,7 +645,7 @@
 			files = (
 				D84C6CDA27CA178A004B7F9B /* UserDataStore.swift in Sources */,
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
-				D84C6CE927CA474D004B7F9B /* UserController.swift in Sources */,
+				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
 				D84C6CE427CA2FFC004B7F9B /* UserAddInputData.swift in Sources */,

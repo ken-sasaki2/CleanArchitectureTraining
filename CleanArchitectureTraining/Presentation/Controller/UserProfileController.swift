@@ -1,5 +1,5 @@
 //
-//  UserController.swift
+//  UserProfileController.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/02/26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class UserController {
+final class UserProfileController {
     private let userAddUseCase: UserAddUseCaseInterface
     
     init(userAddUseCase: UserAddUseCaseInterface) {

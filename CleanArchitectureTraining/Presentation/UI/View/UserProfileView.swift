@@ -11,7 +11,7 @@ struct UserProfileView: View {
     @ObservedObject var userProfileVM = UserProfileViewModel()
     @State private var name = ""
     @State private var genderSelection = 0
-    private let userController = UserController()
+    private let userProfileController = UserProfileController()
     private let genders = ["未選択", "男", "女", "選ばない"]
     
     var body: some View {
@@ -80,7 +80,7 @@ struct UserProfileView: View {
 
 extension UserProfileView {
     private func createUser(name: String, gender: Int) {
-        userController.createUser(name: name, gender: gender)
+        userProfileController.createUser(name: name, gender: gender)
     }
 }
 
