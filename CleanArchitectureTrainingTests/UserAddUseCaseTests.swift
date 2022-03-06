@@ -20,18 +20,18 @@ class UserAddUseCaseTests: XCTestCase {
 
     func testIsValidateUserName() throws {
         XCTContext.runActivity(named: "nameが2文字以上10文字以下の場合") { _ in
-            let inputData = UserAddInputData(name: "sasaki.ken", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
-            let result = userAddUseCase.isValidateUserName(inputData: inputData)
+            let inputData = UserAddInputData(name: "sasaki.ken", gender: 1, createdAt: Date().timeIntervalSince1970)
+            let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == true)
         }
         XCTContext.runActivity(named:"nameが2文字未満の場合") { _ in
-            let inputData = UserAddInputData(name: "A", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
-            let result = userAddUseCase.isValidateUserName(inputData: inputData)
+            let inputData = UserAddInputData(name: "A", gender: 1, createdAt: Date().timeIntervalSince1970)
+            let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == false)
         }
         XCTContext.runActivity(named:"nameが10文字以上の場合") { _ in
-            let inputData = UserAddInputData(name: "sasaki.test", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
-            let result = userAddUseCase.isValidateUserName(inputData: inputData)
+            let inputData = UserAddInputData(name: "sasaki.test", gender: 1, createdAt: Date().timeIntervalSince1970)
+            let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == false)
         }
     }

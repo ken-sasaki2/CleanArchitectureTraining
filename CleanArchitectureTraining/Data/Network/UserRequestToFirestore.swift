@@ -15,7 +15,6 @@ final class UserRequestToFirestore {
             db.collection("user").document().setData([
                 "name" : inputEntity.name,
                 "gender" : inputEntity.gender,
-                "birthday" : inputEntity.birthday,
                 "createdAt" : inputEntity.createdAt
             ]) { error in
                 if let error = error {

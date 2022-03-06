@@ -47,23 +47,9 @@ struct UserProfileView: View {
                     .frame(width: geometry.size.width / 1.2)
                 }
                 .padding(.top, 15)
-                VStack(spacing: 0) {
-                    Text("必須")
-                        .foregroundColor(.gray)
-                        .font(.system(size: 12, weight: .regular, design: .default))
-                        .frame(width: geometry.size.width / 1.3, alignment: .leading)
-                    HStack(spacing: 0) {
-                        Text("生年月日：")
-                            .font(.system(size: 16, weight: .regular, design: .default))
-                        DatePicker("", selection: $dateSelection, displayedComponents: .date)
-                            .labelsHidden()
-                    }
-                    .frame(width: geometry.size.width / 1.3, alignment: .leading)
-                }
-                .padding(.top, 15)
-                .padding(.bottom, 15)
+                .padding(.bottom, 30)
                 RegistrationButtonView {
-                    createUser(name: name, gender: genderSelection, birthday: dateSelection.description)
+                    createUser(name: name, gender: genderSelection)
                 }
                 .alert(isPresented: $userViewModel.isValidateFailure) {
                     Alert(
@@ -79,8 +65,8 @@ struct UserProfileView: View {
 }
 
 extension UserProfileView {
-    private func createUser(name: String, gender: Int, birthday: String) {
-        userController.createUser(name: name, gender: gender, birthday: birthday)
+    private func createUser(name: String, gender: Int) {
+        userController.createUser(name: name, gender: gender)
     }
 }
 

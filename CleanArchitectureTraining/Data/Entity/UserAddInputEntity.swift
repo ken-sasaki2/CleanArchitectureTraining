@@ -10,13 +10,11 @@ import Foundation
 struct UserAddInputEntity {
     var name: String
     var gender: Int
-    var birthday: String
     var createdAt: TimeInterval
     
     init(inputData: UserAddInputData) {
         self.name = inputData.name
         self.gender = inputData.gender
-        self.birthday = inputData.birthday
         self.createdAt = inputData.createdAt
     }
 }

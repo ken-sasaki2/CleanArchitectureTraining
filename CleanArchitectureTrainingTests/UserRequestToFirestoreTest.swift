@@ -19,7 +19,7 @@ class UserRequestToFirestoreTest: XCTestCase {
     }
 
     func testSaveUser() async throws {
-        let inputData = UserAddInputData(name: "sasaki.ken", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
+        let inputData = UserAddInputData(name: "sasaki.ken", gender: 1, createdAt: Date().timeIntervalSince1970)
         let inputEntity = UserAddInputEntity(inputData: inputData)
         do {
             try await firestore.saveUser(inputEntity: inputEntity)
