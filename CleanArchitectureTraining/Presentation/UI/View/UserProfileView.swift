@@ -84,7 +84,7 @@ extension UserProfileView {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()
     }

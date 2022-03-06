@@ -8,20 +8,20 @@
 import Foundation
 
 final class UserController {
-    private let userUseCase: UserUseCaseInterface
+    private let userAddUseCase: UserAddUseCaseInterface
     
-    init(userUseCase: UserUseCaseInterface) {
-        self.userUseCase = userUseCase
+    init(userAddUseCase: UserAddUseCaseInterface) {
+        self.userAddUseCase = userAddUseCase
     }
     
     convenience init() {
-        self.init(userUseCase: RepositoryLocator.shared.getUserUseCase())
+        self.init(userAddUseCase: RepositoryLocator.shared.getUserAddUseCase())
     }
     
     func createUser(name: String, gender: Int, birthday: String) {
         let inputData = UserAddInputData(name: name, gender: gender, birthday: birthday, createdAt: Date().timeIntervalSince1970)
         Task {
-            try await userUseCase.saveUser(inputData: inputData)
+            try await userAddUseCase.saveUser(inputData: inputData)
         }
     }
 }

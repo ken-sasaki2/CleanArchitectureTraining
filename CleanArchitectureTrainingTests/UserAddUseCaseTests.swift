@@ -8,7 +8,7 @@
 import XCTest
 
 class UserAddUseCaseTests: XCTestCase {
-    private let userAddUseCase = UserUseCase()
+    private let userAddUseCase = UserAddUseCase()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,7 +30,7 @@ class UserAddUseCaseTests: XCTestCase {
             XCTAssert(result == false)
         }
         XCTContext.runActivity(named:"nameが10文字以上の場合") { _ in
-            let inputData = UserAddInputData(name: "sasaki.t", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
+            let inputData = UserAddInputData(name: "sasaki.test", gender: 1, birthday: "1996年2月22日", createdAt: Date().timeIntervalSince1970)
             let result = userAddUseCase.isValidateUserName(inputData: inputData)
             XCTAssert(result == false)
         }

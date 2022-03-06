@@ -1,5 +1,5 @@
 //
-//  UserUseCase.swift
+//  UserAddUseCase.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/02/26.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol UserUseCaseInterface {
+protocol UserAddUseCaseInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void
 }
 
-final class UserUseCase: UserUseCaseInterface {
+final class UserAddUseCase: UserAddUseCaseInterface {
     private let userRepository: UserRepositoryInterface
     private let userPresenter: UserPresenterInterface
     

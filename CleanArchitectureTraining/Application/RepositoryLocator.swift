@@ -20,8 +20,8 @@ final class RepositoryLocator {
         UserRepository()
     }
     
-    func getUserUseCase() -> UserUseCaseInterface {
-        UserUseCase()
+    func getUserAddUseCase() -> UserAddUseCaseInterface {
+        UserAddUseCase()
     }
     
     func getUserPresenter() -> UserPresenterInterface {
