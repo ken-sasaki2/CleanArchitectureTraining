@@ -27,7 +27,7 @@
 		D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
 		D858366227D3632D003C207E /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserPresenter.swift */; };
 		D85946D127D36F9D00ABA72A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserViewModel.swift */; };
-		D85946D427D480F100ABA72A /* UserRequestToFirestoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */; };
+		D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */; };
 		D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */; };
 		D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
 		D85946D727D4816700ABA72A /* UserAddInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */; };
@@ -88,7 +88,7 @@
 		D858366127D3632D003C207E /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		D85946D027D36F9D00ABA72A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanArchitectureTrainingTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestoreTest.swift; sourceTree = "<group>"; };
+		D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestoreTests.swift; sourceTree = "<group>"; };
 		D85946D827D49B1900ABA72A /* UserAddUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCaseTests.swift; sourceTree = "<group>"; };
 		D8A658E127D0781200B238FA /* UserAddInputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputEntity.swift; sourceTree = "<group>"; };
 		D8B0CF6A27CE371C00CD4AA0 /* RepositoryLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocator.swift; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 		D85946DF27D4C62100ABA72A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */,
+				D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -660,7 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85946D427D480F100ABA72A /* UserRequestToFirestoreTest.swift in Sources */,
+				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
 				D85946DE27D49BFE00ABA72A /* UserPresenter.swift in Sources */,
