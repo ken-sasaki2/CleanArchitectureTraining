@@ -8,14 +8,13 @@
 import Foundation
 
 protocol UserPresenterInterface {
-    func isValidateFailure(result: Bool)
+     func invalidUserName(isValid: Bool)
 }
 
 class UserPresenter: UserPresenterInterface {
     // private let userViewModel = UserViewModel()
     
-    func isValidateFailure(result: Bool) {
-        print("result:", result)
-        // userViewModel.showFailedUseRegistrationAlert(result: result)
+    func invalidUserName(isValid: Bool) {
+        print("isValid:", isValid)
     }
 }
