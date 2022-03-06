@@ -29,9 +29,11 @@ final class UserAddUseCase: UserAddUseCaseInterface {
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
-            let isValid = isValidUserName(inputData: inputData)
-            if !isValid {
-                userPresenter.invalidUserName(isValid: isValid)
+            let isValidUserName = isValidUserName(name: inputData.name)
+            let isValidGender = isValidGender(gender: inputData.gender)
+            
+            if !isValidUserName || !isValidGender {
+                userPresenter.invalidUserName()
                 return
             }
             // presenterへ保存成功を通知
@@ -41,13 +43,26 @@ final class UserAddUseCase: UserAddUseCaseInterface {
         }
     }
     
-    func isValidUserName(inputData: UserAddInputData) -> Bool {
-        let isMin = inputData.name.count >= 2
-        let isMax = inputData.name.count <= 10
+    func isValidUserName(name: String) -> Bool {
+        let isMin = name.count >= 2
+        let isMax = name.count <= 10
         
         if isMin && isMax {
             return true
         } else {
+            return false
+        }
+    }
+    
+    func isValidGender(gender: Int) -> Bool {
+        switch gender {
+        case 1:
+            return true
+        case 2:
+            return true
+        case 3:
+            return true
+        default:
             return false
         }
     }

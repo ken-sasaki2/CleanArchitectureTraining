@@ -8,13 +8,13 @@
 import Foundation
 
 protocol UserPresenterInterface {
-     func invalidUserName(isValid: Bool)
+     func invalidUserName()
 }
 
 class UserPresenter: UserPresenterInterface {
     // private let userViewModel = UserViewModel()
     
-    func invalidUserName(isValid: Bool) {
-        print("isValid:", isValid)
+    func invalidUserName() {
+        
     }
 }
