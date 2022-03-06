@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    @ObservedObject var userViewModel = UserViewModel()
+    @ObservedObject var userVM = UserViewModel()
     @State private var name = ""
     @State private var genderSelection = 0
     @State private var dateSelection = Date()
@@ -51,12 +51,19 @@ struct UserProfileView: View {
                 RegistrationButtonView {
                     createUser(name: name, gender: genderSelection)
                 }
-                .alert(isPresented: $userViewModel.isValidateFailure) {
-                    Alert(
-                        title: Text("確認"),
-                        message: Text("ユーザーネームは2文字以上10文字以下でなければなりません。"),
-                        dismissButton: .default(Text("OK"))
-                    )
+                .alert("登録失敗", isPresented: $userVM.inValidUserNameAlert) {
+                    Button("OK") {
+                        
+                    }
+                } message: {
+                    Text("2文字以上10文字以下で登録してください")
+                }
+                .alert("登録失敗", isPresented: $userVM.inValidGenderAlert) {
+                    Button("OK") {
+                        
+                    }
+                } message: {
+                    Text("性別を選択してください")
                 }
                 Spacer()
             }
