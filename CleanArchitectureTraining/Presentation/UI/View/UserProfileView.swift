@@ -11,7 +11,6 @@ struct UserProfileView: View {
     @ObservedObject var userVM = UserViewModel()
     @State private var name = ""
     @State private var genderSelection = 0
-    @State private var dateSelection = Date()
     private let userController = UserController()
     private let genders = ["未選択", "男", "女", "選ばない"]
     
