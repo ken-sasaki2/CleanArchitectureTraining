@@ -18,7 +18,7 @@ struct UserProfileView: View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
-                Text("ユーザー登録")
+                Text("プロフィール登録")
                     .font(.system(size: 28, weight: .semibold, design: .default))
                 VStack(spacing: 0) {
                     Text("必須")
@@ -50,19 +50,33 @@ struct UserProfileView: View {
                 RegistrationButtonView {
                     createUser(name: name, gender: genderSelection)
                 }
-                .alert("登録失敗", isPresented: $userVM.inValidUserNameAlert) {
+                .alert("登録失敗", isPresented: $userVM.isShowUserNameAlert) {
                     Button("OK") {
                         
                     }
                 } message: {
                     Text("2文字以上10文字以下で登録してください")
                 }
-                .alert("登録失敗", isPresented: $userVM.inValidGenderAlert) {
+                .alert("登録失敗", isPresented: $userVM.isShowGenderAlert) {
                     Button("OK") {
                         
                     }
                 } message: {
                     Text("性別を選択してください")
+                }
+                .alert("登録失敗", isPresented: $userVM.isShowFailSaveUserAlert) {
+                    Button("OK") {
+                        
+                    }
+                } message: {
+                    Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
+                }
+                .alert("登録完了", isPresented: $userVM.isShowSuccessSaveUserAlert) {
+                    Button("OK") {
+                        
+                    }
+                } message: {
+                    Text("プロフィールを登録しました")
                 }
                 Spacer()
             }
