@@ -42,10 +42,10 @@ final class UserAddUseCase: UserAddUseCaseInterface {
                 return
             }
             
-            // presenterへ保存成功を通知
             try await userRepository.saveUser(inputData: inputData)
+            userPresenter.successSaveUser()
         } catch {
-            // presenterへ保存失敗を通知
+            userPresenter.failSaveUser()
         }
     }
     
