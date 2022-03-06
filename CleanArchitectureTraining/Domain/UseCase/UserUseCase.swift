@@ -13,19 +13,24 @@ protocol UserUseCaseInterface {
 
 final class UserUseCase: UserUseCaseInterface {
     private let userRepository: UserRepositoryInterface
+    private let userPresenter: UserPresenterInterface
     
-    init(userRepository: UserRepositoryInterface) {
+    init(userRepository: UserRepositoryInterface, userPresenter: UserPresenterInterface) {
         self.userRepository = userRepository
+        self.userPresenter = userPresenter
     }
     
     convenience init() {
-        self.init(userRepository: RepositoryLocator.shared.getUserRepository())
+        self.init(
+            userRepository: RepositoryLocator.shared.getUserRepository(),
+            userPresenter: RepositoryLocator.shared.getUserPresenter()
+        )
     }
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
-            if !isValidateUserName(inputData: inputData) {
-                // presenterへvalidate失敗を通知
+            if isValidateUserName(inputData: inputData) {
+                userPresenter.isValidateFailure(result: true)
                 return
             }
             try await userRepository.saveUser(inputData: inputData)
@@ -35,7 +40,7 @@ final class UserUseCase: UserUseCaseInterface {
         }
     }
     
-    private func isValidateUserName(inputData: UserAddInputData) -> Bool {
+    func isValidateUserName(inputData: UserAddInputData) -> Bool {
         let isMin = inputData.name.count >= 2
         let isMax = inputData.name.count <= 10
         
