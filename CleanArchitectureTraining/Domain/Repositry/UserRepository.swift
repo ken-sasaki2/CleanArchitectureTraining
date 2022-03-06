@@ -25,7 +25,7 @@ final class UserRepository: UserRepositoryInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
             try await userDataStore.saveUser(inputData: inputData)
-            return ()
+            return
         } catch {
             throw error
         }

@@ -20,7 +20,7 @@ final class UserDataStore: UserDataStoreInterface {
         do {
             let inputEntity = UserAddInputEntity(inputData: inputData)
             try await userRequest.saveUser(inputEntity: inputEntity)
-            return ()
+            return
         } catch {
             throw error
         }
