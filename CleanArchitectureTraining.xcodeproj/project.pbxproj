@@ -194,9 +194,9 @@
 		D83D001C27C9DBFB008905F3 /* CleanArchitectureTrainingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */,
+				D85946E027D4C62F00ABA72A /* Domain */,
+				D85946DF27D4C62100ABA72A /* Data */,
 				D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */,
-				D85946D827D49B1900ABA72A /* UserAddUseCaseTests.swift */,
 			);
 			path = CleanArchitectureTrainingTests;
 			sourceTree = "<group>";
@@ -337,6 +337,22 @@
 				D858366127D3632D003C207E /* UserPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D85946DF27D4C62100ABA72A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D85946E027D4C62F00ABA72A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D85946D827D49B1900ABA72A /* UserAddUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D8B0CF6927CE363D00CD4AA0 /* Application */ = {
