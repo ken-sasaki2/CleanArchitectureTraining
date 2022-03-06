@@ -20,7 +20,7 @@ class UserAddUseCaseTests: XCTestCase {
 
     func testIsValidateUserName() throws {
         XCTContext.runActivity(named: "nameが2文字以上10文字以下の場合") { _ in
-            let inputData = UserAddInputData(name: "sasaki.ken", gender: 1, createdAt: Date().timeIntervalSince1970)
+            let inputData = UserAddInputData(name: TestHelper.name, gender: TestHelper.gender, createdAt: TestHelper.createdAt)
             let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == true)
         }
@@ -29,7 +29,7 @@ class UserAddUseCaseTests: XCTestCase {
             let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == false)
         }
-        XCTContext.runActivity(named:"nameが10文字以上の場合") { _ in
+        XCTContext.runActivity(named:"nameが10文字超過の場合") { _ in
             let inputData = UserAddInputData(name: "sasaki.test", gender: 1, createdAt: Date().timeIntervalSince1970)
             let result = userAddUseCase.isValidUserName(inputData: inputData)
             XCTAssert(result == false)
