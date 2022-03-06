@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    @ObservedObject var userVM = UserViewModel()
+    @ObservedObject var userProfileVM = UserProfileViewModel()
     @State private var name = ""
     @State private var genderSelection = 0
     private let userController = UserController()
@@ -50,24 +50,24 @@ struct UserProfileView: View {
                 RegistrationButtonView {
                     createUser(name: name, gender: genderSelection)
                 }
-                .alert("登録失敗", isPresented: $userVM.isShowUserNameAlert) {
+                .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
                     Button("OK") {
                         name = ""
                     }
                 } message: {
                     Text("2文字以上10文字以下で登録してください")
                 }
-                .alert("登録失敗", isPresented: $userVM.isShowGenderAlert) {
+                .alert("登録失敗", isPresented: $userProfileVM.isShowGenderAlert) {
                     Button("OK") {}
                 } message: {
                     Text("性別を選択してください")
                 }
-                .alert("登録失敗", isPresented: $userVM.isShowFailSaveUserAlert) {
+                .alert("登録失敗", isPresented: $userProfileVM.isShowFailSaveUserAlert) {
                     Button("OK") {}
                 } message: {
                     Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
                 }
-                .alert("登録完了", isPresented: $userVM.isShowSuccessSaveUserAlert) {
+                .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
                     Button("OK") {}
                 } message: {
                     Text("プロフィールを登録しました")
