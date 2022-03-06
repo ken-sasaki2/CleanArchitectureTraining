@@ -27,6 +27,10 @@
 		D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
 		D858366227D3632D003C207E /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserPresenter.swift */; };
 		D85946D127D36F9D00ABA72A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserViewModel.swift */; };
+		D85946D427D480F100ABA72A /* UserRequestToFirestoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */; };
+		D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */; };
+		D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
+		D85946D727D4816700ABA72A /* UserAddInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
 		D8B0CF6B27CE371C00CD4AA0 /* RepositoryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0CF6A27CE371C00CD4AA0 /* RepositoryLocator.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +81,8 @@
 		D858365827D23DF5003C207E /* RegistrationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationButtonView.swift; sourceTree = "<group>"; };
 		D858366127D3632D003C207E /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		D85946D027D36F9D00ABA72A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanArchitectureTrainingTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestoreTest.swift; sourceTree = "<group>"; };
 		D8A658E127D0781200B238FA /* UserAddInputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputEntity.swift; sourceTree = "<group>"; };
 		D8B0CF6A27CE371C00CD4AA0 /* RepositoryLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocator.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +187,8 @@
 		D83D001C27C9DBFB008905F3 /* CleanArchitectureTrainingTests */ = {
 			isa = PBXGroup;
 			children = (
+				D85946D327D480F100ABA72A /* UserRequestToFirestoreTest.swift */,
+				D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */,
 			);
 			path = CleanArchitectureTrainingTests;
 			sourceTree = "<group>";
@@ -409,6 +417,7 @@
 					};
 					D83D001827C9DBFB008905F3 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = D83D000827C9DBFA008905F3;
 					};
 					D83D002227C9DBFB008905F3 = {
@@ -627,6 +636,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85946D427D480F100ABA72A /* UserRequestToFirestoreTest.swift in Sources */,
+				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
+				D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */,
+				D85946D727D4816700ABA72A /* UserAddInputData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,15 +850,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ken.CleanArchitectureTrainingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CleanArchitectureTrainingTests/CleanArchitectureTrainingTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanArchitectureTraining.app/CleanArchitectureTraining";
@@ -858,15 +879,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ken.CleanArchitectureTrainingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "CleanArchitectureTrainingTests/CleanArchitectureTrainingTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanArchitectureTraining.app/CleanArchitectureTraining";
