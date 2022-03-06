@@ -8,13 +8,18 @@
 import Foundation
 
 protocol UserPresenterInterface {
-     func invalidUserName()
+    func invalidUserName()
+    func invalidGender()
 }
 
-class UserPresenter: UserPresenterInterface {
-    // private let userViewModel = UserViewModel()
+final class UserPresenter: UserPresenterInterface {
+    private let userViewModel = UserViewModel()
     
     func invalidUserName() {
+        
+    }
+    
+    func invalidGender() {
         
     }
 }

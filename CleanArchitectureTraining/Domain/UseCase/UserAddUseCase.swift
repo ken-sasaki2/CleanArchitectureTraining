@@ -32,10 +32,16 @@ final class UserAddUseCase: UserAddUseCaseInterface {
             let isValidUserName = isValidUserName(name: inputData.name)
             let isValidGender = isValidGender(gender: inputData.gender)
             
-            if !isValidUserName || !isValidGender {
+            if !isValidUserName {
                 userPresenter.invalidUserName()
                 return
             }
+            
+            if !isValidGender {
+                userPresenter.invalidGender()
+                return
+            }
+            
             // presenterへ保存成功を通知
             try await userRepository.saveUser(inputData: inputData)
         } catch {
