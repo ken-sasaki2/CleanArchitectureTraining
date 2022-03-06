@@ -52,29 +52,23 @@ struct UserProfileView: View {
                 }
                 .alert("登録失敗", isPresented: $userVM.isShowUserNameAlert) {
                     Button("OK") {
-                        
+                        name = ""
                     }
                 } message: {
                     Text("2文字以上10文字以下で登録してください")
                 }
                 .alert("登録失敗", isPresented: $userVM.isShowGenderAlert) {
-                    Button("OK") {
-                        
-                    }
+                    Button("OK") {}
                 } message: {
                     Text("性別を選択してください")
                 }
                 .alert("登録失敗", isPresented: $userVM.isShowFailSaveUserAlert) {
-                    Button("OK") {
-                        
-                    }
+                    Button("OK") {}
                 } message: {
                     Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
                 }
                 .alert("登録完了", isPresented: $userVM.isShowSuccessSaveUserAlert) {
-                    Button("OK") {
-                        
-                    }
+                    Button("OK") {}
                 } message: {
                     Text("プロフィールを登録しました")
                 }
