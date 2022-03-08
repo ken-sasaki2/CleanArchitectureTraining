@@ -1,23 +1,11 @@
 //
-//  CleanArchitectureTrainingApp.swift
+//  AppDelegate.swift
 //  CleanArchitectureTraining
 //
-//  Created by sasaki.ken on 2022/02/26.
+//  Created by sasaki.ken on 2022/03/08.
 //
 
-import SwiftUI
 import Firebase
-
-@main
-struct CleanArchitectureTrainingApp: App {
-    @UIApplicationDelegateAdaptor (AppDelegate.self) var appDelegate
-    
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -37,7 +25,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
             return
         }
         guard let options = FirebaseOptions(contentsOfFile: filePath) else {
-                return
+            return
         }
         
         print("filePath:", filePath)
