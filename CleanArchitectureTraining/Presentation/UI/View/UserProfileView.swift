@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    @ObservedObject var userProfileVM = UserProfileViewModel()
+    @ObservedObject var userProfileVM: UserProfileViewModel
     @State private var name = ""
     @State private var genderSelection = 0
-    private let userProfileController = UserProfileController()
+    let userProfileController: UserProfileController
     private let genders = ["未選択", "男", "女", "選ばない"]
     
     var body: some View {
@@ -86,6 +86,6 @@ extension UserProfileView {
 
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileView()
+        UserProfileBuilder.shared.build()
     }
 }
