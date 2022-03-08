@@ -10,6 +10,10 @@
 		0B0F301E631926F001C855DF /* Pods_CleanArchitectureTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BCBE205DF9136EB1624031 /* Pods_CleanArchitectureTrainingTests.framework */; };
 		8FFCDAC921FAA27C927A2B0D /* Pods_CleanArchitectureTraining_CleanArchitectureTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B250471F483DB8B094B01 /* Pods_CleanArchitectureTraining_CleanArchitectureTrainingUITests.framework */; };
 		AC6BDFCBF6969681465B2C58 /* Pods_CleanArchitectureTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79078B2C23F8826435453AA /* Pods_CleanArchitectureTraining.framework */; };
+		D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
+		D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
+		D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
+		D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserProfileController.swift */; };
 		D83D000D27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */; };
 		D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
 		D83D001127C9DBFB008905F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83D001027C9DBFB008905F3 /* Assets.xcassets */; };
@@ -684,9 +688,13 @@
 			files = (
 				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
+				D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
+				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
 				D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */,
+				D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */,
+				D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */,
 				D85946DD27D49BC400ABA72A /* UserDataStore.swift in Sources */,
 				D85946D927D49B1900ABA72A /* UserAddUseCaseTests.swift in Sources */,
 				D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */,
