@@ -20,13 +20,6 @@ final class UserAddUseCase: UserAddUseCaseInterface {
         self.userAddPresenter = userAddPresenter
     }
     
-    convenience init() {
-        self.init(
-            userRepository: RepositoryLocator.shared.getUserRepository(),
-            userAddPresenter: RepositoryLocator.shared.getUserAddPresenter()
-        )
-    }
-    
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
             let isValidUserName = isValidUserName(name: inputData.name)

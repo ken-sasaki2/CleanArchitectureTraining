@@ -14,10 +14,6 @@ final class UserProfileController {
         self.userAddUseCase = userAddUseCase
     }
     
-    convenience init() {
-        self.init(userAddUseCase: RepositoryLocator.shared.getUserAddUseCase())
-    }
-    
     func createUser(name: String, gender: Int) {
         let inputData = UserAddInputData(name: name, gender: gender, createdAt: Date().timeIntervalSince1970)
         Task {
