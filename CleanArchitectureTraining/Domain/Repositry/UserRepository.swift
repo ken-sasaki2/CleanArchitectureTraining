@@ -19,7 +19,7 @@ final class UserRepository: UserRepositoryInterface {
     }
     
     convenience init() {
-        self.init(userDataStore: RepositoryLocator.shared.getUserDataStoreImpl())
+        self.init(userDataStore: UserDataStore())
     }
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
