@@ -39,6 +39,7 @@
 		D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FE62B27D4C756007231C9 /* TestHelper.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
+		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D89FE62B27D4C756007231C9 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D8A658E127D0781200B238FA /* UserAddInputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputEntity.swift; sourceTree = "<group>"; };
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
+		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +174,6 @@
 		D83D000B27C9DBFA008905F3 /* CleanArchitectureTraining */ = {
 			isa = PBXGroup;
 			children = (
-				D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */,
 				D8B0CF6927CE363D00CD4AA0 /* Application */,
 				D84C6CE527CA46B8004B7F9B /* Presentation */,
 				D84C6CDB27CA20B0004B7F9B /* Domain */,
@@ -360,9 +361,27 @@
 		D8B0CF6927CE363D00CD4AA0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */,
+				D8DF669A27D6E59000D78A99 /* App */,
+				D8DF669D27D6E5DF00D78A99 /* Builder */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		D8DF669A27D6E59000D78A99 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */,
+				D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D8DF669D27D6E5DF00D78A99 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,6 +665,7 @@
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
 				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
+				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
 				D84C6CE427CA2FFC004B7F9B /* UserAddInputData.swift in Sources */,
