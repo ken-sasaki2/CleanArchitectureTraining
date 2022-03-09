@@ -30,4 +30,13 @@ final class UserRepository: UserRepositoryInterface {
             throw error
         }
     }
+    
+    func fetchUser() async throws -> UserFetchOutputEntity {
+        do {
+            let outputEntity = try await userDataStore.fetchUser()
+            return outputEntity
+        } catch {
+            throw error
+        }
+    }
 }
