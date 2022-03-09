@@ -9,7 +9,7 @@ import Foundation
 
 protocol UserDataStoreInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void 
-    func fetchUser()
+    func fetchUser() async throws -> UserFetchOutputEntity
     func deleteUser()
 }
 
@@ -26,8 +26,13 @@ final class UserDataStore: UserDataStoreInterface {
         }
     }
     
-    func fetchUser() {
-        
+    func fetchUser() async throws -> UserFetchOutputEntity {
+        do {
+            let outputEntity = try await userRequest.fetchUser()
+            return outputEntity
+        } catch {
+            throw error
+        }
     }
     
     func deleteUser() {
