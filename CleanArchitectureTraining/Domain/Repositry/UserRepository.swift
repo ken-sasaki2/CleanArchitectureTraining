@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserRepositoryInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void
+    func fetchUser() async throws -> UserFetchOutputEntity
 }
 
 final class UserRepository: UserRepositoryInterface {
