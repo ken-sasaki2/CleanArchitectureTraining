@@ -42,6 +42,9 @@
 		D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
 		D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FE62B27D4C756007231C9 /* TestHelper.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
+		D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
+		D8B0941F27D83ED90054F138 /* UserFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */; };
+		D8B0942027D841090054F138 /* UserFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */; };
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +100,7 @@
 		D85946D827D49B1900ABA72A /* UserAddUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCaseTests.swift; sourceTree = "<group>"; };
 		D89FE62B27D4C756007231C9 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D8A658E127D0781200B238FA /* UserAddInputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputEntity.swift; sourceTree = "<group>"; };
+		D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchOutputEntity.swift; sourceTree = "<group>"; };
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
 		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A658E127D0781200B238FA /* UserAddInputEntity.swift */,
+				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */,
 				D85946D127D36F9D00ABA72A /* UserProfileViewModel.swift in Sources */,
 				D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */,
+				D8B0941F27D83ED90054F138 /* UserFetchOutputEntity.swift in Sources */,
 				D83D000D27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +695,7 @@
 				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
 				D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */,
+				D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
 				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
@@ -698,6 +705,7 @@
 				D85946DD27D49BC400ABA72A /* UserDataStore.swift in Sources */,
 				D85946D927D49B1900ABA72A /* UserAddUseCaseTests.swift in Sources */,
 				D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */,
+				D8B0942027D841090054F138 /* UserFetchOutputEntity.swift in Sources */,
 				D85946D727D4816700ABA72A /* UserAddInputData.swift in Sources */,
 				D85946DC27D49BBC00ABA72A /* UserRepository.swift in Sources */,
 			);
