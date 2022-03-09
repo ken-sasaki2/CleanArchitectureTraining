@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CleanArchitectureTraining
 
 class UserRequestToFirestoreTests: XCTestCase {
     private let firestore = UserRequestToFirestore()
@@ -26,6 +27,16 @@ class UserRequestToFirestoreTests: XCTestCase {
             print("Success test save user.")
         } catch {
             XCTFail("Fail test save user.")
+        }
+    }
+    
+    func testFetchUser() async throws {
+        do {
+            let user = try await firestore.fetchUser()
+            print("Success test fetch user.")
+            print(user)
+        } catch {
+            XCTFail("Fail test fetch user.")
         }
     }
 }
