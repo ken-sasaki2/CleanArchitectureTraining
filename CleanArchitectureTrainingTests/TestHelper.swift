@@ -11,4 +11,5 @@ struct TestHelper {
     static let name = "test_user"
     static let gender = 1
     static let createdAt = Date().timeIntervalSince1970
+    static let documentId = "123"
 }
