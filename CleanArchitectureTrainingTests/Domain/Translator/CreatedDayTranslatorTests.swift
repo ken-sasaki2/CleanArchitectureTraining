@@ -18,7 +18,7 @@ class CreatedDayTranslatorTests: XCTestCase {
     }
 
     func testTranslate() throws {
-        let input = 1646746371.3128781
+        let input = TestHelper.createdAt
         let result = CreatedDayTranslator.shared.translate(createdAt: input)
         XCTAssertEqual(result, "2022年3月8日")
     }

@@ -10,6 +10,6 @@ import Foundation
 struct TestHelper {
     static let name = "test_user"
     static let gender = 1
-    static let createdAt = Date().timeIntervalSince1970
+    static let createdAt = 1646746371.3128781
     static let documentId = "123"
 }
