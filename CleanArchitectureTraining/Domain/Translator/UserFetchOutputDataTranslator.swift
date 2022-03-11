@@ -14,8 +14,8 @@ final class UserFetchOutputDataTranslator {
     
     func translate(entity: UserFetchOutputEntity) -> UserFetchOutputData {
         let gender = GenderTranslator.shared.translate(gender: entity.gender)
-        let createdDate = CreatedDateTranslator.shared.translate(createdAt: entity.createdAt)
-        let outputData = UserFetchOutputData(name: entity.name, gender: gender, createdDate: createdDate, documentId: entity.documentId)
+        let createdDay = CreatedDayTranslator.shared.translate(createdAt: entity.createdAt)
+        let outputData = UserFetchOutputData(name: entity.name, gender: gender, createdDay: createdDay, documentId: entity.documentId)
         
         return outputData
     }
