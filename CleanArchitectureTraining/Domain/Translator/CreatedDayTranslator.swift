@@ -1,5 +1,5 @@
 //
-//  CreatedDateTranslator.swift
+//  CreatedDayTranslator.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/09.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class CreatedDateTranslator {
-    static let shared = CreatedDateTranslator()
+final class CreatedDayTranslator {
+    static let shared = CreatedDayTranslator()
     
     private init() {}
     

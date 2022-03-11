@@ -40,6 +40,7 @@
 		D85946DC27D49BBC00ABA72A /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D85946DD27D49BC400ABA72A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CD927CA178A004B7F9B /* UserDataStore.swift */; };
 		D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
+		D863CBAA27D9ED2800B9B770 /* CreatedDayTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863CBA927D9ED2800B9B770 /* CreatedDayTranslatorTests.swift */; };
 		D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FE62B27D4C756007231C9 /* TestHelper.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
 		D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
@@ -51,8 +52,10 @@
 		D8B0942727D8DA160054F138 /* UserFetchOutputDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */; };
 		D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */; };
 		D8B0942A27D8DEFF0054F138 /* GenderTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */; };
-		D8B0942C27D8E47E0054F138 /* CreatedDateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942B27D8E47E0054F138 /* CreatedDateTranslator.swift */; };
-		D8B0942D27D8E47E0054F138 /* CreatedDateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942B27D8E47E0054F138 /* CreatedDateTranslator.swift */; };
+		D8B0942C27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */; };
+		D8B0942D27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */; };
+		D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0943327D980730054F138 /* GenderTranslatorTests.swift */; };
+		D8B0943727D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0943627D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift */; };
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -106,13 +109,16 @@
 		D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanArchitectureTrainingTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestToFirestoreTests.swift; sourceTree = "<group>"; };
 		D85946D827D49B1900ABA72A /* UserAddUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCaseTests.swift; sourceTree = "<group>"; };
+		D863CBA927D9ED2800B9B770 /* CreatedDayTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDayTranslatorTests.swift; sourceTree = "<group>"; };
 		D89FE62B27D4C756007231C9 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D8A658E127D0781200B238FA /* UserAddInputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddInputEntity.swift; sourceTree = "<group>"; };
 		D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchOutputEntity.swift; sourceTree = "<group>"; };
 		D8B0942127D89AF20054F138 /* UserFetchOutputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserFetchOutputData.swift; path = ../../../../../../../../Downloads/UserFetchOutputData.swift; sourceTree = "<group>"; };
 		D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchOutputDataTranslator.swift; sourceTree = "<group>"; };
 		D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTranslator.swift; sourceTree = "<group>"; };
-		D8B0942B27D8E47E0054F138 /* CreatedDateTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDateTranslator.swift; sourceTree = "<group>"; };
+		D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDayTranslator.swift; sourceTree = "<group>"; };
+		D8B0943327D980730054F138 /* GenderTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTranslatorTests.swift; sourceTree = "<group>"; };
+		D8B0943627D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchOutputDataTranslatorTests.swift; sourceTree = "<group>"; };
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
 		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -387,7 +393,7 @@
 			children = (
 				D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */,
 				D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */,
-				D8B0942B27D8E47E0054F138 /* CreatedDateTranslator.swift */,
+				D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -403,6 +409,9 @@
 		D8B0942F27D8EDDA0054F138 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
+				D8B0943327D980730054F138 /* GenderTranslatorTests.swift */,
+				D8B0943627D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift */,
+				D863CBA927D9ED2800B9B770 /* CreatedDayTranslatorTests.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -710,7 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B0942C27D8E47E0054F138 /* CreatedDateTranslator.swift in Sources */,
+				D8B0942C27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */,
 				D84C6CDA27CA178A004B7F9B /* UserDataStore.swift in Sources */,
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
 				D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
@@ -746,6 +755,8 @@
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
 				D8B0942327D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
+				D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */,
+				D863CBAA27D9ED2800B9B770 /* CreatedDayTranslatorTests.swift in Sources */,
 				D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */,
 				D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */,
 				D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */,
@@ -754,7 +765,8 @@
 				D85946D527D4811E00ABA72A /* UserRequestToFirestore.swift in Sources */,
 				D8B0942027D841090054F138 /* UserFetchOutputEntity.swift in Sources */,
 				D85946D727D4816700ABA72A /* UserAddInputData.swift in Sources */,
-				D8B0942D27D8E47E0054F138 /* CreatedDateTranslator.swift in Sources */,
+				D8B0942D27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */,
+				D8B0943727D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift in Sources */,
 				D85946DC27D49BBC00ABA72A /* UserRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
