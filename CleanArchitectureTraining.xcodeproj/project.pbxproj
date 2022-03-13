@@ -56,6 +56,10 @@
 		D8B0942D27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */; };
 		D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0943327D980730054F138 /* GenderTranslatorTests.swift */; };
 		D8B0943727D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0943627D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift */; };
+		D8D5205627DC538A0072121B /* UserFetchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5205527DC538A0072121B /* UserFetchPresenter.swift */; };
+		D8D5205727DC538A0072121B /* UserFetchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5205527DC538A0072121B /* UserFetchPresenter.swift */; };
+		D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */; };
+		D8D5205A27DC54EA0072121B /* UserFetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */; };
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -119,6 +123,8 @@
 		D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDayTranslator.swift; sourceTree = "<group>"; };
 		D8B0943327D980730054F138 /* GenderTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTranslatorTests.swift; sourceTree = "<group>"; };
 		D8B0943627D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchOutputDataTranslatorTests.swift; sourceTree = "<group>"; };
+		D8D5205527DC538A0072121B /* UserFetchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchPresenter.swift; sourceTree = "<group>"; };
+		D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchUseCase.swift; sourceTree = "<group>"; };
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
 		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */,
+				D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -367,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				D858366127D3632D003C207E /* UserAddPresenter.swift */,
+				D8D5205527DC538A0072121B /* UserFetchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -727,8 +735,10 @@
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
 				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
+				D8D5205627DC538A0072121B /* UserFetchPresenter.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
 				D84C6CE427CA2FFC004B7F9B /* UserAddInputData.swift in Sources */,
+				D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */,
 				D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */,
@@ -749,6 +759,7 @@
 				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
 				D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */,
+				D8D5205727DC538A0072121B /* UserFetchPresenter.swift in Sources */,
 				D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */,
 				D8B0942A27D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
@@ -756,6 +767,7 @@
 				D8B0942327D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
 				D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */,
+				D8D5205A27DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D863CBAA27D9ED2800B9B770 /* CreatedDayTranslatorTests.swift in Sources */,
 				D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */,
 				D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */,
