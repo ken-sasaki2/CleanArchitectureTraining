@@ -12,6 +12,7 @@ final class UserProfileViewModel: ObservableObject {
     @Published var isShowGenderAlert = false
     @Published var isShowSuccessSaveUserAlert = false
     @Published var isShowFailSaveUserAlert = false
+    @Published var isShowNextPage = false
     @Published var userFetchOutputData = UserFetchOutputData(name: "", gender: "", createdDay: "", documentId: "")
     
     func showInValidUserNameAlert() {
@@ -28,5 +29,10 @@ final class UserProfileViewModel: ObservableObject {
     
     func showFailSaveUserAlert() {
         isShowFailSaveUserAlert = true
+    }
+    
+    func showNextPage(outputData: UserFetchOutputData) {
+        isShowNextPage = true
+        userFetchOutputData = outputData
     }
 }

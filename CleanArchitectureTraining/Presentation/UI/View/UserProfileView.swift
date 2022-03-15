@@ -47,30 +47,50 @@ struct UserProfileView: View {
                 }
                 .padding(.top, 15)
                 .padding(.bottom, 30)
-                RegistrationButtonView {
-                    createUser(name: name, gender: genderSelection)
-                }
-                .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
-                    Button("OK") {
-                        name = ""
+                VStack {
+                    RegistrationButtonView {
+                        createUser(name: name, gender: genderSelection)
                     }
-                } message: {
-                    Text("2文字以上10文字以下で登録してください")
-                }
-                .alert("登録失敗", isPresented: $userProfileVM.isShowGenderAlert) {
-                    Button("OK") {}
-                } message: {
-                    Text("性別を選択してください")
-                }
-                .alert("登録失敗", isPresented: $userProfileVM.isShowFailSaveUserAlert) {
-                    Button("OK") {}
-                } message: {
-                    Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
-                }
-                .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
-                    Button("OK") {}
-                } message: {
-                    Text("プロフィールを登録しました")
+                    .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
+                        Button("OK") {
+                            name = ""
+                        }
+                    } message: {
+                        Text("2文字以上10文字以下で登録してください")
+                    }
+                    .alert("登録失敗", isPresented: $userProfileVM.isShowGenderAlert) {
+                        Button("OK") {}
+                    } message: {
+                        Text("性別を選択してください")
+                    }
+                    .alert("登録失敗", isPresented: $userProfileVM.isShowFailSaveUserAlert) {
+                        Button("OK") {}
+                    } message: {
+                        Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
+                    }
+                    .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
+                        Button("OK") {}
+                    } message: {
+                        Text("プロフィールを登録しました")
+                    }
+                    Button {
+                        fetchUser()
+                    } label: {
+                        Text("取得")
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 140)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .font(.system(size: 16, weight: .semibold, design: .default))
+                            .cornerRadius(10)
+                    }
+                    .sheet(isPresented: $userProfileVM.isShowNextPage) {
+                        NextPageView(
+                            name: userProfileVM.userFetchOutputData.name,
+                            gender: userProfileVM.userFetchOutputData.gender,
+                            createdDay: userProfileVM.userFetchOutputData.createdDay
+                        )
+                    }
                 }
                 Spacer()
             }
@@ -81,6 +101,10 @@ struct UserProfileView: View {
 extension UserProfileView {
     private func createUser(name: String, gender: Int) {
         userProfileController.createUser(name: name, gender: gender)
+    }
+    
+    private func fetchUser() {
+        userProfileController.fetchUser()
     }
 }
 

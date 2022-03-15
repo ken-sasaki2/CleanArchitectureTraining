@@ -19,6 +19,6 @@ final class UserFetchPresenter: UserFetchPresenterInterface {
     }
     
     func outputUserData(outputData: UserFetchOutputData) {
-        userProfileVM.userFetchOutputData = outputData
+        userProfileVM.showNextPage(outputData: outputData)
     }
 }
