@@ -91,6 +91,13 @@ struct UserProfileView: View {
                             createdDay: userProfileVM.userFetchOutputData.createdDay
                         )
                     }
+                    .alert("取得失敗", isPresented: $userProfileVM.isShowFailFetchUserAlert) {
+                        Button("やり直す") {
+                            
+                        }
+                    } message: {
+                        Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
+                    }
                 }
                 Spacer()
             }

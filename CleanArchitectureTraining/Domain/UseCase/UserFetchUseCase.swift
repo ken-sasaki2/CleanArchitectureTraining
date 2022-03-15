@@ -27,7 +27,7 @@ final class UserFetchUseCase: UserFetchUseCaseInterface {
             userFetchPresenter.outputUserData(outputData: outputData)
             return
         } catch {
-            // presenterへ通知
+            userFetchPresenter.failFetchUser()
         }
     }
 }

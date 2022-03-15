@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserFetchPresenterInterface {
     func outputUserData(outputData: UserFetchOutputData)
+    func failFetchUser()
 }
 
 final class UserFetchPresenter: UserFetchPresenterInterface {
@@ -20,5 +21,9 @@ final class UserFetchPresenter: UserFetchPresenterInterface {
     
     func outputUserData(outputData: UserFetchOutputData) {
         userProfileVM.showNextPage(outputData: outputData)
+    }
+    
+    func failFetchUser() {
+        userProfileVM.showFailFetchUserAlert()
     }
 }
