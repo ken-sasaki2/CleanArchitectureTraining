@@ -11,6 +11,7 @@ struct UserProfileView: View {
     @ObservedObject var userProfileVM: UserProfileViewModel
     @State private var name = ""
     @State private var genderSelection = 0
+    @State private var fetchButtonEnabled = false
     let userProfileController: UserProfileController
     private let genders = ["未選択", "男", "女", "選ばない"]
     
@@ -69,7 +70,9 @@ struct UserProfileView: View {
                         Text("登録に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
                     .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
-                        Button("OK") {}
+                        Button("OK") {
+                            toggleFetchButtonEnabled()
+                        }
                     } message: {
                         Text("プロフィールを登録しました")
                     }
@@ -79,11 +82,12 @@ struct UserProfileView: View {
                         Text("取得")
                             .padding(.vertical, 10)
                             .padding(.horizontal, 140)
-                            .background(Color.blue)
+                            .background(fetchButtonEnabled ? Color.blue : Color.gray)
                             .foregroundColor(.white)
                             .font(.system(size: 16, weight: .semibold, design: .default))
                             .cornerRadius(10)
                     }
+                    .disabled(!fetchButtonEnabled)
                     .sheet(isPresented: $userProfileVM.isShowNextPage) {
                         NextPageView(
                             name: userProfileVM.userFetchOutputData.name,
@@ -102,6 +106,9 @@ struct UserProfileView: View {
                 Spacer()
             }
         }
+        .onAppear {
+            toggleFetchButtonEnabled()
+        }
     }
 }
 
@@ -112,6 +119,11 @@ extension UserProfileView {
     
     private func fetchUser() {
         userProfileController.fetchUser()
+    }
+    
+    private func toggleFetchButtonEnabled() {
+        userProfileController.getIsUserDataSaved()
+        fetchButtonEnabled = userProfileVM.isUserDataSaved
     }
 }
 

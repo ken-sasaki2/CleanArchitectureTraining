@@ -10,6 +10,7 @@ import Foundation
 protocol UserFetchPresenterInterface {
     func outputUserData(outputData: UserFetchOutputData)
     func failFetchUser()
+    func outputIsUserDataSaved(isSaved: Bool)
 }
 
 final class UserFetchPresenter: UserFetchPresenterInterface {
@@ -20,10 +21,15 @@ final class UserFetchPresenter: UserFetchPresenterInterface {
     }
     
     func outputUserData(outputData: UserFetchOutputData) {
-        userProfileVM.showNextPage(outputData: outputData)
+        userProfileVM.isShowNextPage = true
+        userProfileVM.userFetchOutputData = outputData
     }
     
     func failFetchUser() {
-        userProfileVM.showFailFetchUserAlert()
+        userProfileVM.isShowFailSaveUserAlert = true
+    }
+    
+    func outputIsUserDataSaved(isSaved: Bool) {
+        userProfileVM.isUserDataSaved = isSaved
     }
 }
