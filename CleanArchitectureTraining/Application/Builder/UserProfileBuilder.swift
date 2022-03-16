@@ -14,9 +14,19 @@ final class UserProfileBuilder {
     
     func build() -> UserProfileView {
         let viewModel = UserProfileViewModel()
-        let view = UserProfileView(userProfileVM: viewModel, userProfileController: UserProfileController(
-            userAddUseCase: UserAddUseCase(userRepository: UserRepository(), userAddPresenter: UserAddPresenter(
-                userProfileVM: viewModel)))
+        let view = UserProfileView(
+            userProfileVM: viewModel,
+            userProfileController: UserProfileController(
+                userAddUseCase: UserAddUseCase(
+                    userRepository: UserRepository(),
+                    userAddPresenter: UserAddPresenter(
+                        userProfileVM: viewModel)),
+                userFetchUseCase: UserFetchUseCase(
+                    userRepository: UserRepository(),
+                    userFetchPresenter: UserFetchPresenter(
+                        userProfileVM: viewModel)
+                )
+            )
         )
         return view
     }

@@ -36,6 +36,7 @@ final class UserAddUseCase: UserAddUseCaseInterface {
             }
             
             try await userRepository.saveUser(inputData: inputData)
+            userRepository.setIsUserDataSaved(isSaved: true)
             userAddPresenter.successSaveUser()
         } catch {
             userAddPresenter.failSaveUser()

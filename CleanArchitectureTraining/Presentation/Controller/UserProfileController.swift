@@ -9,9 +9,11 @@ import Foundation
 
 final class UserProfileController {
     private let userAddUseCase: UserAddUseCaseInterface
+    private let userFetchUseCase: UserFetchUseCase
     
-    init(userAddUseCase: UserAddUseCaseInterface) {
+    init(userAddUseCase: UserAddUseCaseInterface, userFetchUseCase: UserFetchUseCase) {
         self.userAddUseCase = userAddUseCase
+        self.userFetchUseCase = userFetchUseCase
     }
     
     func createUser(name: String, gender: Int) {
@@ -19,5 +21,15 @@ final class UserProfileController {
         Task {
             try await userAddUseCase.saveUser(inputData: inputData)
         }
+    }
+    
+    func fetchUser() {
+        Task {
+            try await userFetchUseCase.fetchUser()
+        }
+    }
+    
+    func getIsUserDataSaved() {
+        userFetchUseCase.getIsUserDataSaved()
     }
 }

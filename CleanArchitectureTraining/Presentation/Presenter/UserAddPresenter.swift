@@ -22,18 +22,18 @@ final class UserAddPresenter: UserAddPresenterInterface {
     }
     
     func invalidUserName() {
-        userProfileVM.showInValidUserNameAlert()
+        userProfileVM.isShowUserNameAlert = true
     }
     
     func invalidGender() {
-        userProfileVM.showInValidGenderAlert()
+        userProfileVM.isShowGenderAlert = true
     }
     
     func successSaveUser() {
-        userProfileVM.showSuccessSaveUserAlert()
+        userProfileVM.isShowSuccessSaveUserAlert = true
     }
     
     func failSaveUser() {
-        userProfileVM.showFailSaveUserAlert()
+        userProfileVM.isShowFailSaveUserAlert = true
     }
 }

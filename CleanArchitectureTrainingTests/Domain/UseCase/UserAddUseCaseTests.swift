@@ -8,7 +8,7 @@
 import XCTest
 
 class UserAddUseCaseTests: XCTestCase {
-    private let userAddUseCase = UserAddUseCase()
+    private let userAddUseCase = UserAddUseCase(userRepository: UserRepository(), userAddPresenter: UserAddPresenter(userProfileVM: UserProfileViewModel()))
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

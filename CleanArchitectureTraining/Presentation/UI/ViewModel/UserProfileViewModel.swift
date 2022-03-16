@@ -12,20 +12,8 @@ final class UserProfileViewModel: ObservableObject {
     @Published var isShowGenderAlert = false
     @Published var isShowSuccessSaveUserAlert = false
     @Published var isShowFailSaveUserAlert = false
-    
-    func showInValidUserNameAlert() {
-        isShowUserNameAlert = true
-    }
-    
-    func showInValidGenderAlert() {
-        isShowGenderAlert = true
-    }
-    
-    func showSuccessSaveUserAlert() {
-        isShowSuccessSaveUserAlert = true
-    }
-    
-    func showFailSaveUserAlert() {
-        isShowFailSaveUserAlert = true
-    }
+    @Published var isShowNextPage = false
+    @Published var isShowFailFetchUserAlert = false
+    @Published var isUserDataSaved = false
+    @Published var userFetchOutputData = UserFetchOutputData(name: "", gender: "", createdDay: "", documentId: "")
 }

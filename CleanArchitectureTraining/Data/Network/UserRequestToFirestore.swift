@@ -6,13 +6,14 @@
 //
 
 import Firebase
+import FirebaseAuth
 
 final class UserRequestToFirestore {
     private let db = Firestore.firestore()
     
     func saveUser(inputEntity: UserAddInputEntity) async throws -> Void {
         return try await withCheckedThrowingContinuation { continuation in
-            db.collection("user").document().setData([
+            db.collection("users").document("123").collection("user").addDocument(data: [
                 "name" : inputEntity.name,
                 "gender" : inputEntity.gender,
                 "createdAt" : inputEntity.createdAt
@@ -28,9 +29,38 @@ final class UserRequestToFirestore {
         }
     }
     
-    
-    func fetchUser() {
-        
+    func fetchUser() async throws -> UserFetchOutputEntity {
+        return try await withCheckedThrowingContinuation({ continuation in
+            db.collection("users").document("123").collection("user").getDocuments { snapShot, error in
+                if let error = error {
+                    print("Error getting documents:", error)
+                    continuation.resume(throwing: error)
+                }
+                
+                if let snapshotDocuments = snapShot?.documents {
+                    snapshotDocuments.forEach { document in
+                        let data = document.data()
+                        if let name = data["name"] as? String,
+                           let gender = data["gender"] as? Int,
+                           let createdAt = data["createdAt"] as? Double,
+                           let documentId = document.documentID as String? {
+                            
+                            let entity = UserFetchOutputEntity(
+                                name: name,
+                                gender: gender,
+                                createdAt: createdAt,
+                                documentId: documentId
+                            )
+                            
+                            continuation.resume(returning: entity)
+                        } else {
+                            let error = NSError(domain: "Required document data not found.", code: -1)
+                            continuation.resume(throwing: error)
+                        }
+                    }
+                }
+            }
+        })
     }
     
     
