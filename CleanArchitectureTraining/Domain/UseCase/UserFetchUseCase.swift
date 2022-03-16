@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserFetchUseCaseInterface {
     func fetchUser() async throws -> Void
+    func getIsUserDataSaved()
 }
 
 final class UserFetchUseCase: UserFetchUseCaseInterface {
@@ -29,5 +30,10 @@ final class UserFetchUseCase: UserFetchUseCaseInterface {
         } catch {
             userFetchPresenter.failFetchUser()
         }
+    }
+    
+    func getIsUserDataSaved() {
+        let isSaved = userRepository.getIsUserDataSaved()
+        userFetchPresenter.outputIsUserDataSaved(isSaved: isSaved)
     }
 }

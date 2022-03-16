@@ -10,6 +10,8 @@ import Foundation
 protocol UserRepositoryInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void
     func fetchUser() async throws -> UserFetchOutputEntity
+    func getIsUserDataSaved() -> Bool
+    func setIsUserDataSaved(isSaved: Bool)
 }
 
 final class UserRepository: UserRepositoryInterface {
@@ -39,5 +41,13 @@ final class UserRepository: UserRepositoryInterface {
         } catch {
             throw error
         }
+    }
+    
+    func getIsUserDataSaved() -> Bool {
+        return userDataStore.getIsUserDataSaved()
+    }
+    
+    func setIsUserDataSaved(isSaved: Bool) {
+        userDataStore.setIsUserDataSaved(isSaved: isSaved)
     }
 }
