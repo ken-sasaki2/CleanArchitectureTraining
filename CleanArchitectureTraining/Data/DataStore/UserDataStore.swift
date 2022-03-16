@@ -11,6 +11,8 @@ protocol UserDataStoreInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void 
     func fetchUser() async throws -> UserFetchOutputEntity
     func deleteUser()
+    func getIsUserDataSaved() -> Bool
+    func setIsUserDataSaved(isSaved: Bool)
 }
 
 final class UserDataStore: UserDataStoreInterface {
@@ -37,5 +39,13 @@ final class UserDataStore: UserDataStoreInterface {
     
     func deleteUser() {
         
+    }
+    
+    func getIsUserDataSaved() -> Bool {
+        return UserDefaultsEntity.shared.isUserDataSaved
+    }
+    
+    func setIsUserDataSaved(isSaved: Bool) {
+        UserDefaultsEntity.shared.isUserDataSaved = isSaved
     }
 }
