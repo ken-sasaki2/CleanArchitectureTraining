@@ -41,6 +41,7 @@ class UserRequestToFirestoreTests: XCTestCase {
     }
     
     func testDeleteUser() async throws {
+        try XCTSkipIf(true, "'documentId'を設定しないと削除できないのでスキップ")
         do {
             try await firestore.deleteUser(documentId: "zqgRCxJlR0VRga6nLkSt")
             print("Success test delete user.")
