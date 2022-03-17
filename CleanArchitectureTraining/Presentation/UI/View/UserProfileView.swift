@@ -49,7 +49,7 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    RegistrationButtonView {
+                    ButtonView(text: "登録", color: .purple) {
                         createUser(name: name, gender: genderSelection)
                     }
                     .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
@@ -76,16 +76,8 @@ struct UserProfileView: View {
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    Button {
+                    ButtonView(text: "取得", color: .blue) {
                         fetchUser()
-                    } label: {
-                        Text("取得")
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 140)
-                            .background(fetchButtonEnabled ? Color.blue : Color.gray)
-                            .foregroundColor(.white)
-                            .font(.system(size: 16, weight: .semibold, design: .default))
-                            .cornerRadius(10)
                     }
                     .disabled(!fetchButtonEnabled)
                     .sheet(isPresented: $userProfileVM.isShowNextPage) {
@@ -101,6 +93,9 @@ struct UserProfileView: View {
                         }
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
+                    }
+                    ButtonView(text: "削除", color: .red) {
+                        print("削除")
                     }
                 }
                 Spacer()

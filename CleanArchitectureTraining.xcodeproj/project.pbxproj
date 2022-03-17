@@ -35,7 +35,7 @@
 		D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserProfileController.swift */; };
 		D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */; };
-		D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
+		D858365927D23DF5003C207E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* ButtonView.swift */; };
 		D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
 		D85946D127D36F9D00ABA72A /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
 		D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D327D480F100ABA72A /* UserRequestToFirestoreTests.swift */; };
@@ -50,7 +50,7 @@
 		D863CBAA27D9ED2800B9B770 /* CreatedDayTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863CBA927D9ED2800B9B770 /* CreatedDayTranslatorTests.swift */; };
 		D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89FE62B27D4C756007231C9 /* TestHelper.swift */; };
 		D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A658E127D0781200B238FA /* UserAddInputEntity.swift */; };
-		D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* RegistrationButtonView.swift */; };
+		D8B0941D27D78AF10054F138 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* ButtonView.swift */; };
 		D8B0941F27D83ED90054F138 /* UserFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */; };
 		D8B0942027D841090054F138 /* UserFetchOutputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */; };
 		D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0942127D89AF20054F138 /* UserFetchOutputData.swift */; };
@@ -119,7 +119,7 @@
 		D84C6CE827CA474D004B7F9B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCase.swift; sourceTree = "<group>"; };
-		D858365827D23DF5003C207E /* RegistrationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationButtonView.swift; sourceTree = "<group>"; };
+		D858365827D23DF5003C207E /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D858366127D3632D003C207E /* UserAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddPresenter.swift; sourceTree = "<group>"; };
 		D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		D85946D227D480F100ABA72A /* CleanArchitectureTrainingTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanArchitectureTrainingTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				D83274A727E076F700492D8A /* NextPageView.swift */,
-				D858365827D23DF5003C207E /* RegistrationButtonView.swift */,
+				D858365827D23DF5003C207E /* ButtonView.swift */,
 				D83D000E27C9DBFA008905F3 /* UserProfileView.swift */,
 			);
 			path = View;
@@ -761,7 +761,7 @@
 				D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */,
-				D858365927D23DF5003C207E /* RegistrationButtonView.swift in Sources */,
+				D858365927D23DF5003C207E /* ButtonView.swift in Sources */,
 				D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */,
 				D85946D127D36F9D00ABA72A /* UserProfileViewModel.swift in Sources */,
 				D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */,
@@ -783,7 +783,7 @@
 				D85946D627D4812400ABA72A /* UserAddInputEntity.swift in Sources */,
 				D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */,
 				D8D5205727DC538A0072121B /* UserFetchPresenter.swift in Sources */,
-				D8B0941D27D78AF10054F138 /* RegistrationButtonView.swift in Sources */,
+				D8B0941D27D78AF10054F138 /* ButtonView.swift in Sources */,
 				D8B0942A27D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
 				D85946DA27D49BA700ABA72A /* UserAddUseCase.swift in Sources */,
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
