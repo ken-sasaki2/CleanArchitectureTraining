@@ -39,4 +39,13 @@ class UserRequestToFirestoreTests: XCTestCase {
             XCTFail("Fail test fetch user.")
         }
     }
+    
+    func testDeleteUser() async throws {
+        do {
+            try await firestore.deleteUser(documentId: "zqgRCxJlR0VRga6nLkSt")
+            print("Success test delete user.")
+        } catch {
+            XCTFail("Fail test delete user.")
+        }
+    }
 }
