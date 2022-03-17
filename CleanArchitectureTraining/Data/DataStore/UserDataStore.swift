@@ -10,7 +10,7 @@ import Foundation
 protocol UserDataStoreInterface {
     func saveUser(inputData: UserAddInputData) async throws -> Void 
     func fetchUser() async throws -> UserFetchOutputEntity
-    func deleteUser()
+    func deleteUser(deleteData: UserDeleteData) async throws -> Void
     func getIsUserDataSaved() -> Bool
     func setIsUserDataSaved(isSaved: Bool)
 }
@@ -37,8 +37,14 @@ final class UserDataStore: UserDataStoreInterface {
         }
     }
     
-    func deleteUser() {
-        
+    func deleteUser(deleteData: UserDeleteData) async throws -> Void {
+        do {
+            let deleteEntity = UserDeleteEntity(documentid: deleteData.documentid)
+            try await userRequest.deleteUser(documentId: deleteEntity.documentid)
+            return
+        } catch {
+            throw error
+        }
     }
     
     func getIsUserDataSaved() -> Bool {

@@ -19,6 +19,8 @@
 		D83274B327E236DC00492D8A /* UserDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274B227E236DC00492D8A /* UserDataStoreTests.swift */; };
 		D83274B427E237D800492D8A /* UserDefaultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */; };
 		D83274B527E237EB00492D8A /* NextPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A727E076F700492D8A /* NextPageView.swift */; };
+		D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */; };
+		D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BE27E34B7100492D8A /* UserDeleteData.swift */; };
 		D83D000D27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */; };
 		D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
 		D83D001127C9DBFB008905F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83D001027C9DBFB008905F3 /* Assets.xcassets */; };
@@ -98,6 +100,8 @@
 		D83274A727E076F700492D8A /* NextPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
 		D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEntity.swift; sourceTree = "<group>"; };
 		D83274B227E236DC00492D8A /* UserDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreTests.swift; sourceTree = "<group>"; };
+		D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteEntity.swift; sourceTree = "<group>"; };
+		D83274BE27E34B7100492D8A /* UserDeleteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteData.swift; sourceTree = "<group>"; };
 		D83D000927C9DBFA008905F3 /* CleanArchitectureTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitectureTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureTrainingApp.swift; sourceTree = "<group>"; };
 		D83D000E27C9DBFA008905F3 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				D8A658E127D0781200B238FA /* UserAddInputEntity.swift */,
 				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
 				D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */,
+				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */,
+				D83274BE27E34B7100492D8A /* UserDeleteData.swift */,
 				D8B0942127D89AF20054F138 /* UserFetchOutputData.swift */,
 			);
 			path = Model;
@@ -744,8 +750,10 @@
 				D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
 				D83274AA27E0BFC600492D8A /* UserDefaultsEntity.swift in Sources */,
 				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
+				D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
 				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
+				D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
 				D8D5205627DC538A0072121B /* UserFetchPresenter.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
