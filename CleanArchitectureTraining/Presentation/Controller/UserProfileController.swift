@@ -10,10 +10,12 @@ import Foundation
 final class UserProfileController {
     private let userAddUseCase: UserAddUseCaseInterface
     private let userFetchUseCase: UserFetchUseCase
+    private let userDeleteUseCase: UserDeleteUseCaseInterface
     
-    init(userAddUseCase: UserAddUseCaseInterface, userFetchUseCase: UserFetchUseCase) {
+    init(userAddUseCase: UserAddUseCaseInterface, userFetchUseCase: UserFetchUseCase, userDeleteUseCase: UserDeleteUseCaseInterface) {
         self.userAddUseCase = userAddUseCase
         self.userFetchUseCase = userFetchUseCase
+        self.userDeleteUseCase = userDeleteUseCase
     }
     
     func createUser(name: String, gender: Int) {
@@ -26,6 +28,13 @@ final class UserProfileController {
     func fetchUser() {
         Task {
             try await userFetchUseCase.fetchUser()
+        }
+    }
+    
+    func deleteUser(outputData: UserFetchOutputData) {
+        let deleteData = UserDeleteData(documentid: outputData.documentId)
+        Task {
+            try await userDeleteUseCase.deleteUser(deleteData: deleteData)
         }
     }
     

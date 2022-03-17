@@ -95,7 +95,8 @@ struct UserProfileView: View {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
                     ButtonView(text: "削除", color: .red) {
-                        print("削除")
+                        fetchUser()
+                        userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
                     }
                 }
                 Spacer()
