@@ -9,11 +9,11 @@ import Firebase
 import FirebaseAuth
 
 final class UserRequestToFirestore {
-    private let db = Firestore.firestore()
+    private let reference = Firestore.firestore().collection("users").document("123").collection("user")
     
     func saveUser(inputEntity: UserAddInputEntity) async throws -> Void {
         return try await withCheckedThrowingContinuation { continuation in
-            db.collection("users").document("123").collection("user").addDocument(data: [
+            reference.addDocument(data: [
                 "name" : inputEntity.name,
                 "gender" : inputEntity.gender,
                 "createdAt" : inputEntity.createdAt
@@ -31,7 +31,7 @@ final class UserRequestToFirestore {
     
     func fetchUser() async throws -> UserFetchOutputEntity {
         return try await withCheckedThrowingContinuation({ continuation in
-            db.collection("users").document("123").collection("user").getDocuments { snapShot, error in
+            reference.getDocuments { snapShot, error in
                 if let error = error {
                     print("Error getting documents:", error)
                     continuation.resume(throwing: error)
@@ -64,7 +64,17 @@ final class UserRequestToFirestore {
     }
     
     
-    func deleteUser() {
-        
+    func deleteUser(documentId: String) async throws -> Void {
+        return try await withCheckedThrowingContinuation({ continuation in
+            reference.document(documentId).delete() { error in
+                if let error = error {
+                    print("Error removing document:", error)
+                    continuation.resume(throwing: error)
+                } else {
+                    print("Success remove document.")
+                    continuation.resume(returning: ())
+                }
+            }
+        })
     }
 }
