@@ -1,5 +1,5 @@
 //
-//  RegistrationButtonView.swift
+//  ButtonView.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/04.
@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct RegistrationButtonView: View {
-    var onTapRegistrationButton: (() -> Void)
+struct ButtonView: View {
+    var text: String
+    var color: Color?
+    var buttonEnabled: Bool
+    var onTapButton: (() -> Void)
     
     var body: some View {
         Button {
-            onTapRegistrationButton()
+            onTapButton()
         } label: {
-            Text("登録")
+            Text(text)
                 .padding(.vertical, 10)
                 .padding(.horizontal, 140)
-                .background(Color.purple)
+                .background(buttonEnabled ? color : .gray)
                 .foregroundColor(.white)
                 .font(.system(size: 16, weight: .semibold, design: .default))
                 .cornerRadius(10)
@@ -27,6 +30,6 @@ struct RegistrationButtonView: View {
 
 struct RegistrationButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationButtonView {}
+        ButtonView(text: "登録", color: .purple, buttonEnabled: true) {}
     }
 }

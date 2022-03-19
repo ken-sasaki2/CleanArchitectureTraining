@@ -11,7 +11,9 @@ struct UserProfileView: View {
     @ObservedObject var userProfileVM: UserProfileViewModel
     @State private var name = ""
     @State private var genderSelection = 0
+    @State private var addButtonEnabled = true
     @State private var fetchButtonEnabled = false
+    @State private var deleteButtonEnabled = false
     let userProfileController: UserProfileController
     private let genders = ["未選択", "男", "女", "選ばない"]
     
@@ -49,9 +51,10 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    RegistrationButtonView {
+                    ButtonView(text: "登録", color: .purple, buttonEnabled: !addButtonEnabled) {
                         createUser(name: name, gender: genderSelection)
                     }
+                    .disabled(addButtonEnabled)
                     .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
                         Button("OK") {
                             name = ""
@@ -71,21 +74,14 @@ struct UserProfileView: View {
                     }
                     .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
                         Button("OK") {
-                            toggleFetchButtonEnabled()
+                            name = ""
+                            toggleButtonEnabled()
                         }
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    Button {
+                    ButtonView(text: "取得", color: .blue, buttonEnabled: fetchButtonEnabled) {
                         fetchUser()
-                    } label: {
-                        Text("取得")
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 140)
-                            .background(fetchButtonEnabled ? Color.blue : Color.gray)
-                            .foregroundColor(.white)
-                            .font(.system(size: 16, weight: .semibold, design: .default))
-                            .cornerRadius(10)
                     }
                     .disabled(!fetchButtonEnabled)
                     .sheet(isPresented: $userProfileVM.isShowNextPage) {
@@ -96,18 +92,29 @@ struct UserProfileView: View {
                         )
                     }
                     .alert("取得失敗", isPresented: $userProfileVM.isShowFailFetchUserAlert) {
-                        Button("やり直す") {
-                            
-                        }
+                        Button("やり直す") {}
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
+                    }
+                    ButtonView(text: "削除", color: .red, buttonEnabled: deleteButtonEnabled) {
+                        fetchUser()
+                        userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
+                    }
+                    .disabled(!deleteButtonEnabled)
+                    .alert("削除成功", isPresented: $userProfileVM.isShowSuccessDeleteUserAlert) {
+                        Button("OK") {
+                            name = ""
+                            toggleButtonEnabled()
+                        }
+                    } message: {
+                        Text("プロフィールを削除しました")
                     }
                 }
                 Spacer()
             }
         }
         .onAppear {
-            toggleFetchButtonEnabled()
+            toggleButtonEnabled()
         }
     }
 }
@@ -121,9 +128,11 @@ extension UserProfileView {
         userProfileController.fetchUser()
     }
     
-    private func toggleFetchButtonEnabled() {
+    private func toggleButtonEnabled() {
         userProfileController.getIsUserDataSaved()
+        addButtonEnabled = userProfileVM.isUserDataSaved
         fetchButtonEnabled = userProfileVM.isUserDataSaved
+        deleteButtonEnabled = userProfileVM.isUserDataSaved
     }
 }
 

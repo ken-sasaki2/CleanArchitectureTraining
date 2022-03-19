@@ -20,10 +20,16 @@ final class UserProfileBuilder {
                 userAddUseCase: UserAddUseCase(
                     userRepository: UserRepository(),
                     userAddPresenter: UserAddPresenter(
-                        userProfileVM: viewModel)),
+                        userProfileVM: viewModel)
+                ),
                 userFetchUseCase: UserFetchUseCase(
                     userRepository: UserRepository(),
                     userFetchPresenter: UserFetchPresenter(
+                        userProfileVM: viewModel)
+                ),
+                userDeleteUseCase: UserDeleteUseCase(
+                    userRepository: UserRepository(),
+                    userDeletePresenter: UserDeletePresenter(
                         userProfileVM: viewModel)
                 )
             )
