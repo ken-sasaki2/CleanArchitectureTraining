@@ -12,6 +12,7 @@ struct UserProfileView: View {
     @State private var name = ""
     @State private var genderSelection = 0
     @State private var fetchButtonEnabled = false
+    @State private var deleteButtonEnabled = false
     let userProfileController: UserProfileController
     private let genders = ["未選択", "男", "女", "選ばない"]
     
@@ -71,7 +72,7 @@ struct UserProfileView: View {
                     }
                     .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
                         Button("OK") {
-                            toggleFetchButtonEnabled()
+                            toggleButtonEnabled()
                         }
                     } message: {
                         Text("プロフィールを登録しました")
@@ -96,16 +97,19 @@ struct UserProfileView: View {
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
-                    ButtonView(text: "削除", color: .red) {
+                    ButtonView(text: "削除", color: nil) {
                         fetchUser()
                         userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
                     }
+                    .background(deleteButtonEnabled ? Color.red : Color.gray)
+                    .cornerRadius(10)
+                    .disabled(!deleteButtonEnabled)
                 }
                 Spacer()
             }
         }
         .onAppear {
-            toggleFetchButtonEnabled()
+            toggleButtonEnabled()
         }
     }
 }
@@ -119,9 +123,10 @@ extension UserProfileView {
         userProfileController.fetchUser()
     }
     
-    private func toggleFetchButtonEnabled() {
+    private func toggleButtonEnabled() {
         userProfileController.getIsUserDataSaved()
         fetchButtonEnabled = userProfileVM.isUserDataSaved
+        deleteButtonEnabled = userProfileVM.isUserDataSaved
     }
 }
 
