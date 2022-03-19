@@ -11,6 +11,7 @@ struct UserProfileView: View {
     @ObservedObject var userProfileVM: UserProfileViewModel
     @State private var name = ""
     @State private var genderSelection = 0
+    @State private var addButtonEnabled = true
     @State private var fetchButtonEnabled = false
     @State private var deleteButtonEnabled = false
     let userProfileController: UserProfileController
@@ -50,9 +51,12 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    ButtonView(text: "登録", color: .purple) {
+                    ButtonView(text: "登録", color: nil) {
                         createUser(name: name, gender: genderSelection)
                     }
+                    .background(!addButtonEnabled ? Color.purple : Color.gray)
+                    .cornerRadius(10)
+                    .disabled(addButtonEnabled)
                     .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
                         Button("OK") {
                             name = ""
@@ -125,6 +129,7 @@ extension UserProfileView {
     
     private func toggleButtonEnabled() {
         userProfileController.getIsUserDataSaved()
+        addButtonEnabled = userProfileVM.isUserDataSaved
         fetchButtonEnabled = userProfileVM.isUserDataSaved
         deleteButtonEnabled = userProfileVM.isUserDataSaved
     }
