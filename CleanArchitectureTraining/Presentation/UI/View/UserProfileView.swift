@@ -51,11 +51,9 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    ButtonView(text: "登録", color: nil) {
+                    ButtonView(text: "登録", color: .purple, buttonEnabled: !addButtonEnabled) {
                         createUser(name: name, gender: genderSelection)
                     }
-                    .background(!addButtonEnabled ? Color.purple : Color.gray)
-                    .cornerRadius(10)
                     .disabled(addButtonEnabled)
                     .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
                         Button("OK") {
@@ -76,16 +74,15 @@ struct UserProfileView: View {
                     }
                     .alert("登録完了", isPresented: $userProfileVM.isShowSuccessSaveUserAlert) {
                         Button("OK") {
+                            name = ""
                             toggleButtonEnabled()
                         }
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    ButtonView(text: "取得", color: nil) {
+                    ButtonView(text: "取得", color: .blue, buttonEnabled: fetchButtonEnabled) {
                         fetchUser()
                     }
-                    .background(fetchButtonEnabled ? Color.green : Color.gray)
-                    .cornerRadius(10)
                     .disabled(!fetchButtonEnabled)
                     .sheet(isPresented: $userProfileVM.isShowNextPage) {
                         NextPageView(
@@ -95,21 +92,18 @@ struct UserProfileView: View {
                         )
                     }
                     .alert("取得失敗", isPresented: $userProfileVM.isShowFailFetchUserAlert) {
-                        Button("やり直す") {
-                            
-                        }
+                        Button("やり直す") {}
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
-                    ButtonView(text: "削除", color: nil) {
+                    ButtonView(text: "削除", color: .red, buttonEnabled: deleteButtonEnabled) {
                         fetchUser()
                         userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
                     }
-                    .background(deleteButtonEnabled ? Color.red : Color.gray)
-                    .cornerRadius(10)
                     .disabled(!deleteButtonEnabled)
                     .alert("削除成功", isPresented: $userProfileVM.isShowSuccessDeleteUserAlert) {
                         Button("OK") {
+                            name = ""
                             toggleButtonEnabled()
                         }
                     } message: {
