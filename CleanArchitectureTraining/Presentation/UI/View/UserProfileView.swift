@@ -108,6 +108,13 @@ struct UserProfileView: View {
                     .background(deleteButtonEnabled ? Color.red : Color.gray)
                     .cornerRadius(10)
                     .disabled(!deleteButtonEnabled)
+                    .alert("削除成功", isPresented: $userProfileVM.isShowSuccessDeleteUserAlert) {
+                        Button("OK") {
+                            toggleButtonEnabled()
+                        }
+                    } message: {
+                        Text("プロフィールを削除しました")
+                    }
                 }
                 Spacer()
             }

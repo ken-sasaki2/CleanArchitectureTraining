@@ -20,7 +20,8 @@ final class UserDeletePresenter: UserDeletePresenterInterface {
     }
     
     func successDeleteUser() {
-        userProfileVM.isShowSuccessDeleteUser = true
+        userProfileVM.isUserDataSaved = false
+        userProfileVM.isShowSuccessDeleteUserAlert = true
     }
     
     func failDeleteUser() {

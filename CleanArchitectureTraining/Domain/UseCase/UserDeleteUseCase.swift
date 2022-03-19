@@ -23,6 +23,7 @@ final class UserDeleteUseCase: UserDeleteUseCaseInterface {
     func deleteUser(deleteData: UserDeleteData) async throws {
         do {
             try await userRepository.deleteUser(deleteData: deleteData)
+            userRepository.setIsUserDataSaved(isSaved: false)
             userDeletePresenter.successDeleteUser()
         } catch {
             userDeletePresenter.failDeleteUser()
