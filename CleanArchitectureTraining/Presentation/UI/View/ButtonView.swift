@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonView: View {
     var text: String
-    var color: Color
+    var color: Color?
     var onTapButton: (() -> Void)
     
     var body: some View {

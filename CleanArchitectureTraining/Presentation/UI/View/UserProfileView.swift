@@ -76,9 +76,11 @@ struct UserProfileView: View {
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    ButtonView(text: "取得", color: .blue) {
+                    ButtonView(text: "取得", color: nil) {
                         fetchUser()
                     }
+                    .background(fetchButtonEnabled ? Color.green : Color.gray)
+                    .cornerRadius(10)
                     .disabled(!fetchButtonEnabled)
                     .sheet(isPresented: $userProfileVM.isShowNextPage) {
                         NextPageView(
