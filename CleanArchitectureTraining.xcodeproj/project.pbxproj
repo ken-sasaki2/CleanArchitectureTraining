@@ -10,6 +10,8 @@
 		0B0F301E631926F001C855DF /* Pods_CleanArchitectureTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BCBE205DF9136EB1624031 /* Pods_CleanArchitectureTrainingTests.framework */; };
 		8FFCDAC921FAA27C927A2B0D /* Pods_CleanArchitectureTraining_CleanArchitectureTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B250471F483DB8B094B01 /* Pods_CleanArchitectureTraining_CleanArchitectureTrainingUITests.framework */; };
 		AC6BDFCBF6969681465B2C58 /* Pods_CleanArchitectureTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79078B2C23F8826435453AA /* Pods_CleanArchitectureTraining.framework */; };
+		D80F6AD327E6EAF600CF613B /* AuthRequestToFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AD227E6EAF600CF613B /* AuthRequestToFirebase.swift */; };
+		D80F6AD527E6F7A800CF613B /* AuthCreateUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AD427E6F7A800CF613B /* AuthCreateUserEntity.swift */; };
 		D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
 		D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
@@ -99,6 +101,8 @@
 		C97EAC207453412B7CA6E209 /* Pods-CleanArchitectureTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining/Pods-CleanArchitectureTraining.debug.xcconfig"; sourceTree = "<group>"; };
 		D6C745BAB7A032DB776998BF /* Pods-CleanArchitectureTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTrainingTests/Pods-CleanArchitectureTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D79078B2C23F8826435453AA /* Pods_CleanArchitectureTraining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureTraining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80F6AD227E6EAF600CF613B /* AuthRequestToFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestToFirebase.swift; sourceTree = "<group>"; };
+		D80F6AD427E6F7A800CF613B /* AuthCreateUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCreateUserEntity.swift; sourceTree = "<group>"; };
 		D828705727E373F2000DF0AF /* UserDeletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeletePresenter.swift; sourceTree = "<group>"; };
 		D83274A727E076F700492D8A /* NextPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
 		D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEntity.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				D84C6CD727CA1439004B7F9B /* UserRequestToFirestore.swift */,
+				D80F6AD227E6EAF600CF613B /* AuthRequestToFirebase.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -299,10 +304,11 @@
 		D84C6CD627CA0860004B7F9B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D80F6AD427E6F7A800CF613B /* AuthCreateUserEntity.swift */,
 				D8A658E127D0781200B238FA /* UserAddInputEntity.swift */,
-				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
 				D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */,
 				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
+				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -767,6 +773,8 @@
 				D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D83274C127E36C6200492D8A /* UserDeleteUseCase.swift in Sources */,
 				D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
+				D80F6AD527E6F7A800CF613B /* AuthCreateUserEntity.swift in Sources */,
+				D80F6AD327E6EAF600CF613B /* AuthRequestToFirebase.swift in Sources */,
 				D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */,
 				D858365927D23DF5003C207E /* ButtonView.swift in Sources */,
 				D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */,
