@@ -9,31 +9,26 @@ import FirebaseAuth
 
 final class AuthRequestToFirebase {
     
-    func createUser(authEntity: AuthCreateUserEntity) async throws {
-        return try await withCheckedThrowingContinuation { continuation in
+    func createUser(authEntity: AuthCreateUserEntity) async -> AuthResponseTypeEntity {
+        return await withCheckedContinuation { continuation in
             Auth.auth().createUser(withEmail: authEntity.email, password: authEntity.password) { authResult, error in
                 if let error = error {
                     let errorCode = AuthErrorCode(rawValue: error._code)
                     switch errorCode {
                     case .invalidEmail:
-                        print("Error to email address format.")
-                        continuation.resume(throwing: error)
+                        continuation.resume(returning: .invalidEmail)
                     case .weakPassword:
-                        print("Error weak password.")
-                        continuation.resume(throwing: error)
+                        continuation.resume(returning: .weakPassword)
                     case .emailAlreadyInUse:
-                        print("Error email already in use.")
-                        continuation.resume(throwing: error)
+                        continuation.resume(returning: .emailAlreadyInUse)
                     case .networkError:
-                        print("Network error.")
-                        continuation.resume(throwing: error)
+                        continuation.resume(returning: .networkError)
                     default:
-                        print("Other error.")
-                        continuation.resume(throwing: error)
+                        continuation.resume(returning: .otherError)
                     }
+                } else {
+                    continuation.resume(returning: .success)
                 }
-                
-                continuation.resume(returning: ())
             }
         }
     }
