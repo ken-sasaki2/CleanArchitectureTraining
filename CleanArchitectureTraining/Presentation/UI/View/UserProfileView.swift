@@ -41,7 +41,7 @@ struct UserProfileView: View {
                         .font(.system(size: 12, weight: .regular, design: .default))
                         .frame(width: geometry.size.width / 1.3, alignment: .leading)
                     Picker(selection: $genderSelection, label: Text("性別")) {
-                        ForEach(0..<genders.count) { index in
+                        ForEach(0..<genders.count, id: \.self) { index in
                             Text(genders[index])
                         }
                     }
