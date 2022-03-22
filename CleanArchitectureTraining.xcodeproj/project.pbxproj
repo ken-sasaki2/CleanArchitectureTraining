@@ -23,6 +23,8 @@
 		D80F6AE027E7282A00CF613B /* AuthResponseTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */; };
 		D80F6AE227E73AB500CF613B /* AuthDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE127E73AB500CF613B /* AuthDataStore.swift */; };
 		D80F6AE327E73ADF00CF613B /* AuthDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE127E73AB500CF613B /* AuthDataStore.swift */; };
+		D80F6AE527E9AE4400CF613B /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE427E9AE4400CF613B /* AuthRepository.swift */; };
+		D80F6AE727E9AF0400CF613B /* AuthCreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE627E9AF0400CF613B /* AuthCreateUserModel.swift */; };
 		D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
 		D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
@@ -117,6 +119,8 @@
 		D80F6AD627E6F8BB00CF613B /* AuthRequestToFirebaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestToFirebaseTests.swift; sourceTree = "<group>"; };
 		D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseTypeEntity.swift; sourceTree = "<group>"; };
 		D80F6AE127E73AB500CF613B /* AuthDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataStore.swift; sourceTree = "<group>"; };
+		D80F6AE427E9AE4400CF613B /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		D80F6AE627E9AF0400CF613B /* AuthCreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCreateUserModel.swift; sourceTree = "<group>"; };
 		D828705727E373F2000DF0AF /* UserDeletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeletePresenter.swift; sourceTree = "<group>"; };
 		D83274A727E076F700492D8A /* NextPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
 		D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEntity.swift; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 				D84C6CE327CA2FFC004B7F9B /* UserAddInputData.swift */,
 				D83274BE27E34B7100492D8A /* UserDeleteData.swift */,
 				D8B0942127D89AF20054F138 /* UserFetchOutputData.swift */,
+				D80F6AE627E9AF0400CF613B /* AuthCreateUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */,
+				D80F6AE427E9AE4400CF613B /* AuthRepository.swift */,
 			);
 			path = Repositry;
 			sourceTree = "<group>";
@@ -774,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B0942C27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */,
+				D80F6AE527E9AE4400CF613B /* AuthRepository.swift in Sources */,
 				D84C6CDA27CA178A004B7F9B /* UserDataStore.swift in Sources */,
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
 				D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
@@ -795,6 +802,7 @@
 				D80F6AD527E6F7A800CF613B /* AuthCreateUserEntity.swift in Sources */,
 				D80F6AD327E6EAF600CF613B /* AuthRequestToFirebase.swift in Sources */,
 				D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */,
+				D80F6AE727E9AF0400CF613B /* AuthCreateUserModel.swift in Sources */,
 				D858365927D23DF5003C207E /* ButtonView.swift in Sources */,
 				D83D000F27C9DBFA008905F3 /* UserProfileView.swift in Sources */,
 				D85946D127D36F9D00ABA72A /* UserProfileViewModel.swift in Sources */,
