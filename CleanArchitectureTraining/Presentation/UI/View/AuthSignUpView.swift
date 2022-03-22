@@ -49,7 +49,6 @@ struct AuthSignUpView: View {
                     onTapSignUpButton(email: email, password: password)
                 }
                 .padding(.top, 20)
-                
                 .alert("登録完了", isPresented: $authSignUpVM.isShowSuccessSignUpAlert) {
                     Button("OK") {
                         //ページ遷移
