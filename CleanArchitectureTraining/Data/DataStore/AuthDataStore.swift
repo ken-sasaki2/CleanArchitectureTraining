@@ -8,15 +8,15 @@
 import Foundation
 
 protocol AuthDataStoreInterface {
-    func createUser(authModel: AuthCreateUserModel) async -> AuthResponseTypeEntity
+    func signUp(signUpModel: AuthSignUpModel) async -> AuthResponseTypeEntity
 }
 
 final class AuthDataStore: AuthDataStoreInterface {
     private let authRequest = AuthRequestToFirebase()
     
-    func createUser(authModel: AuthCreateUserModel) async -> AuthResponseTypeEntity {
-        let entity = AuthCreateUserEntity(email: authModel.email, password: authModel.password)
-        let response = await authRequest.createUser(authEntity: entity)
+    func signUp(signUpModel: AuthSignUpModel) async -> AuthResponseTypeEntity {
+        let entity = AuthSignUpEntity(email: signUpModel.email, password: signUpModel.password)
+        let response = await authRequest.signUp(signUpEntity: entity)
         return response
     }
 }

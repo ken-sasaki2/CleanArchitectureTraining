@@ -1,13 +1,13 @@
 //
-//  AuthCreateUserModel.swift
+//  AuthSignUpEntity.swift
 //  CleanArchitectureTraining
 //
-//  Created by sasaki.ken on 2022/03/22.
+//  Created by sasaki.ken on 2022/03/20.
 //
 
 import Foundation
 
-struct AuthCreateUserModel {
+struct AuthSignUpEntity {
     var email: String
     var password: String
     

@@ -9,9 +9,9 @@ import FirebaseAuth
 
 final class AuthRequestToFirebase {
     
-    func createUser(authEntity: AuthCreateUserEntity) async -> AuthResponseTypeEntity {
+    func signUp(signUpEntity: AuthSignUpEntity) async -> AuthResponseTypeEntity {
         return await withCheckedContinuation { continuation in
-            Auth.auth().createUser(withEmail: authEntity.email, password: authEntity.password) { authResult, error in
+            Auth.auth().createUser(withEmail: signUpEntity.email, password: signUpEntity.password) { authResult, error in
                 if let error = error {
                     let errorCode = AuthErrorCode(rawValue: error._code)
                     switch errorCode {
