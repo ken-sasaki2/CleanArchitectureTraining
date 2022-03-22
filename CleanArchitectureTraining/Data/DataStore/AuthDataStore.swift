@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthDataStoreInterface {
-    
+    func createUser(authEntity: AuthCreateUserEntity) async -> AuthResponseTypeEntity
 }
 
 final class AuthDataStore: AuthDataStoreInterface {
