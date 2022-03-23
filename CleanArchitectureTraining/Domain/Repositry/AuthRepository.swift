@@ -9,6 +9,7 @@ import Foundation
 
 protocol AuthRepositoryInterface {
     func signUp(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity
+    func signIn(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity
 }
 
 final class AuthRepository: AuthRepositoryInterface {
@@ -20,6 +21,11 @@ final class AuthRepository: AuthRepositoryInterface {
     
     func signUp(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity {
         let response = await authDataStore.signUp(requestModel: requestModel)
+        return response
+    }
+    
+    func signIn(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity {
+        let response = await authDataStore.signIn(requestModel: requestModel)
         return response
     }
 }

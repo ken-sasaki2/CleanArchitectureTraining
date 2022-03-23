@@ -18,32 +18,39 @@ class AuthRequestToFirebaseTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testCreateUser_responseIsSuccess() async throws {
+    func testSignUp_responseIsSuccess() async throws {
         try XCTSkipIf(true, "Firebaseに登録済みの場合テストが失敗するのでスキップ")
-        let authEntity = AuthSignUpEntity(email: TestHelper.email, password: TestHelper.password)
-        let response = await authRequestToFirebase.signUp(signUpEntity: authEntity)
-        print("Success test create user.")
+        let request = AuthRequestEntity(email: TestHelper.email, password: TestHelper.password)
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
+        print("Success test sign up.")
         XCTAssert(response == .success)
     }
     
-    func testCreateUser_responseIsInvalidEmail() async throws {
-        let authEntity = AuthSignUpEntity(email: "test_user@", password: TestHelper.password)
-        let response = await authRequestToFirebase.signUp(signUpEntity: authEntity)
+    func testSignUp_responseIsInvalidEmail() async throws {
+        let request = AuthRequestEntity(email: "test_user@", password: TestHelper.password)
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
         print("Fail invalid email.")
         XCTAssert(response == .invalidEmail)
     }
     
-    func testCreateUser_responseIsWeakPassword() async throws {
-        let authEntity = AuthSignUpEntity(email: TestHelper.email, password: "xxxxx")
-        let response = await authRequestToFirebase.signUp(signUpEntity: authEntity)
+    func testSignUp_responseIsWeakPassword() async throws {
+        let request = AuthRequestEntity(email: TestHelper.email, password: "xxxxx")
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
         print("Fail weak password.")
         XCTAssert(response == .weakPassword)
     }
     
-    func testCreateUser_responseIsEmailAlreadyInUse() async throws {
-        let authEntity = AuthSignUpEntity(email: "email_already_in_use@example.com", password: TestHelper.password)
-        let response = await authRequestToFirebase.signUp(signUpEntity: authEntity)
+    func testSignUp_responseIsEmailAlreadyInUse() async throws {
+        let request = AuthRequestEntity(email: "email_already_in_use@example.com", password: TestHelper.password)
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
         print("Fail email already in use.")
         XCTAssert(response == .emailAlreadyInUse)
+    }
+    
+    func testSignIn_responseIsSuccess() async throws {
+        let request = AuthRequestEntity(email: TestHelper.email, password: TestHelper.password)
+        let response = await authRequestToFirebase.signIn(requestEntity: request)
+        print("Success test sign in.")
+        XCTAssert(response == .success)
     }
 }

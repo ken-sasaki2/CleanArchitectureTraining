@@ -36,7 +36,7 @@ final class AuthRequestToFirebase {
     
     func signIn(requestEntity: AuthRequestEntity) async -> AuthResponseTypeEntity {
         return await withCheckedContinuation { continuation in
-            Auth.auth().signIn(withEmail: "", password: "") { authResult, error in
+            Auth.auth().signIn(withEmail: requestEntity.email, password: requestEntity.password) { authResult, error in
                 if let error = error {
                     let errorCode = AuthErrorCode(rawValue: error._code)
                     switch errorCode {
