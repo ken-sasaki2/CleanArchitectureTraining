@@ -15,9 +15,9 @@ final class AuthController {
     }
     
     func signUp(email: String, password: String) {
-        let model = AuthSignUpModel(email: email, password: password)
+        let model = AuthRequestModel(email: email, password: password)
         Task {
-            await authSignUpUseCase.signUp(signUpModel: model)
+            await authSignUpUseCase.signUp(requestModel: model)
         }
     }
 }

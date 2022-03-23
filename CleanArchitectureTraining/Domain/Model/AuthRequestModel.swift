@@ -1,5 +1,5 @@
 //
-//  AuthSignUpModel.swift
+//  AuthRequestModel.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthSignUpModel {
+struct AuthRequestModel {
     var email: String
     var password: String
     

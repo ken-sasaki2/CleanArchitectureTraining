@@ -1,5 +1,5 @@
 //
-//  AuthSignUpEntity.swift
+//  AuthRequestEntity.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthSignUpEntity {
+struct AuthRequestEntity {
     var email: String
     var password: String
     

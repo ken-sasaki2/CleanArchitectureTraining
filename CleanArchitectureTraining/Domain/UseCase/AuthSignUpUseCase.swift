@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthSignUpUseCaseInterface {
-    func signUp(signUpModel: AuthSignUpModel) async
+    func signUp(requestModel: AuthRequestModel) async
 }
 
 final class AuthSignUpUseCase: AuthSignUpUseCaseInterface {
@@ -20,8 +20,8 @@ final class AuthSignUpUseCase: AuthSignUpUseCaseInterface {
         self.authSignUpPresenter = authSignUpPresenter
     }
     
-    func signUp(signUpModel: AuthSignUpModel) async {
-        let response = await authRepository.signUp(signUpModel: signUpModel)
+    func signUp(requestModel: AuthRequestModel) async {
+        let response = await authRepository.signUp(requestModel: requestModel)
         let responseType = AuthSignUpResponseTranslator.shared.translate(responseTypeEntity: response)
         
         switch responseType {
