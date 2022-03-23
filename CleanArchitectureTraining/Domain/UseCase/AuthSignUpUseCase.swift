@@ -22,7 +22,7 @@ final class AuthSignUpUseCase: AuthSignUpUseCaseInterface {
     
     func signUp(requestModel: AuthRequestModel) async {
         let response = await authRepository.signUp(requestModel: requestModel)
-        let responseType = AuthSignUpResponseTranslator.shared.translate(responseTypeEntity: response)
+        let responseType = AuthResponseTypeTranslator.shared.translate(responseTypeEntity: response)
         
         switch responseType {
         case .success:
