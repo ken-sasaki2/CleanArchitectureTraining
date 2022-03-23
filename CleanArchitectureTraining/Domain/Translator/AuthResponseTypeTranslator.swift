@@ -1,5 +1,5 @@
 //
-//  AuthSignUpResponseTranslator.swift
+//  AuthResponseTypeTranslator.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class AuthSignUpResponseTranslator {
-    static let shared = AuthSignUpResponseTranslator()
+final class AuthResponseTypeTranslator {
+    static let shared = AuthResponseTypeTranslator()
     
     private init() {}
     

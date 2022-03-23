@@ -27,7 +27,7 @@
 		D80F6AE727E9AF0400CF613B /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE627E9AF0400CF613B /* AuthRequestModel.swift */; };
 		D80F6AE927E9B95800CF613B /* AuthSignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE827E9B95800CF613B /* AuthSignUpUseCase.swift */; };
 		D80F6AEB27E9C9B600CF613B /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEA27E9C9B600CF613B /* AuthController.swift */; };
-		D80F6AED27E9D22600CF613B /* AuthSignUpResponseTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEC27E9D22600CF613B /* AuthSignUpResponseTranslator.swift */; };
+		D80F6AED27E9D22600CF613B /* AuthResponseTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEC27E9D22600CF613B /* AuthResponseTypeTranslator.swift */; };
 		D80F6AEF27E9D2E700CF613B /* AuthResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEE27E9D2E700CF613B /* AuthResponseType.swift */; };
 		D80F6AF127E9E8CD00CF613B /* AuthSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AF027E9E8CD00CF613B /* AuthSignUpView.swift */; };
 		D80F6AF327E9EA9600CF613B /* AuthSignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AF227E9EA9600CF613B /* AuthSignUpBuilder.swift */; };
@@ -35,7 +35,7 @@
 		D80F6AF827E9F14200CF613B /* AuthSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AF727E9F14200CF613B /* AuthSignUpViewModel.swift */; };
 		D80F6AFA27EA046200CF613B /* AuthSignUpResponseTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AF927EA046200CF613B /* AuthSignUpResponseTranslatorTests.swift */; };
 		D80F6AFB27EA050400CF613B /* AuthResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEE27E9D2E700CF613B /* AuthResponseType.swift */; };
-		D80F6AFC27EA058C00CF613B /* AuthSignUpResponseTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEC27E9D22600CF613B /* AuthSignUpResponseTranslator.swift */; };
+		D80F6AFC27EA058C00CF613B /* AuthResponseTypeTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AEC27E9D22600CF613B /* AuthResponseTypeTranslator.swift */; };
 		D80F6AFD27EA069E00CF613B /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE627E9AF0400CF613B /* AuthRequestModel.swift */; };
 		D80FE70427D76CE400E6A921 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
@@ -98,6 +98,7 @@
 		D8D5205A27DC54EA0072121B /* UserFetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */; };
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
+		D8EA876C27EB5024009BF8AA /* AuthSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,7 +136,7 @@
 		D80F6AE627E9AF0400CF613B /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
 		D80F6AE827E9B95800CF613B /* AuthSignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignUpUseCase.swift; sourceTree = "<group>"; };
 		D80F6AEA27E9C9B600CF613B /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
-		D80F6AEC27E9D22600CF613B /* AuthSignUpResponseTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignUpResponseTranslator.swift; sourceTree = "<group>"; };
+		D80F6AEC27E9D22600CF613B /* AuthResponseTypeTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseTypeTranslator.swift; sourceTree = "<group>"; };
 		D80F6AEE27E9D2E700CF613B /* AuthResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseType.swift; sourceTree = "<group>"; };
 		D80F6AF027E9E8CD00CF613B /* AuthSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignUpView.swift; sourceTree = "<group>"; };
 		D80F6AF227E9EA9600CF613B /* AuthSignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignUpBuilder.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 		D8D5205827DC54EA0072121B /* UserFetchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchUseCase.swift; sourceTree = "<group>"; };
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
 		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInUseCase.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -380,6 +382,7 @@
 		D84C6CDD27CA22A3004B7F9B /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */,
 				D80F6AE827E9B95800CF613B /* AuthSignUpUseCase.swift */,
 				D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */,
 				D83274C027E36C6200492D8A /* UserDeleteUseCase.swift */,
@@ -478,7 +481,7 @@
 		D8B0942427D8D5DA0054F138 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
-				D80F6AEC27E9D22600CF613B /* AuthSignUpResponseTranslator.swift */,
+				D80F6AEC27E9D22600CF613B /* AuthResponseTypeTranslator.swift */,
 				D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */,
 				D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */,
 				D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */,
@@ -825,7 +828,7 @@
 				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
 				D80F6AEB27E9C9B600CF613B /* AuthController.swift in Sources */,
 				D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */,
-				D80F6AED27E9D22600CF613B /* AuthSignUpResponseTranslator.swift in Sources */,
+				D80F6AED27E9D22600CF613B /* AuthResponseTypeTranslator.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
 				D8D5205627DC538A0072121B /* UserFetchPresenter.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
@@ -836,6 +839,7 @@
 				D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D80F6AD527E6F7A800CF613B /* AuthRequestEntity.swift in Sources */,
 				D80F6AF127E9E8CD00CF613B /* AuthSignUpView.swift in Sources */,
+				D8EA876C27EB5024009BF8AA /* AuthSignInUseCase.swift in Sources */,
 				D80F6AD327E6EAF600CF613B /* AuthRequestToFirebase.swift in Sources */,
 				D8A658E227D0781200B238FA /* UserAddInputEntity.swift in Sources */,
 				D80F6AE727E9AF0400CF613B /* AuthRequestModel.swift in Sources */,
@@ -896,7 +900,7 @@
 				D83274B527E237EB00492D8A /* NextPageView.swift in Sources */,
 				D8B0942D27D8E47E0054F138 /* CreatedDayTranslator.swift in Sources */,
 				D8B0943727D980B10054F138 /* UserFetchOutputDataTranslatorTests.swift in Sources */,
-				D80F6AFC27EA058C00CF613B /* AuthSignUpResponseTranslator.swift in Sources */,
+				D80F6AFC27EA058C00CF613B /* AuthResponseTypeTranslator.swift in Sources */,
 				D85946DC27D49BBC00ABA72A /* UserRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
