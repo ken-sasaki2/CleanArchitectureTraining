@@ -335,8 +335,8 @@
 		D84C6CD527CA0842004B7F9B /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				D84C6CD927CA178A004B7F9B /* UserDataStore.swift */,
 				D80F6AE127E73AB500CF613B /* AuthDataStore.swift */,
+				D84C6CD927CA178A004B7F9B /* UserDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -344,8 +344,8 @@
 		D84C6CD627CA0860004B7F9B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D80F6AD427E6F7A800CF613B /* AuthSignUpEntity.swift */,
 				D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */,
+				D80F6AD427E6F7A800CF613B /* AuthSignUpEntity.swift */,
 				D8A658E127D0781200B238FA /* UserAddInputEntity.swift */,
 				D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */,
 				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
@@ -410,8 +410,8 @@
 		D84C6CE627CA46CA004B7F9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D84C6CE827CA474D004B7F9B /* UserProfileController.swift */,
 				D80F6AEA27E9C9B600CF613B /* AuthController.swift */,
+				D84C6CE827CA474D004B7F9B /* UserProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -428,10 +428,10 @@
 		D84C6CEB27CA49C5004B7F9B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D83274A727E076F700492D8A /* NextPageView.swift */,
-				D858365827D23DF5003C207E /* ButtonView.swift */,
-				D83D000E27C9DBFA008905F3 /* UserProfileView.swift */,
 				D80F6AF027E9E8CD00CF613B /* AuthSignUpView.swift */,
+				D858365827D23DF5003C207E /* ButtonView.swift */,
+				D83274A727E076F700492D8A /* NextPageView.swift */,
+				D83D000E27C9DBFA008905F3 /* UserProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,8 +439,8 @@
 		D84C6CEC27CA49CB004B7F9B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */,
 				D80F6AF727E9F14200CF613B /* AuthSignUpViewModel.swift */,
+				D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -448,10 +448,10 @@
 		D858366027D36300003C207E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D858366127D3632D003C207E /* UserAddPresenter.swift */,
-				D8D5205527DC538A0072121B /* UserFetchPresenter.swift */,
-				D828705727E373F2000DF0AF /* UserDeletePresenter.swift */,
 				D80F6AF527E9F10400CF613B /* AuthSignUpPresenter.swift */,
+				D858366127D3632D003C207E /* UserAddPresenter.swift */,
+				D828705727E373F2000DF0AF /* UserDeletePresenter.swift */,
+				D8D5205527DC538A0072121B /* UserFetchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -478,10 +478,10 @@
 		D8B0942427D8D5DA0054F138 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
-				D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */,
-				D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */,
-				D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */,
 				D80F6AEC27E9D22600CF613B /* AuthSignUpResponseTranslator.swift */,
+				D8B0942B27D8E47E0054F138 /* CreatedDayTranslator.swift */,
+				D8B0942827D8DEFF0054F138 /* GenderTranslator.swift */,
+				D8B0942527D8DA160054F138 /* UserFetchOutputDataTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -517,8 +517,8 @@
 		D8DF669A27D6E59000D78A99 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */,
 				D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */,
+				D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -526,8 +526,8 @@
 		D8DF669D27D6E5DF00D78A99 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */,
 				D80F6AF227E9EA9600CF613B /* AuthSignUpBuilder.swift */,
+				D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
