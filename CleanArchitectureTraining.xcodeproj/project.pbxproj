@@ -99,6 +99,10 @@
 		D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */; };
 		D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */; };
 		D8EA876C27EB5024009BF8AA /* AuthSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */; };
+		D8EA876E27EB5990009BF8AA /* AuthSignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA876D27EB5990009BF8AA /* AuthSignInPresenter.swift */; };
+		D8EA877027EB59F8009BF8AA /* AuthSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */; };
+		D8EA877227EB5B29009BF8AA /* AuthSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA877127EB5B29009BF8AA /* AuthSignInView.swift */; };
+		D8EA877427EB5D4A009BF8AA /* AuthSignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA877327EB5D4A009BF8AA /* AuthSignInBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +192,10 @@
 		D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBuilder.swift; sourceTree = "<group>"; };
 		D8DF669B27D6E5A000D78A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInUseCase.swift; sourceTree = "<group>"; };
+		D8EA876D27EB5990009BF8AA /* AuthSignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInPresenter.swift; sourceTree = "<group>"; };
+		D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInViewModel.swift; sourceTree = "<group>"; };
+		D8EA877127EB5B29009BF8AA /* AuthSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInView.swift; sourceTree = "<group>"; };
+		D8EA877327EB5D4A009BF8AA /* AuthSignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInBuilder.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,6 +439,7 @@
 		D84C6CEB27CA49C5004B7F9B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8EA877127EB5B29009BF8AA /* AuthSignInView.swift */,
 				D80F6AF027E9E8CD00CF613B /* AuthSignUpView.swift */,
 				D858365827D23DF5003C207E /* ButtonView.swift */,
 				D83274A727E076F700492D8A /* NextPageView.swift */,
@@ -442,6 +451,7 @@
 		D84C6CEC27CA49CB004B7F9B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */,
 				D80F6AF727E9F14200CF613B /* AuthSignUpViewModel.swift */,
 				D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */,
 			);
@@ -451,6 +461,7 @@
 		D858366027D36300003C207E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D8EA876D27EB5990009BF8AA /* AuthSignInPresenter.swift */,
 				D80F6AF527E9F10400CF613B /* AuthSignUpPresenter.swift */,
 				D858366127D3632D003C207E /* UserAddPresenter.swift */,
 				D828705727E373F2000DF0AF /* UserDeletePresenter.swift */,
@@ -529,6 +540,7 @@
 		D8DF669D27D6E5DF00D78A99 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				D8EA877327EB5D4A009BF8AA /* AuthSignInBuilder.swift */,
 				D80F6AF227E9EA9600CF613B /* AuthSignUpBuilder.swift */,
 				D8DF669827D6E0F200D78A99 /* UserProfileBuilder.swift */,
 			);
@@ -817,7 +829,10 @@
 				D80F6AE527E9AE4400CF613B /* AuthRepository.swift in Sources */,
 				D84C6CDA27CA178A004B7F9B /* UserDataStore.swift in Sources */,
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
+				D8EA877427EB5D4A009BF8AA /* AuthSignInBuilder.swift in Sources */,
+				D8EA877227EB5B29009BF8AA /* AuthSignInView.swift in Sources */,
 				D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
+				D8EA877027EB59F8009BF8AA /* AuthSignInViewModel.swift in Sources */,
 				D83274AA27E0BFC600492D8A /* UserDefaultsEntity.swift in Sources */,
 				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
 				D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */,
@@ -836,6 +851,7 @@
 				D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D83274C127E36C6200492D8A /* UserDeleteUseCase.swift in Sources */,
 				D80F6AE227E73AB500CF613B /* AuthDataStore.swift in Sources */,
+				D8EA876E27EB5990009BF8AA /* AuthSignInPresenter.swift in Sources */,
 				D8B0942227D89AF20054F138 /* UserFetchOutputData.swift in Sources */,
 				D80F6AD527E6F7A800CF613B /* AuthRequestEntity.swift in Sources */,
 				D80F6AF127E9E8CD00CF613B /* AuthSignUpView.swift in Sources */,
