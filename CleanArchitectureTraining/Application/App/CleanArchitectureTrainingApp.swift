@@ -13,7 +13,7 @@ struct CleanArchitectureTrainingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            UserProfileBuilder.shared.build()
+            AuthSignInBuilder.shared.build()
         }
     }
 }
