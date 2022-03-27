@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AuthResponseTypeEntity  {
+enum AuthResponseTypeEntity {
     case success
     case invalidEmail
     case weakPassword
