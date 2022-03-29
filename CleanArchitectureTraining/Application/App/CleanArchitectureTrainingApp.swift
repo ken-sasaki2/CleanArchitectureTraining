@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CleanArchitectureTrainingApp: App {
     @UIApplicationDelegateAdaptor (AppDelegate.self) var appDelegate
-    @StateObject private var rootViewModel = RootViewMode.shared
+    @StateObject private var rootViewModel = RootViewModel.shared
     
     var body: some Scene {
         WindowGroup {

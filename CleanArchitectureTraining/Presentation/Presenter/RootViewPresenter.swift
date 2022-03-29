@@ -14,6 +14,6 @@ protocol RootViewPresenterInterface {
 final class RootViewPresenter: RootViewPresenterInterface {
     
     func changeProfileView() {
-        RootViewMode.shared.changeRootView(rootView: .profile)
+        RootViewModel.shared.changeRootView(rootView: .profile)
     }
 }

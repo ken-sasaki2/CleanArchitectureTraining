@@ -102,8 +102,8 @@
 		D8EA877027EB59F8009BF8AA /* AuthSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */; };
 		D8EA877227EB5B29009BF8AA /* AuthSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA877127EB5B29009BF8AA /* AuthSignInView.swift */; };
 		D8EA877427EB5D4A009BF8AA /* AuthSignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EA877327EB5D4A009BF8AA /* AuthSignInBuilder.swift */; };
-		D8F773D527F32C9200A1268F /* RootViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D427F32C9200A1268F /* RootViewMode.swift */; };
-		D8F773D627F32C9200A1268F /* RootViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D427F32C9200A1268F /* RootViewMode.swift */; };
+		D8F773D527F32C9200A1268F /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D427F32C9200A1268F /* RootViewModel.swift */; };
+		D8F773D627F32C9200A1268F /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D427F32C9200A1268F /* RootViewModel.swift */; };
 		D8F773D827F3329600A1268F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D727F3329600A1268F /* RootViewController.swift */; };
 		D8F773D927F3329600A1268F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773D727F3329600A1268F /* RootViewController.swift */; };
 		D8F773DB27F3330400A1268F /* RootViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DA27F3330400A1268F /* RootViewUseCase.swift */; };
@@ -203,7 +203,7 @@
 		D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInViewModel.swift; sourceTree = "<group>"; };
 		D8EA877127EB5B29009BF8AA /* AuthSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInView.swift; sourceTree = "<group>"; };
 		D8EA877327EB5D4A009BF8AA /* AuthSignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignInBuilder.swift; sourceTree = "<group>"; };
-		D8F773D427F32C9200A1268F /* RootViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewMode.swift; sourceTree = "<group>"; };
+		D8F773D427F32C9200A1268F /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		D8F773D727F3329600A1268F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D8F773DA27F3330400A1268F /* RootViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUseCase.swift; sourceTree = "<group>"; };
 		D8F773DD27F334C000A1268F /* RootViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewPresenter.swift; sourceTree = "<group>"; };
@@ -466,7 +466,7 @@
 			children = (
 				D8EA876F27EB59F8009BF8AA /* AuthSignInViewModel.swift */,
 				D80F6AF727E9F14200CF613B /* AuthSignUpViewModel.swift */,
-				D8F773D427F32C9200A1268F /* RootViewMode.swift */,
+				D8F773D427F32C9200A1268F /* RootViewModel.swift */,
 				D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */,
 			);
 			path = ViewModel;
@@ -868,7 +868,7 @@
 				D8D5205927DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D83274C127E36C6200492D8A /* UserDeleteUseCase.swift in Sources */,
 				D80F6AE227E73AB500CF613B /* AuthDataStore.swift in Sources */,
-				D8F773D527F32C9200A1268F /* RootViewMode.swift in Sources */,
+				D8F773D527F32C9200A1268F /* RootViewModel.swift in Sources */,
 				D8EA876E27EB5990009BF8AA /* AuthSignInPresenter.swift in Sources */,
 				D80F6AD527E6F7A800CF613B /* AuthRequestEntity.swift in Sources */,
 				D892252027EDB3DD00F9E703 /* UserFetchOutputData.swift in Sources */,
@@ -904,7 +904,7 @@
 				D8F773DF27F334C000A1268F /* RootViewPresenter.swift in Sources */,
 				D8B0942727D8DA160054F138 /* UserFetchOutputDataTranslator.swift in Sources */,
 				D80F6ADB27E6FA3F00CF613B /* UserDeleteUseCase.swift in Sources */,
-				D8F773D627F32C9200A1268F /* RootViewMode.swift in Sources */,
+				D8F773D627F32C9200A1268F /* RootViewModel.swift in Sources */,
 				D83274B427E237D800492D8A /* UserDefaultsEntity.swift in Sources */,
 				D80F6AE027E7282A00CF613B /* AuthResponseTypeEntity.swift in Sources */,
 				D85946D427D480F100ABA72A /* UserRequestToFirestoreTests.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RootViewMode.swift
+//  RootViewModel.swift
 //  CleanArchitectureTraining
 //
 //  Created by sasaki.ken on 2022/03/29.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class RootViewMode: ObservableObject {
+final class RootViewModel: ObservableObject {
     @Published private(set) var rootView: RootViews = .signUp
-    static let shared = RootViewMode()
+    static let shared = RootViewModel()
     
     enum RootViews {
         case signIn
