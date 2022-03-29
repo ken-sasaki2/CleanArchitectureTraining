@@ -33,6 +33,11 @@ final class AuthSignUpBuilder {
                     authSignInPresenter: AuthSignInPresenter(
                         authSignInVM: signInVM)
                 )
+            ),
+            rootViewController: RootViewController(
+                rootViewUseCase: RootViewUseCase(
+                    rootViewPresenter: RootViewPresenter()
+                )
             )
         )
         return view

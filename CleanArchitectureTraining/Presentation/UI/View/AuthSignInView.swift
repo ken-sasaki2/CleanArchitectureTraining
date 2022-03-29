@@ -13,6 +13,7 @@ struct AuthSignInView: View {
     @State private var password = ""
     @State private var signInButtonEnabled = false
     let authController: AuthController
+    let rootViewController: RootViewController
     
     var body: some View {
         GeometryReader { geometry in
@@ -51,7 +52,7 @@ struct AuthSignInView: View {
                 .padding(.top, 20)
                 .alert("登録完了", isPresented: $authSignInVM.isShowSuccessSignInAlert) {
                     Button("OK") {
-                        //ページ遷移
+                        rootViewController.successSignIn()
                     }
                 } message: {
                     Text("サインアップに成功しました！")
