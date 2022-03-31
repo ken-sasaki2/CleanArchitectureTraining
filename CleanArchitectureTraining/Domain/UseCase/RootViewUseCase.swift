@@ -20,7 +20,7 @@ final class RootViewUseCase: RootViewUseCaseInterface {
     }
     
     func successSignUp() {
-        rootViewPresenter.changeProfileView()
+        rootViewPresenter.changeSignInView()
     }
     
     func successSignIn() {

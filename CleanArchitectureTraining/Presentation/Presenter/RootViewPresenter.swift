@@ -9,11 +9,16 @@ import Foundation
  
 protocol RootViewPresenterInterface {
     func changeProfileView()
+    func changeSignInView()
 }
 
 final class RootViewPresenter: RootViewPresenterInterface {
     
     func changeProfileView() {
         RootViewModel.shared.changeRootView(rootView: .profile)
+    }
+    
+    func changeSignInView() {
+        RootViewModel.shared.changeRootView(rootView: .signIn)
     }
 }
