@@ -41,6 +41,7 @@
 		D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000E27C9DBFA008905F3 /* UserProfileView.swift */; };
 		D80FE70627D76E7C00E6A921 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
 		D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserProfileController.swift */; };
+		D8261DF727F8058D00BAEB73 /* UserFetchOutputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D892251F27EDB3DD00F9E703 /* UserFetchOutputData.swift */; };
 		D828705827E373F2000DF0AF /* UserDeletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828705727E373F2000DF0AF /* UserDeletePresenter.swift */; };
 		D83274A827E076F700492D8A /* NextPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A727E076F700492D8A /* NextPageView.swift */; };
 		D83274AA27E0BFC600492D8A /* UserDefaultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */; };
@@ -918,6 +919,7 @@
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
 				D80F6AFB27EA050400CF613B /* AuthResponseType.swift in Sources */,
 				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
+				D8261DF727F8058D00BAEB73 /* UserFetchOutputData.swift in Sources */,
 				D80F6AE327E73ADF00CF613B /* AuthDataStore.swift in Sources */,
 				D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */,
 				D8F773DC27F3330400A1268F /* RootViewUseCase.swift in Sources */,

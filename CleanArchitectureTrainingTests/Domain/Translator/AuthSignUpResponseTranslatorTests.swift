@@ -38,7 +38,7 @@ class AuthSignUpResponseTranslatorTests: XCTestCase {
         
         for (index, input) in inputs.enumerated() {
             let expect = expects[index]
-            let result = AuthSignUpResponseTranslator.shared.translate(responseTypeEntity: input)
+            let result = AuthResponseTypeTranslator.shared.translate(responseTypeEntity: input)
             XCTAssertEqual(result, expect)
         }
     }
