@@ -11,6 +11,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         firebaseConfigure()
+        setRootView()
         return true
     }
      
@@ -32,5 +33,15 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         print("options:", options)
 
         FirebaseApp.configure(options: options)
+    }
+    
+    func setRootView() {
+        let user = Auth.auth().currentUser
+        
+        if user == nil {
+            RootViewModel.shared.changeRootView(rootView: .signUp)
+        } else {
+            RootViewModel.shared.changeRootView(rootView: .profile)
+        }
     }
 }

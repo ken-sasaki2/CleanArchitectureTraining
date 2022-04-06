@@ -10,10 +10,18 @@ import SwiftUI
 @main
 struct CleanArchitectureTrainingApp: App {
     @UIApplicationDelegateAdaptor (AppDelegate.self) var appDelegate
+    @StateObject private var rootViewModel = RootViewModel.shared
     
     var body: some Scene {
         WindowGroup {
-            UserProfileBuilder.shared.build()
+            switch rootViewModel.rootView {
+            case .signIn:
+                AuthSignInBuilder.shared.build()
+            case .signUp:
+                AuthSignUpBuilder.shared.build()
+            case .profile:
+                UserProfileBuilder.shared.build()
+            }
         }
     }
 }
