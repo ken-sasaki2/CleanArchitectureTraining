@@ -53,4 +53,25 @@ class AuthRequestToFirebaseTests: XCTestCase {
         print("Success test sign in.")
         XCTAssert(response == .success)
     }
+    
+    func testSignIn_responseIsInvalidEmail() async throws {
+        let request = AuthRequestEntity(email: "test_user@", password: TestHelper.password)
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
+        print("Fail invalid email.")
+        XCTAssert(response == .invalidEmail)
+    }
+    
+    func testSignIn_responseIsWeakPassword() async throws {
+        let request = AuthRequestEntity(email: TestHelper.email, password: "xxxxx")
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
+        print("Fail weak password.")
+        XCTAssert(response == .weakPassword)
+    }
+    
+    func testSignIn_responseIsEmailAlreadyInUse() async throws {
+        let request = AuthRequestEntity(email: "email_already_in_use@example.com", password: TestHelper.password)
+        let response = await authRequestToFirebase.signUp(requestEntity: request)
+        print("Fail email already in use.")
+        XCTAssert(response == .emailAlreadyInUse)
+    }
 }
