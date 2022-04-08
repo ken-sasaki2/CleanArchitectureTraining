@@ -92,7 +92,7 @@ struct AuthSignUpView: View {
                     Text("入力内容が正しくありません")
                 }
                 ButtonView(text: "既に登録済みの方はこちら", textColor: .blue, buttonEnabled: true) {
-                    
+                    rootViewController.alreadySignedUpUser()
                 }
                 .padding(.top, 2)
                 Spacer()

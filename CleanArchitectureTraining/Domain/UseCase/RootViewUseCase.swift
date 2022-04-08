@@ -11,6 +11,8 @@ protocol RootViewUseCaseInterface {
     func successSignUp()
     func successSignIn()
     func successSignOut()
+    func alreadySignedUpUser()
+    func notSignedUpUser()
 }
 
 final class RootViewUseCase: RootViewUseCaseInterface {
@@ -30,5 +32,13 @@ final class RootViewUseCase: RootViewUseCaseInterface {
     
     func successSignOut() {
         rootViewPresenter.changeSignInView()
+    }
+    
+    func alreadySignedUpUser() {
+        rootViewPresenter.alreadySignedUpUser()
+    }
+    
+    func notSignedUpUser() {
+        rootViewPresenter.notSignedUpUser()
     }
 }
