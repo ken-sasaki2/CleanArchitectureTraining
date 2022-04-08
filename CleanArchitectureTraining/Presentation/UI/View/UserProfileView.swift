@@ -9,12 +9,16 @@ import SwiftUI
 
 struct UserProfileView: View {
     @ObservedObject var userProfileVM: UserProfileViewModel
+    @ObservedObject var authSignOutVM: AuthSignOutViewModel
     @State private var name = ""
     @State private var genderSelection = 0
     @State private var addButtonEnabled = true
     @State private var fetchButtonEnabled = false
     @State private var deleteButtonEnabled = false
+    @State private var signOutButtonEnabled = false
     let userProfileController: UserProfileController
+    let authController: AuthController
+    let rootViewController: RootViewController
     private let genders = ["未選択", "男", "女", "選ばない"]
     
     var body: some View {
@@ -51,7 +55,7 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    ButtonView(text: "登録", color: .purple, buttonEnabled: !addButtonEnabled) {
+                    ButtonView(text: "登録", textColor: .white, color: .purple, buttonEnabled: !addButtonEnabled) {
                         createUser(name: name, gender: genderSelection)
                     }
                     .disabled(addButtonEnabled)
@@ -80,7 +84,7 @@ struct UserProfileView: View {
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    ButtonView(text: "取得", color: .blue, buttonEnabled: fetchButtonEnabled) {
+                    ButtonView(text: "取得", textColor: .white, color: .blue, buttonEnabled: fetchButtonEnabled) {
                         fetchUser()
                     }
                     .disabled(!fetchButtonEnabled)
@@ -96,7 +100,7 @@ struct UserProfileView: View {
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
-                    ButtonView(text: "削除", color: .red, buttonEnabled: deleteButtonEnabled) {
+                    ButtonView(text: "削除", textColor: .white, color: .red, buttonEnabled: deleteButtonEnabled) {
                         fetchUser()
                         userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
                     }
@@ -108,6 +112,21 @@ struct UserProfileView: View {
                         }
                     } message: {
                         Text("プロフィールを削除しました")
+                    }
+                    ButtonView(text: "サインアウト", textColor: .white, color: .green, buttonEnabled: true) {
+                        signOut()
+                    }
+                    .alert("成功", isPresented: $authSignOutVM.isShowSuccessSignOutAlert) {
+                        Button("OK") {
+                            rootViewController.successSignOut()
+                        }
+                    } message: {
+                        Text("サインアウトに成功しました！")
+                    }
+                    .alert("失敗", isPresented: $authSignOutVM.isShowFailSignOutAlert) {
+                        Button("OK") {}
+                    } message: {
+                        Text("サインアウトに失敗しました")
                     }
                 }
                 Spacer()
@@ -133,6 +152,10 @@ extension UserProfileView {
         addButtonEnabled = userProfileVM.isUserDataSaved
         fetchButtonEnabled = userProfileVM.isUserDataSaved
         deleteButtonEnabled = userProfileVM.isUserDataSaved
+    }
+    
+    private func signOut() {
+        authController.signOut()
     }
 }
 

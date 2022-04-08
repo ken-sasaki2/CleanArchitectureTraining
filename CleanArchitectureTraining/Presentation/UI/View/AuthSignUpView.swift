@@ -11,7 +11,6 @@ struct AuthSignUpView: View {
     @ObservedObject var authSignUpVM: AuthSignUpViewModel
     @State private var email = ""
     @State private var password = ""
-    @State private var signUpButtonEnabled = false
     let authController: AuthController
     let rootViewController: RootViewController
     
@@ -46,7 +45,7 @@ struct AuthSignUpView: View {
                     }
                 }
                 .padding(.top, 20)
-                ButtonView(text: "サインアップ", color: .black, buttonEnabled: true) {
+                ButtonView(text: "サインアップ", textColor: .white, color: .black, buttonEnabled: true) {
                     onTapSignUpButton(email: email, password: password)
                 }
                 .padding(.top, 20)
@@ -92,6 +91,10 @@ struct AuthSignUpView: View {
                 } message: {
                     Text("入力内容が正しくありません")
                 }
+                ButtonView(text: "既に登録済みの方はこちら", textColor: .blue, buttonEnabled: true) {
+                    rootViewController.alreadySignedUpUser()
+                }
+                .padding(.top, 2)
                 Spacer()
             }
         }

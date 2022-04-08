@@ -8,12 +8,18 @@
 import Foundation
 
 final class AuthController {
-    private let authSignUpUseCase: AuthSignUpUseCase
-    private let authSignInUseCase: AuthSignInUseCase
+    private let authSignUpUseCase: AuthSignUpUseCaseInterface
+    private let authSignInUseCase: AuthSignInUseCaseInterface
+    private let authSignOutuseCase: AuthSignOutUseCaseInterface
     
-    init(authSignUpUseCase: AuthSignUpUseCase, authSignInUseCase: AuthSignInUseCase) {
+    init(
+        authSignUpUseCase: AuthSignUpUseCaseInterface,
+        authSignInUseCase: AuthSignInUseCaseInterface,
+        authSignOutUseCase: AuthSignOutUseCaseInterface
+    ) {
         self.authSignUpUseCase = authSignUpUseCase
         self.authSignInUseCase = authSignInUseCase
+        self.authSignOutuseCase = authSignOutUseCase
     }
     
     func signUp(email: String, password: String) {
@@ -27,6 +33,12 @@ final class AuthController {
         let model = AuthRequestModel(email: email, password: password)
         Task {
             await authSignInUseCase.signIn(requestModel: model)
+        }
+    }
+    
+    func signOut() {
+        Task {
+            try await authSignOutuseCase.signOut()
         }
     }
 }

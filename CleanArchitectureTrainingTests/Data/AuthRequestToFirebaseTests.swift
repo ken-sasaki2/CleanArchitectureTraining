@@ -74,4 +74,13 @@ class AuthRequestToFirebaseTests: XCTestCase {
         print("Fail email already in use.")
         XCTAssert(response == .emailAlreadyInUse)
     }
+    
+    func testSignout() async throws {
+        do {
+            try await authRequestToFirebase.signout()
+            print("Success Signout")
+        } catch {
+            XCTFail("Fail sign out.")
+        }
+    }
 }
