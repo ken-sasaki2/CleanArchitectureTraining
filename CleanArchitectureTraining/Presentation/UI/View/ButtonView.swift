@@ -18,8 +18,7 @@ struct ButtonView: View {
             onTapButton()
         } label: {
             Text(text)
-                .padding(.vertical, 10)
-                .padding(.horizontal, 140)
+                .frame(width: 300, height: 44)
                 .background(buttonEnabled ? color : .gray)
                 .foregroundColor(.white)
                 .font(.system(size: 16, weight: .semibold, design: .default))
