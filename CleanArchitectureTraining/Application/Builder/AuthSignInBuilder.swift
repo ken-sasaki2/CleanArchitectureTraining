@@ -15,6 +15,8 @@ final class AuthSignInBuilder {
     func build() -> AuthSignInView {
         let signUpVM = AuthSignUpViewModel()
         let signInVM = AuthSignInViewModel()
+        let signOutVM = AuthSignOutViewModel()
+        
         let view = AuthSignInView(
             authSignInVM: signInVM,
             authController: AuthController(
@@ -32,6 +34,14 @@ final class AuthSignInBuilder {
                     ),
                     authSignInPresenter: AuthSignInPresenter(
                         authSignInVM: signInVM
+                    )
+                ),
+                authSignOutUseCase: AuthSignOutUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authSignOutPresenter: AuthSignOutPresenter(
+                        authSignOutVM: signOutVM
                     )
                 )
             ),
