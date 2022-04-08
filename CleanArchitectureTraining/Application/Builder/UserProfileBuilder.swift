@@ -13,27 +13,73 @@ final class UserProfileBuilder {
     private init() {}
     
     func build() -> UserProfileView {
-        let viewModel = UserProfileViewModel()
+        let userProfileVM = UserProfileViewModel()
+        let signUpVM = AuthSignUpViewModel()
+        let signInVM = AuthSignInViewModel()
+        let signOutVM = AuthSignOutViewModel()
+        
         let view = UserProfileView(
-            userProfileVM: viewModel,
+            userProfileVM: userProfileVM,
+            authSignOutVM: signOutVM,
             userProfileController: UserProfileController(
                 userAddUseCase: UserAddUseCase(
-                    userRepository: UserRepository(),
+                    userRepository: UserRepository(
+                        userDataStore: UserDataStore()
+                    ),
                     userAddPresenter: UserAddPresenter(
-                        userProfileVM: viewModel)
+                        userProfileVM: userProfileVM
+                    )
                 ),
                 userFetchUseCase: UserFetchUseCase(
-                    userRepository: UserRepository(),
+                    userRepository: UserRepository(
+                        userDataStore: UserDataStore()
+                    ),
                     userFetchPresenter: UserFetchPresenter(
-                        userProfileVM: viewModel)
+                        userProfileVM: userProfileVM
+                    )
                 ),
                 userDeleteUseCase: UserDeleteUseCase(
-                    userRepository: UserRepository(),
+                    userRepository: UserRepository(
+                        userDataStore: UserDataStore()
+                    ),
                     userDeletePresenter: UserDeletePresenter(
-                        userProfileVM: viewModel)
+                        userProfileVM: userProfileVM
+                    )
+                )
+            ),
+            authController: AuthController(
+                authSignUpUseCase: AuthSignUpUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authSignUpPresenter: AuthSignUpPresenter(
+                        authSignUpVM: signUpVM
+                    )
+                ),
+                authSignInUseCase: AuthSignInUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authSignInPresenter: AuthSignInPresenter(
+                        authSignInVM: signInVM
+                    )
+                ),
+                authSignOutUseCase: AuthSignOutUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authSignOutPresenter: AuthSignOutPresenter(
+                        authSignOutVM: signOutVM
+                    )
+                )
+            ),
+            rootViewController: RootViewController(
+                rootViewUseCase: RootViewUseCase(
+                    rootViewPresenter: RootViewPresenter()
                 )
             )
         )
+        
         return view
     }
 }
