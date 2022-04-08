@@ -55,7 +55,7 @@ struct UserProfileView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 30)
                 VStack {
-                    ButtonView(text: "登録", color: .purple, buttonEnabled: !addButtonEnabled) {
+                    ButtonView(text: "登録", textColor: .white, color: .purple, buttonEnabled: !addButtonEnabled) {
                         createUser(name: name, gender: genderSelection)
                     }
                     .disabled(addButtonEnabled)
@@ -84,7 +84,7 @@ struct UserProfileView: View {
                     } message: {
                         Text("プロフィールを登録しました")
                     }
-                    ButtonView(text: "取得", color: .blue, buttonEnabled: fetchButtonEnabled) {
+                    ButtonView(text: "取得", textColor: .white, color: .blue, buttonEnabled: fetchButtonEnabled) {
                         fetchUser()
                     }
                     .disabled(!fetchButtonEnabled)
@@ -100,7 +100,7 @@ struct UserProfileView: View {
                     } message: {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
-                    ButtonView(text: "削除", color: .red, buttonEnabled: deleteButtonEnabled) {
+                    ButtonView(text: "削除", textColor: .white, color: .red, buttonEnabled: deleteButtonEnabled) {
                         fetchUser()
                         userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
                     }
@@ -113,7 +113,7 @@ struct UserProfileView: View {
                     } message: {
                         Text("プロフィールを削除しました")
                     }
-                    ButtonView(text: "サインアウト", color: .green, buttonEnabled: true) {
+                    ButtonView(text: "サインアウト", textColor: .white, color: .green, buttonEnabled: true) {
                         signOut()
                     }
                     .alert("成功", isPresented: $authSignOutVM.isShowSuccessSignOutAlert) {

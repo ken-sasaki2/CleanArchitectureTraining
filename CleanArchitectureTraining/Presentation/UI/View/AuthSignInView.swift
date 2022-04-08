@@ -46,7 +46,7 @@ struct AuthSignInView: View {
                     }
                 }
                 .padding(.top, 20)
-                ButtonView(text: "サインイン", color: .green, buttonEnabled: true) {
+                ButtonView(text: "サインイン", textColor: .white, color: .green, buttonEnabled: true) {
                     onTapSignInButton(email: email, password: password)
                 }
                 .padding(.top, 20)
