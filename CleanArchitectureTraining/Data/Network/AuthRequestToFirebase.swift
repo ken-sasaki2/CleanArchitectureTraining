@@ -57,4 +57,14 @@ final class AuthRequestToFirebase {
             }
         }
     }
+    
+    func signout() async throws {
+        do {
+            try Auth.auth().signOut()
+        } catch  let signOutError as NSError {
+            print("Fail sign out.")
+            print("Error message:", signOutError.debugDescription)
+            throw(signOutError)
+        }
+    }
 }
