@@ -21,4 +21,8 @@ final class RootViewController {
     func successSignIn() {
         rootViewUseCase.successSignIn()
     }
+    
+    func successSignOut() {
+        rootViewUseCase.successSignOut()
+    }
 }

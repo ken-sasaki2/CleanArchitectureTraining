@@ -10,6 +10,7 @@ import Foundation
 protocol RootViewUseCaseInterface {
     func successSignUp()
     func successSignIn()
+    func successSignOut()
 }
 
 final class RootViewUseCase: RootViewUseCaseInterface {
@@ -20,10 +21,14 @@ final class RootViewUseCase: RootViewUseCaseInterface {
     }
     
     func successSignUp() {
-        rootViewPresenter.changeSignInView()
+        rootViewPresenter.changeProfileView()
     }
     
     func successSignIn() {
         rootViewPresenter.changeProfileView()
+    }
+    
+    func successSignOut() {
+        rootViewPresenter.changeSignInView()
     }
 }
