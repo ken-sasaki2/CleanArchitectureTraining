@@ -79,6 +79,11 @@
 		D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CE827CA474D004B7F9B /* UserProfileController.swift */; };
 		D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */; };
 		D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */; };
+		D856A398280042F2001465EA /* AuthUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A397280042F2001465EA /* AuthUserEntity.swift */; };
+		D856A39928004415001465EA /* AuthUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A397280042F2001465EA /* AuthUserEntity.swift */; };
+		D856A39B28004611001465EA /* AuthUserFetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A39A28004611001465EA /* AuthUserFetchUseCase.swift */; };
+		D856A39C28004614001465EA /* AuthUserFetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A39A28004611001465EA /* AuthUserFetchUseCase.swift */; };
+		D856A39E280047A8001465EA /* AuthUserFetchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A39D280047A8001465EA /* AuthUserFetchPresenter.swift */; };
 		D858365927D23DF5003C207E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858365827D23DF5003C207E /* ButtonView.swift */; };
 		D858366227D3632D003C207E /* UserAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858366127D3632D003C207E /* UserAddPresenter.swift */; };
 		D85946D127D36F9D00ABA72A /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */; };
@@ -196,6 +201,9 @@
 		D84C6CE827CA474D004B7F9B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		D84C6CEE27CA4AD5004B7F9B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddUseCase.swift; sourceTree = "<group>"; };
+		D856A397280042F2001465EA /* AuthUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserEntity.swift; sourceTree = "<group>"; };
+		D856A39A28004611001465EA /* AuthUserFetchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserFetchUseCase.swift; sourceTree = "<group>"; };
+		D856A39D280047A8001465EA /* AuthUserFetchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserFetchPresenter.swift; sourceTree = "<group>"; };
 		D858365827D23DF5003C207E /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D858366127D3632D003C207E /* UserAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddPresenter.swift; sourceTree = "<group>"; };
 		D85946D027D36F9D00ABA72A /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
@@ -389,6 +397,7 @@
 				D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */,
 				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
 				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
+				D856A397280042F2001465EA /* AuthUserEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				D8EA876B27EB5024009BF8AA /* AuthSignInUseCase.swift */,
 				D80E42A427FDA81A003D2A06 /* AuthSignOutUseCase.swift */,
 				D80F6AE827E9B95800CF613B /* AuthSignUpUseCase.swift */,
+				D856A39A28004611001465EA /* AuthUserFetchUseCase.swift */,
 				D8F773DA27F3330400A1268F /* RootViewUseCase.swift */,
 				D84C6CF027CA4DB6004B7F9B /* UserAddUseCase.swift */,
 				D83274C027E36C6200492D8A /* UserDeleteUseCase.swift */,
@@ -498,6 +508,7 @@
 				D8EA876D27EB5990009BF8AA /* AuthSignInPresenter.swift */,
 				D80E42A627FDA9EE003D2A06 /* AuthSignOutPresenter.swift */,
 				D80F6AF527E9F10400CF613B /* AuthSignUpPresenter.swift */,
+				D856A39D280047A8001465EA /* AuthUserFetchPresenter.swift */,
 				D8F773DD27F334C000A1268F /* RootViewPresenter.swift */,
 				D858366127D3632D003C207E /* UserAddPresenter.swift */,
 				D828705727E373F2000DF0AF /* UserDeletePresenter.swift */,
@@ -870,6 +881,7 @@
 				D84C6CD827CA1439004B7F9B /* UserRequestToFirestore.swift in Sources */,
 				D8EA877427EB5D4A009BF8AA /* AuthSignInBuilder.swift in Sources */,
 				D8EA877227EB5B29009BF8AA /* AuthSignInView.swift in Sources */,
+				D856A39B28004611001465EA /* AuthUserFetchUseCase.swift in Sources */,
 				D8B0942927D8DEFF0054F138 /* GenderTranslator.swift in Sources */,
 				D8EA877027EB59F8009BF8AA /* AuthSignInViewModel.swift in Sources */,
 				D83274AA27E0BFC600492D8A /* UserDefaultsEntity.swift in Sources */,
@@ -879,11 +891,13 @@
 				D80F6AF327E9EA9600CF613B /* AuthSignUpBuilder.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
 				D80F6AF627E9F10400CF613B /* AuthSignUpPresenter.swift in Sources */,
+				D856A398280042F2001465EA /* AuthUserEntity.swift in Sources */,
 				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
 				D80F6AEB27E9C9B600CF613B /* AuthController.swift in Sources */,
 				D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */,
 				D80F6AED27E9D22600CF613B /* AuthResponseTypeTranslator.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
+				D856A39E280047A8001465EA /* AuthUserFetchPresenter.swift in Sources */,
 				D8D5205627DC538A0072121B /* UserFetchPresenter.swift in Sources */,
 				D8F773DE27F334C000A1268F /* RootViewPresenter.swift in Sources */,
 				D84C6CF127CA4DB6004B7F9B /* UserAddUseCase.swift in Sources */,
@@ -924,6 +938,7 @@
 				D80E42B327FDC204003D2A06 /* AuthSignOutPresenter.swift in Sources */,
 				D80F6ADC27E6FA5600CF613B /* UserDeletePresenter.swift in Sources */,
 				D80E42AB27FDC178003D2A06 /* AuthSignInViewModel.swift in Sources */,
+				D856A39928004415001465EA /* AuthUserEntity.swift in Sources */,
 				D80F6AD927E6F91400CF613B /* AuthRequestEntity.swift in Sources */,
 				D80F6AD727E6F8BB00CF613B /* AuthRequestToFirebaseTests.swift in Sources */,
 				D83274B327E236DC00492D8A /* UserDataStoreTests.swift in Sources */,
@@ -948,6 +963,7 @@
 				D85946DE27D49BFE00ABA72A /* UserAddPresenter.swift in Sources */,
 				D80F6AFB27EA050400CF613B /* AuthResponseType.swift in Sources */,
 				D80FE70527D76D2100E6A921 /* UserProfileView.swift in Sources */,
+				D856A39C28004614001465EA /* AuthUserFetchUseCase.swift in Sources */,
 				D8261DF727F8058D00BAEB73 /* UserFetchOutputData.swift in Sources */,
 				D80F6AE327E73ADF00CF613B /* AuthDataStore.swift in Sources */,
 				D8B0943427D980730054F138 /* GenderTranslatorTests.swift in Sources */,
