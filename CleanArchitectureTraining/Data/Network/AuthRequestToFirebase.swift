@@ -71,15 +71,15 @@ final class AuthRequestToFirebase {
     func fetchAuthCurrentUser() async -> AuthUserEntity? {
         let auth = Auth.auth()
         
-        if let currentUser = auth.currentUser {
-            let uid = currentUser.uid
-            let displayName = currentUser.displayName ?? ""
-            let email = currentUser.email ?? ""
-            let entity = AuthUserEntity(uid: uid, displayName: displayName, email: email)
-            
-            return entity
-        } else {
+        guard let currentUser = auth.currentUser else {
             return nil
         }
+        
+        let uid = currentUser.uid
+        let displayName = currentUser.displayName ?? ""
+        let email = currentUser.email ?? ""
+        let entity = AuthUserEntity(uid: uid, displayName: displayName, email: email)
+        
+        return entity
     }
 }

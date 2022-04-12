@@ -38,7 +38,7 @@ final class AuthDataStore: AuthDataStoreInterface {
     }
     
     func fetchAuthCurrentUser() async -> AuthUserEntity? {
-        let response = await authRequest.fetchAuthCurrentUser()
-        return response
+        let entity = await authRequest.fetchAuthCurrentUser()
+        return entity
     }
 }
