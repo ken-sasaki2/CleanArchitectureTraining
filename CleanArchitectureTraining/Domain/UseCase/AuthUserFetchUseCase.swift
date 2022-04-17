@@ -13,9 +13,9 @@ protocol AuthUserFetchUseCaseInterface {
 
 final class AuthUserFetchUseCase: AuthUserFetchUseCaseInterface {
     private let authRepository: AuthRepositoryInterface
-    private let authUserFetchPresenter: AuthUserFetchPresenter
+    private let authUserFetchPresenter: AuthUserFetchPresenterInterface
     
-    init(authRepository: AuthRepositoryInterface, authUserFetchPresenter: AuthUserFetchPresenter) {
+    init(authRepository: AuthRepositoryInterface, authUserFetchPresenter: AuthUserFetchPresenterInterface) {
         self.authRepository = authRepository
         self.authUserFetchPresenter = authUserFetchPresenter
     }

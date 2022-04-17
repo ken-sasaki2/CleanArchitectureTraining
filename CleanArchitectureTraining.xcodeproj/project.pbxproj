@@ -133,6 +133,7 @@
 		D8F773DC27F3330400A1268F /* RootViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DA27F3330400A1268F /* RootViewUseCase.swift */; };
 		D8F773DE27F334C000A1268F /* RootViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DD27F334C000A1268F /* RootViewPresenter.swift */; };
 		D8F773DF27F334C000A1268F /* RootViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DD27F334C000A1268F /* RootViewPresenter.swift */; };
+		D8F87D3E280C20EE002B112D /* DocumentIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 		D8F773D727F3329600A1268F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D8F773DA27F3330400A1268F /* RootViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUseCase.swift; sourceTree = "<group>"; };
 		D8F773DD27F334C000A1268F /* RootViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewPresenter.swift; sourceTree = "<group>"; };
+		D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIdEntity.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -404,6 +406,7 @@
 				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
 				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
 				D856A397280042F2001465EA /* AuthUserEntity.swift */,
+				D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				D82BCC3028044A66005B39C8 /* AuthUserModelTranslator.swift in Sources */,
 				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
 				D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */,
+				D8F87D3E280C20EE002B112D /* DocumentIdEntity.swift in Sources */,
 				D80F6ADF27E7282600CF613B /* AuthResponseTypeEntity.swift in Sources */,
 				D80F6AF327E9EA9600CF613B /* AuthSignUpBuilder.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,

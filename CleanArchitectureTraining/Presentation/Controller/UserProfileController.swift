@@ -18,8 +18,14 @@ final class UserProfileController {
         self.userDeleteUseCase = userDeleteUseCase
     }
     
-    func createUser(name: String, gender: Int) {
-        let inputData = UserAddInputData(name: name, gender: gender, createdAt: Date().timeIntervalSince1970)
+    func createUser(uid: String, name: String, gender: Int) {
+        let inputData = UserAddInputData(
+            uid: uid,
+            name: name,
+            gender: gender,
+            createdAt: Date().timeIntervalSince1970
+        )
+        
         Task {
             try await userAddUseCase.saveUser(inputData: inputData)
         }

@@ -11,13 +11,13 @@ final class AuthController {
     private let authSignUpUseCase: AuthSignUpUseCaseInterface
     private let authSignInUseCase: AuthSignInUseCaseInterface
     private let authSignOutuseCase: AuthSignOutUseCaseInterface
-    private let authUserFetchUseCase: AuthUserFetchUseCase
+    private let authUserFetchUseCase: AuthUserFetchUseCaseInterface
     
     init(
         authSignUpUseCase: AuthSignUpUseCaseInterface,
         authSignInUseCase: AuthSignInUseCaseInterface,
         authSignOutUseCase: AuthSignOutUseCaseInterface,
-        authUserFetchUseCase: AuthUserFetchUseCase
+        authUserFetchUseCase: AuthUserFetchUseCaseInterface
     ) {
         self.authSignUpUseCase = authSignUpUseCase
         self.authSignInUseCase = authSignInUseCase
@@ -47,7 +47,7 @@ final class AuthController {
     
     func fetchAuthCurrentUser() {
         Task {
-            authUserFetchUseCase.fetchAuthCurrentUser
+            await authUserFetchUseCase.fetchAuthCurrentUser()
         }
     }
 }
