@@ -17,10 +17,12 @@ final class UserProfileBuilder {
         let signUpVM = AuthSignUpViewModel()
         let signInVM = AuthSignInViewModel()
         let signOutVM = AuthSignOutViewModel()
+        let authUserFetchVM = AuthUserFetchViewModel()
         
         let view = UserProfileView(
             userProfileVM: userProfileVM,
             authSignOutVM: signOutVM,
+            authUserFetchVM: authUserFetchVM,
             userProfileController: UserProfileController(
                 userAddUseCase: UserAddUseCase(
                     userRepository: UserRepository(
@@ -70,6 +72,14 @@ final class UserProfileBuilder {
                     ),
                     authSignOutPresenter: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
+                    )
+                ),
+                authUserFetchUseCase: AuthUserFetchUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authUserFetchPresenter: AuthUserFetchPresenter(
+                        authUserFetchVM: authUserFetchVM
                     )
                 )
             ),
