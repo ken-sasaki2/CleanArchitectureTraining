@@ -11,15 +11,18 @@ final class AuthController {
     private let authSignUpUseCase: AuthSignUpUseCaseInterface
     private let authSignInUseCase: AuthSignInUseCaseInterface
     private let authSignOutuseCase: AuthSignOutUseCaseInterface
+    private let authUserFetchUseCase: AuthUserFetchUseCaseInterface
     
     init(
         authSignUpUseCase: AuthSignUpUseCaseInterface,
         authSignInUseCase: AuthSignInUseCaseInterface,
-        authSignOutUseCase: AuthSignOutUseCaseInterface
+        authSignOutUseCase: AuthSignOutUseCaseInterface,
+        authUserFetchUseCase: AuthUserFetchUseCaseInterface
     ) {
         self.authSignUpUseCase = authSignUpUseCase
         self.authSignInUseCase = authSignInUseCase
         self.authSignOutuseCase = authSignOutUseCase
+        self.authUserFetchUseCase = authUserFetchUseCase
     }
     
     func signUp(email: String, password: String) {
@@ -39,6 +42,12 @@ final class AuthController {
     func signOut() {
         Task {
             try await authSignOutuseCase.signOut()
+        }
+    }
+    
+    func fetchAuthCurrentUser() {
+        Task {
+            await authUserFetchUseCase.fetchAuthCurrentUser()
         }
     }
 }

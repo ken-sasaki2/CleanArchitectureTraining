@@ -11,6 +11,7 @@ protocol AuthDataStoreInterface {
     func signUp(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity
     func signIn(requestModel: AuthRequestModel) async -> AuthResponseTypeEntity
     func signOut() async throws
+    func fetchAuthCurrentUser() async -> AuthUserEntity?
 }
 
 final class AuthDataStore: AuthDataStoreInterface {
@@ -34,5 +35,10 @@ final class AuthDataStore: AuthDataStoreInterface {
         } catch {
             throw(error)
         }
+    }
+    
+    func fetchAuthCurrentUser() async -> AuthUserEntity? {
+        let entity = await authRequest.fetchAuthCurrentUser()
+        return entity
     }
 }

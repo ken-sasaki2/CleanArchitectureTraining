@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import CleanArchitectureTraining
 
 class UserRequestToFirestoreTests: XCTestCase {
     private let firestore = UserRequestToFirestore()
@@ -34,7 +33,11 @@ class UserRequestToFirestoreTests: XCTestCase {
         do {
             let user = try await firestore.fetchUser()
             print("Success test fetch user.")
-            print(user)
+            
+            XCTAssertEqual(user.uid, TestHelper.uid)
+            XCTAssertEqual(user.name, TestHelper.name)
+            XCTAssertEqual(user.gender, TestHelper.gender)
+            XCTAssertEqual(user.createdAt, TestHelper.createdAt)
         } catch {
             XCTFail("Fail test fetch user.")
         }
@@ -43,7 +46,7 @@ class UserRequestToFirestoreTests: XCTestCase {
     func testDeleteUser() async throws {
         try XCTSkipIf(true, "'documentId'を設定しないと削除できないのでスキップ")
         do {
-            try await firestore.deleteUser(documentId: "zqgRCxJlR0VRga6nLkSt")
+            try await firestore.deleteUser()
             print("Success test delete user.")
         } catch {
             XCTFail("Fail test delete user.")

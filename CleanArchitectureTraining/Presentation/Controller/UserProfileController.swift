@@ -18,8 +18,13 @@ final class UserProfileController {
         self.userDeleteUseCase = userDeleteUseCase
     }
     
-    func createUser(name: String, gender: Int) {
-        let inputData = UserAddInputData(name: name, gender: gender, createdAt: Date().timeIntervalSince1970)
+    func createUser(uid: String, name: String, gender: Int) {
+        let inputData = UserAddInputData(
+            name: name,
+            gender: gender,
+            createdAt: Date().timeIntervalSince1970
+        )
+        
         Task {
             try await userAddUseCase.saveUser(inputData: inputData)
         }
@@ -31,10 +36,9 @@ final class UserProfileController {
         }
     }
     
-    func deleteUser(outputData: UserFetchOutputData) {
-        let deleteData = UserDeleteData(documentid: outputData.documentId)
+    func deleteUser() {
         Task {
-            try await userDeleteUseCase.deleteUser(deleteData: deleteData)
+            try await userDeleteUseCase.deleteUser()
         }
     }
     

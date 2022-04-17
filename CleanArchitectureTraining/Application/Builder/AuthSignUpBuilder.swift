@@ -43,6 +43,14 @@ final class AuthSignUpBuilder {
                     authSignOutPresenter: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
                     )
+                ),
+                authUserFetchUseCase: AuthUserFetchUseCase(
+                    authRepository: AuthRepository(
+                        authDataStore: AuthDataStore()
+                    ),
+                    authUserFetchPresenter: AuthUserFetchPresenter(
+                        authUserFetchVM: AuthUserFetchViewModel()
+                    )
                 )
             ),
             rootViewController: RootViewController(

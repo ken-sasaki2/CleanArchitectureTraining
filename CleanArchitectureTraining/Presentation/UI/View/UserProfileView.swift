@@ -10,6 +10,7 @@ import SwiftUI
 struct UserProfileView: View {
     @ObservedObject var userProfileVM: UserProfileViewModel
     @ObservedObject var authSignOutVM: AuthSignOutViewModel
+    @ObservedObject var authUserFetchVM: AuthUserFetchViewModel
     @State private var name = ""
     @State private var genderSelection = 0
     @State private var addButtonEnabled = true
@@ -56,7 +57,7 @@ struct UserProfileView: View {
                 .padding(.bottom, 30)
                 VStack {
                     ButtonView(text: "登録", textColor: .white, color: .purple, buttonEnabled: !addButtonEnabled) {
-                        createUser(name: name, gender: genderSelection)
+                        createUser(uid: authUserFetchVM.authUserModel.uid, name: name, gender: genderSelection)
                     }
                     .disabled(addButtonEnabled)
                     .alert("登録失敗", isPresented: $userProfileVM.isShowUserNameAlert) {
@@ -101,8 +102,7 @@ struct UserProfileView: View {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
                     ButtonView(text: "削除", textColor: .white, color: .red, buttonEnabled: deleteButtonEnabled) {
-                        fetchUser()
-                        userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
+                        userProfileController.deleteUser()
                     }
                     .disabled(!deleteButtonEnabled)
                     .alert("削除成功", isPresented: $userProfileVM.isShowSuccessDeleteUserAlert) {
@@ -134,13 +134,14 @@ struct UserProfileView: View {
         }
         .onAppear {
             toggleButtonEnabled()
+            fetchAuthUser()
         }
     }
 }
 
 extension UserProfileView {
-    private func createUser(name: String, gender: Int) {
-        userProfileController.createUser(name: name, gender: gender)
+    private func createUser(uid: String, name: String, gender: Int) {
+        userProfileController.createUser(uid: uid, name: name, gender: gender)
     }
     
     private func fetchUser() {
@@ -156,6 +157,10 @@ extension UserProfileView {
     
     private func signOut() {
         authController.signOut()
+    }
+    
+    private func fetchAuthUser() {
+        authController.fetchAuthCurrentUser()
     }
 }
 

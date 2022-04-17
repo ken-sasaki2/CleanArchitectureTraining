@@ -67,4 +67,19 @@ final class AuthRequestToFirebase {
             throw(signOutError)
         }
     }
+    
+    func fetchAuthCurrentUser() async -> AuthUserEntity? {
+        let auth = Auth.auth()
+        
+        guard let currentUser = auth.currentUser else {
+            return nil
+        }
+        
+        let uid = currentUser.uid
+        let displayName = currentUser.displayName ?? ""
+        let email = currentUser.email ?? ""
+        let entity = AuthUserEntity(uid: uid, displayName: displayName, email: email)
+        
+        return entity
+    }
 }

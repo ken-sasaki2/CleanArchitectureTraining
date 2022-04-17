@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserDeleteUseCaseInterface {
-    func deleteUser(deleteData: UserDeleteData) async throws
+    func deleteUser() async throws
 }
 
 final class UserDeleteUseCase: UserDeleteUseCaseInterface {
@@ -20,9 +20,9 @@ final class UserDeleteUseCase: UserDeleteUseCaseInterface {
         self.userDeletePresenter = userDeletePresenter
     }
     
-    func deleteUser(deleteData: UserDeleteData) async throws {
+    func deleteUser() async throws {
         do {
-            try await userRepository.deleteUser(deleteData: deleteData)
+            try await userRepository.deleteUser()
             userRepository.setIsUserDataSaved(isSaved: false)
             userDeletePresenter.successDeleteUser()
         } catch {
