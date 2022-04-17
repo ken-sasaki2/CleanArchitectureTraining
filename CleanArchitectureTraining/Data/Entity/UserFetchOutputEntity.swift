@@ -8,12 +8,14 @@
 import Foundation
 
 struct UserFetchOutputEntity {
+    var uid: String
     var name: String
     var gender: Int
     var createdAt: Double
     var documentId: String
     
-    init(name: String, gender: Int, createdAt: Double, documentId: String) {
+    init(uid: String, name: String, gender: Int, createdAt: Double, documentId: String) {
+        self.uid = uid
         self.name = name
         self.gender = gender
         self.createdAt = createdAt

@@ -15,7 +15,7 @@ final class UserProfileViewModel: ObservableObject {
     @Published var isShowNextPage = false
     @Published var isShowFailFetchUserAlert = false
     @Published var isUserDataSaved = false
-    @Published var userFetchOutputData = UserFetchOutputData(name: "", gender: "", createdDay: "", documentId: "")
+    @Published var userFetchOutputData = UserFetchOutputData(uid: "", name: "", gender: "", createdDay: "", documentId: "")
     @Published var isShowSuccessDeleteUserAlert = false
     @Published var isShowFailDeleteUser = false
 }

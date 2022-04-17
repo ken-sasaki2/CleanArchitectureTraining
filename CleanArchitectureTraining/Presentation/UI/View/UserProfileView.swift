@@ -102,8 +102,7 @@ struct UserProfileView: View {
                         Text("取得に失敗しました。通信状態が良好な環境で再度お試しください。")
                     }
                     ButtonView(text: "削除", textColor: .white, color: .red, buttonEnabled: deleteButtonEnabled) {
-                        fetchUser()
-                        userProfileController.deleteUser(outputData: userProfileVM.userFetchOutputData)
+                        userProfileController.deleteUser()
                     }
                     .disabled(!deleteButtonEnabled)
                     .alert("削除成功", isPresented: $userProfileVM.isShowSuccessDeleteUserAlert) {

@@ -32,7 +32,6 @@
 		D80F6ADA27E6FA3900CF613B /* UserDeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BE27E34B7100492D8A /* UserDeleteData.swift */; };
 		D80F6ADB27E6FA3F00CF613B /* UserDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274C027E36C6200492D8A /* UserDeleteUseCase.swift */; };
 		D80F6ADC27E6FA5600CF613B /* UserDeletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828705727E373F2000DF0AF /* UserDeletePresenter.swift */; };
-		D80F6ADD27E6FA5E00CF613B /* UserDeleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */; };
 		D80F6ADF27E7282600CF613B /* AuthResponseTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */; };
 		D80F6AE027E7282A00CF613B /* AuthResponseTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */; };
 		D80F6AE227E73AB500CF613B /* AuthDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F6AE127E73AB500CF613B /* AuthDataStore.swift */; };
@@ -64,7 +63,6 @@
 		D83274B327E236DC00492D8A /* UserDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274B227E236DC00492D8A /* UserDataStoreTests.swift */; };
 		D83274B427E237D800492D8A /* UserDefaultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */; };
 		D83274B527E237EB00492D8A /* NextPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274A727E076F700492D8A /* NextPageView.swift */; };
-		D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */; };
 		D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274BE27E34B7100492D8A /* UserDeleteData.swift */; };
 		D83274C127E36C6200492D8A /* UserDeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83274C027E36C6200492D8A /* UserDeleteUseCase.swift */; };
 		D83D000D27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D000C27C9DBFA008905F3 /* CleanArchitectureTrainingApp.swift */; };
@@ -133,7 +131,6 @@
 		D8F773DC27F3330400A1268F /* RootViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DA27F3330400A1268F /* RootViewUseCase.swift */; };
 		D8F773DE27F334C000A1268F /* RootViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DD27F334C000A1268F /* RootViewPresenter.swift */; };
 		D8F773DF27F334C000A1268F /* RootViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F773DD27F334C000A1268F /* RootViewPresenter.swift */; };
-		D8F87D3E280C20EE002B112D /* DocumentIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,7 +184,6 @@
 		D83274A727E076F700492D8A /* NextPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
 		D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEntity.swift; sourceTree = "<group>"; };
 		D83274B227E236DC00492D8A /* UserDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreTests.swift; sourceTree = "<group>"; };
-		D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteEntity.swift; sourceTree = "<group>"; };
 		D83274BE27E34B7100492D8A /* UserDeleteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteData.swift; sourceTree = "<group>"; };
 		D83274C027E36C6200492D8A /* UserDeleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteUseCase.swift; sourceTree = "<group>"; };
 		D83D000927C9DBFA008905F3 /* CleanArchitectureTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitectureTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,7 +236,6 @@
 		D8F773D727F3329600A1268F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D8F773DA27F3330400A1268F /* RootViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUseCase.swift; sourceTree = "<group>"; };
 		D8F773DD27F334C000A1268F /* RootViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewPresenter.swift; sourceTree = "<group>"; };
-		D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentIdEntity.swift; sourceTree = "<group>"; };
 		E3B9C7AE7B8E86060AA702C6 /* Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests/Pods-CleanArchitectureTraining-CleanArchitectureTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -399,14 +394,12 @@
 		D84C6CD627CA0860004B7F9B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */,
 				D80F6AD427E6F7A800CF613B /* AuthRequestEntity.swift */,
+				D80F6ADE27E7282600CF613B /* AuthResponseTypeEntity.swift */,
+				D856A397280042F2001465EA /* AuthUserEntity.swift */,
 				D8A658E127D0781200B238FA /* UserAddInputEntity.swift */,
 				D83274A927E0BFC600492D8A /* UserDefaultsEntity.swift */,
-				D83274BC27E34B0500492D8A /* UserDeleteEntity.swift */,
 				D8B0941E27D83ED90054F138 /* UserFetchOutputEntity.swift */,
-				D856A397280042F2001465EA /* AuthUserEntity.swift */,
-				D8F87D3D280C20EE002B112D /* DocumentIdEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -901,7 +894,6 @@
 				D82BCC3028044A66005B39C8 /* AuthUserModelTranslator.swift in Sources */,
 				D84C6CE927CA474D004B7F9B /* UserProfileController.swift in Sources */,
 				D83274BF27E34B7100492D8A /* UserDeleteData.swift in Sources */,
-				D8F87D3E280C20EE002B112D /* DocumentIdEntity.swift in Sources */,
 				D80F6ADF27E7282600CF613B /* AuthResponseTypeEntity.swift in Sources */,
 				D80F6AF327E9EA9600CF613B /* AuthSignUpBuilder.swift in Sources */,
 				D84C6CEF27CA4AD5004B7F9B /* UserRepository.swift in Sources */,
@@ -909,7 +901,6 @@
 				D856A398280042F2001465EA /* AuthUserEntity.swift in Sources */,
 				D8DF669C27D6E5A000D78A99 /* AppDelegate.swift in Sources */,
 				D80F6AEB27E9C9B600CF613B /* AuthController.swift in Sources */,
-				D83274BD27E34B0500492D8A /* UserDeleteEntity.swift in Sources */,
 				D80F6AED27E9D22600CF613B /* AuthResponseTypeTranslator.swift in Sources */,
 				D8DF669927D6E0F200D78A99 /* UserProfileBuilder.swift in Sources */,
 				D856A39E280047A8001465EA /* AuthUserFetchPresenter.swift in Sources */,
@@ -987,7 +978,6 @@
 				D8D5205A27DC54EA0072121B /* UserFetchUseCase.swift in Sources */,
 				D863CBAA27D9ED2800B9B770 /* CreatedDayTranslatorTests.swift in Sources */,
 				D80E42AF27FDC1A2003D2A06 /* AuthRepository.swift in Sources */,
-				D80F6ADD27E6FA5E00CF613B /* UserDeleteEntity.swift in Sources */,
 				D80F6AD827E6F91200CF613B /* AuthRequestToFirebase.swift in Sources */,
 				D89FE62C27D4C756007231C9 /* TestHelper.swift in Sources */,
 				D80FE70727D76E7F00E6A921 /* UserProfileController.swift in Sources */,

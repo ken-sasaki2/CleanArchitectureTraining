@@ -8,13 +8,11 @@
 import Foundation
 
 struct UserAddInputData {
-    var uid: String
     var name: String
     var gender: Int
     var createdAt: TimeInterval
     
-    init(uid: String, name: String, gender: Int, createdAt: TimeInterval) {
-        self.uid = uid
+    init(name: String, gender: Int, createdAt: TimeInterval) {
         self.name = name
         self.gender = gender
         self.createdAt = createdAt

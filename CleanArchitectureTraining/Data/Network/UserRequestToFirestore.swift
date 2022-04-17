@@ -9,11 +9,15 @@ import Firebase
 import FirebaseAuth
 
 final class UserRequestToFirestore {
-    private let reference = Firestore.firestore().collection("users").document("123").collection("user")
+    private let reference = Firestore.firestore().collection("users")
+    private var uid: String {
+        Auth.auth().currentUser?.uid ?? ""
+    }
     
     func saveUser(inputEntity: UserAddInputEntity) async throws -> Void {
         return try await withCheckedThrowingContinuation { continuation in
-            reference.addDocument(data: [
+            reference.document(uid).collection("user").addDocument(data: [
+                "uid" : uid,
                 "name" : inputEntity.name,
                 "gender" : inputEntity.gender,
                 "createdAt" : inputEntity.createdAt
@@ -31,7 +35,7 @@ final class UserRequestToFirestore {
     
     func fetchUser() async throws -> UserFetchOutputEntity {
         return try await withCheckedThrowingContinuation({ continuation in
-            reference.getDocuments { snapShot, error in
+            reference.document(uid).collection("user").getDocuments { snapShot, error in
                 if let error = error {
                     print("Error getting documents:", error)
                     continuation.resume(throwing: error)
@@ -40,12 +44,14 @@ final class UserRequestToFirestore {
                 if let snapshotDocuments = snapShot?.documents {
                     snapshotDocuments.forEach { document in
                         let data = document.data()
-                        if let name = data["name"] as? String,
+                        if let uid = data["uid"] as? String,
+                           let name = data["name"] as? String,
                            let gender = data["gender"] as? Int,
                            let createdAt = data["createdAt"] as? Double,
                            let documentId = document.documentID as String? {
                             
                             let entity = UserFetchOutputEntity(
+                                uid: uid,
                                 name: name,
                                 gender: gender,
                                 createdAt: createdAt,
@@ -64,13 +70,19 @@ final class UserRequestToFirestore {
     }
     
     
-    func deleteUser(documentId: String) async throws -> Void {
+    func deleteUser() async throws -> Void {
         return try await withCheckedThrowingContinuation({ continuation in
-            reference.document(documentId).delete() { error in
+            reference.document(uid).collection("user").getDocuments { snapShot, error in
                 if let error = error {
-                    print("Error removing document:", error)
+                    print("Error getting documents:", error)
                     continuation.resume(throwing: error)
-                } else {
+                }
+                
+                if let snapshotDocuments = snapShot?.documents {
+                    snapshotDocuments.forEach { document in
+                        document.reference.delete()
+                    }
+                    
                     print("Success remove document.")
                     continuation.resume(returning: ())
                 }
