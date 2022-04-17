@@ -19,15 +19,16 @@ class UserFetchOutputDataTranslatorTests: XCTestCase {
 
     func testTranslate() throws {
         let entity = UserFetchOutputEntity(
+            uid: TestHelper.uid,
             name: TestHelper.name,
             gender: TestHelper.gender,
             createdAt: TestHelper.createdAt,
-            documentId: TestHelper.documentId
+            documentId: ""
         )
         let data = UserFetchOutputDataTranslator.shared.translate(entity: entity)
+        XCTAssertEqual(data.uid, TestHelper.uid)
         XCTAssert(data.name == "test_user")
         XCTAssert(data.gender == "男性")
         XCTAssert(data.createdDay == "2022年3月8日")
-        XCTAssert(data.documentId == "123")
     }
 }
