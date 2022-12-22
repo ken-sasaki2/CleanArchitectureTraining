@@ -54,7 +54,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignUpPresenter: AuthSignUpPresenter(
+                    output: AuthSignUpPresenter(
                         authSignUpVM: signUpVM
                     )
                 ),

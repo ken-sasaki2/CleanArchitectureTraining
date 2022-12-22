@@ -24,7 +24,7 @@ final class AuthSignUpBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignUpPresenter: AuthSignUpPresenter(
+                    output: AuthSignUpPresenter(
                         authSignUpVM: signUpVM
                     )
                 ),
