@@ -32,7 +32,7 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignInPresenter: AuthSignInPresenter(
+                    output: AuthSignInPresenter(
                         authSignInVM: signInVM
                     )
                 ),

@@ -28,7 +28,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userAddPresenter: UserAddPresenter(
+                    output: UserAddPresenter(
                         userProfileVM: userProfileVM
                     )
                 ),
@@ -62,7 +62,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignInPresenter: AuthSignInPresenter(
+                    output: AuthSignInPresenter(
                         authSignInVM: signInVM
                     )
                 ),

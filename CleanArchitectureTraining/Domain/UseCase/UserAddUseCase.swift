@@ -7,17 +7,24 @@
 
 import Foundation
 
-protocol UserAddUseCaseInterface {
+protocol UserAddUseCaseInput {
     func saveUser(inputData: UserAddInputData) async throws -> Void
 }
 
-final class UserAddUseCase: UserAddUseCaseInterface {
+protocol UserAddUseCaseOutput {
+    func invalidUserName()
+    func invalidGender()
+    func successSaveUser()
+    func failSaveUser()
+}
+
+final class UserAddUseCase: UserAddUseCaseInput {
     private let userRepository: UserRepositoryInterface
-    private let userAddPresenter: UserAddPresenterInterface
+    private let output: UserAddUseCaseOutput
     
-    init(userRepository: UserRepositoryInterface, userAddPresenter: UserAddPresenterInterface) {
+    init(userRepository: UserRepositoryInterface, output: UserAddUseCaseOutput) {
         self.userRepository = userRepository
-        self.userAddPresenter = userAddPresenter
+        self.output = output
     }
     
     func saveUser(inputData: UserAddInputData) async throws -> Void {
@@ -26,20 +33,20 @@ final class UserAddUseCase: UserAddUseCaseInterface {
             let isValidGender = isValidGender(gender: inputData.gender)
             
             if !isValidUserName {
-                userAddPresenter.invalidUserName()
+                output.invalidUserName()
                 return
             }
             
             if !isValidGender {
-                userAddPresenter.invalidGender()
+                output.invalidGender()
                 return
             }
             
             try await userRepository.saveUser(inputData: inputData)
             userRepository.setIsUserDataSaved(isSaved: true)
-            userAddPresenter.successSaveUser()
+            output.successSaveUser()
         } catch {
-            userAddPresenter.failSaveUser()
+            output.failSaveUser()
         }
     }
     

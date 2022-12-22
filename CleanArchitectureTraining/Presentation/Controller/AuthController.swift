@@ -9,13 +9,13 @@ import Foundation
 
 final class AuthController {
     private let authSignUpUseCase: AuthSignUpUseCaseInterface
-    private let authSignInUseCase: AuthSignInUseCaseInterface
+    private let authSignInUseCase: AuthSignInUseCaseInput
     private let authSignOutuseCase: AuthSignOutUseCaseInterface
     private let authUserFetchUseCase: AuthUserFetchUseCaseInterface
     
     init(
         authSignUpUseCase: AuthSignUpUseCaseInterface,
-        authSignInUseCase: AuthSignInUseCaseInterface,
+        authSignInUseCase: AuthSignInUseCaseInput,
         authSignOutUseCase: AuthSignOutUseCaseInterface,
         authUserFetchUseCase: AuthUserFetchUseCaseInterface
     ) {
