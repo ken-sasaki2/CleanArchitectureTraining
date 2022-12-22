@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol AuthUserFetchPresenterInterface {
-    func successFetchedUser(model: AuthUserModel)
-    func failFetchedUser()
-}
-
-final class AuthUserFetchPresenter: AuthUserFetchPresenterInterface {
+final class AuthUserFetchPresenter: AuthUserFetchUseCaseOutput {
     let authUserFetchVM: AuthUserFetchViewModel
     
     init(authUserFetchVM: AuthUserFetchViewModel) {

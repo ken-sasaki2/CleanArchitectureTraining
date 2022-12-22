@@ -48,7 +48,7 @@ final class AuthSignUpBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authUserFetchPresenter: AuthUserFetchPresenter(
+                    output: AuthUserFetchPresenter(
                         authUserFetchVM: AuthUserFetchViewModel()
                     )
                 )

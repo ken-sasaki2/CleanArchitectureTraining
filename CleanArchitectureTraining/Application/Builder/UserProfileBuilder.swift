@@ -78,7 +78,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authUserFetchPresenter: AuthUserFetchPresenter(
+                    output: AuthUserFetchPresenter(
                         authUserFetchVM: authUserFetchVM
                     )
                 )

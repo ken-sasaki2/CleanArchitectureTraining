@@ -11,13 +11,13 @@ final class AuthController {
     private let authSignUpUseCase: AuthSignUpUseCaseInput
     private let authSignInUseCase: AuthSignInUseCaseInput
     private let authSignOutuseCase: AuthSignOutUseCaseInput
-    private let authUserFetchUseCase: AuthUserFetchUseCaseInterface
+    private let authUserFetchUseCase: AuthUserFetchUseCaseInput
     
     init(
         authSignUpUseCase: AuthSignUpUseCaseInput,
         authSignInUseCase: AuthSignInUseCaseInput,
         authSignOutUseCase: AuthSignOutUseCaseInput,
-        authUserFetchUseCase: AuthUserFetchUseCaseInterface
+        authUserFetchUseCase: AuthUserFetchUseCaseInput
     ) {
         self.authSignUpUseCase = authSignUpUseCase
         self.authSignInUseCase = authSignInUseCase
