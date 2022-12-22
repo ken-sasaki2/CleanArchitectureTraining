@@ -36,7 +36,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userFetchPresenter: UserFetchPresenter(
+                    output: UserFetchPresenter(
                         userProfileVM: userProfileVM
                     )
                 ),

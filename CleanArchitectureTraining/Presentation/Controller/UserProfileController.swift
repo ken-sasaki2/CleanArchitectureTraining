@@ -9,10 +9,10 @@ import Foundation
 
 final class UserProfileController {
     private let userAddUseCase: UserAddUseCaseInput
-    private let userFetchUseCase: UserFetchUseCase
+    private let userFetchUseCase: UserFetchUseCaseInput
     private let userDeleteUseCase: UserDeleteUseCaseInput
     
-    init(userAddUseCase: UserAddUseCaseInput, userFetchUseCase: UserFetchUseCase, userDeleteUseCase: UserDeleteUseCaseInput) {
+    init(userAddUseCase: UserAddUseCaseInput, userFetchUseCase: UserFetchUseCaseInput, userDeleteUseCase: UserDeleteUseCaseInput) {
         self.userAddUseCase = userAddUseCase
         self.userFetchUseCase = userFetchUseCase
         self.userDeleteUseCase = userDeleteUseCase
