@@ -44,7 +44,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userDeletePresenter: UserDeletePresenter(
+                    output: UserDeletePresenter(
                         userProfileVM: userProfileVM
                     )
                 )
