@@ -25,17 +25,18 @@ class UserAddUseCaseTests: XCTestCase {
         let useCase = UserAddUseCase(userRepository: repository, output: output)
         
         XCTContext.runActivity(named: "nameが2文字以上10文字以下の場合") { _ in
-            let result = useCase.isValidUserName(name: TestHelper.name)
+            let name = "xx"
+            let result = useCase.isValidUserName(name: name)
             XCTAssert(result == true)
         }
         XCTContext.runActivity(named:"nameが2文字未満の場合") { _ in
-            let input = "x"
-            let result = useCase.isValidUserName(name: input)
+            let name = "x"
+            let result = useCase.isValidUserName(name: name)
             XCTAssert(result == false)
         }
         XCTContext.runActivity(named:"nameが10文字超過の場合") { _ in
-            let input = "xxxxx_xxxxx"
-            let result = useCase.isValidUserName(name: input)
+            let name = "xxxxxxxxxxx"
+            let result = useCase.isValidUserName(name: name)
             XCTAssert(result == false)
         }
     }
