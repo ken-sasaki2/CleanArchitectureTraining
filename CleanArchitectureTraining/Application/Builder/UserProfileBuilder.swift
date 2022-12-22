@@ -70,7 +70,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignOutPresenter: AuthSignOutPresenter(
+                    output: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
                     )
                 ),

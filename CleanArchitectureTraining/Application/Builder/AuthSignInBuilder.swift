@@ -40,7 +40,7 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignOutPresenter: AuthSignOutPresenter(
+                    output: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
                     )
                 ),
