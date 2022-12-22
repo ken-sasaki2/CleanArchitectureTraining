@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol UserDeletePresenterInterface {
-    func successDeleteUser()
-    func failDeleteUser()
-}
-
-final class UserDeletePresenter: UserDeletePresenterInterface {
+final class UserDeletePresenter: UserDeleteUseCaseOutput {
     var userProfileVM: UserProfileViewModel
     
     init(userProfileVM: UserProfileViewModel) {

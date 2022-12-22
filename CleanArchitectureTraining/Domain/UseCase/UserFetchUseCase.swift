@@ -7,33 +7,39 @@
 
 import Foundation
 
-protocol UserFetchUseCaseInterface {
+protocol UserFetchUseCaseInput {
     func fetchUser() async throws -> Void
     func getIsUserDataSaved()
 }
 
-final class UserFetchUseCase: UserFetchUseCaseInterface {
+protocol UserFetchUseCaseOutput {
+    func outputUserData(outputData: UserFetchOutputData)
+    func failFetchUser()
+    func outputIsUserDataSaved(isSaved: Bool)
+}
+
+final class UserFetchUseCase: UserFetchUseCaseInput {
     private let userRepository: UserRepositoryInterface
-    private let userFetchPresenter: UserFetchPresenterInterface
+    private let output: UserFetchUseCaseOutput
     
-    init(userRepository: UserRepositoryInterface, userFetchPresenter: UserFetchPresenterInterface) {
+    init(userRepository: UserRepositoryInterface, output: UserFetchUseCaseOutput) {
         self.userRepository = userRepository
-        self.userFetchPresenter = userFetchPresenter
+        self.output = output
     }
     
     func fetchUser() async throws -> Void {
         do {
             let entity = try await userRepository.fetchUser()
             let outputData = UserFetchOutputDataTranslator.shared.translate(entity: entity)
-            userFetchPresenter.outputUserData(outputData: outputData)
+            output.outputUserData(outputData: outputData)
             return
         } catch {
-            userFetchPresenter.failFetchUser()
+            output.failFetchUser()
         }
     }
     
     func getIsUserDataSaved() {
         let isSaved = userRepository.getIsUserDataSaved()
-        userFetchPresenter.outputIsUserDataSaved(isSaved: isSaved)
+        output.outputIsUserDataSaved(isSaved: isSaved)
     }
 }

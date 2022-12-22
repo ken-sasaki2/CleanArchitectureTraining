@@ -22,10 +22,6 @@ final class UserRepository: UserRepositoryInterface {
         self.userDataStore = userDataStore
     }
     
-    convenience init() {
-        self.init(userDataStore: UserDataStore())
-    }
-    
     func saveUser(inputData: UserAddInputData) async throws -> Void {
         do {
             try await userDataStore.saveUser(inputData: inputData)

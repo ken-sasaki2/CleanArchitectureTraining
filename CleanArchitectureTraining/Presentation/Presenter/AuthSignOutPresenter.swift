@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol AuthSignOutPresenterInterface {
-    func successSignOut()
-    func failSignOut()
-}
-
-final class AuthSignOutPresenter: AuthSignOutPresenterInterface {
+final class AuthSignOutPresenter: AuthSignOutUseCaseOutput {
     let authSignOutVM: AuthSignOutViewModel
     
     init(authSignOutVM: AuthSignOutViewModel) {

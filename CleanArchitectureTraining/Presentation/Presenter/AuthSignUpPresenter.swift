@@ -7,16 +7,7 @@
 
 import Foundation
 
-protocol AuthSignUpPresenterInterface {
-    func successSignUp()
-    func failInvalidEmail()
-    func failWeakPassword()
-    func failEmailAlreadyInUse()
-    func failNetworkError()
-    func failOtherError()
-}
-
-final class AuthSignUpPresenter: AuthSignUpPresenterInterface {
+final class AuthSignUpPresenter: AuthSignUpUseCaseOutput {
     let authSignUpVM: AuthSignUpViewModel
     
     init(authSignUpVM: AuthSignUpViewModel) {

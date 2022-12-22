@@ -8,9 +8,9 @@
 import Foundation
 
 final class RootViewController {
-    private let rootViewUseCase: RootViewUseCaseInterface
+    private let rootViewUseCase: RootViewUseCaseInput
     
-    init(rootViewUseCase: RootViewUseCaseInterface) {
+    init(rootViewUseCase: RootViewUseCaseInput) {
         self.rootViewUseCase = rootViewUseCase
     }
     

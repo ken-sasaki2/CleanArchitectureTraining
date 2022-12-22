@@ -8,16 +8,16 @@
 import Foundation
 
 final class AuthController {
-    private let authSignUpUseCase: AuthSignUpUseCaseInterface
-    private let authSignInUseCase: AuthSignInUseCaseInterface
-    private let authSignOutuseCase: AuthSignOutUseCaseInterface
-    private let authUserFetchUseCase: AuthUserFetchUseCaseInterface
+    private let authSignUpUseCase: AuthSignUpUseCaseInput
+    private let authSignInUseCase: AuthSignInUseCaseInput
+    private let authSignOutuseCase: AuthSignOutUseCaseInput
+    private let authUserFetchUseCase: AuthUserFetchUseCaseInput
     
     init(
-        authSignUpUseCase: AuthSignUpUseCaseInterface,
-        authSignInUseCase: AuthSignInUseCaseInterface,
-        authSignOutUseCase: AuthSignOutUseCaseInterface,
-        authUserFetchUseCase: AuthUserFetchUseCaseInterface
+        authSignUpUseCase: AuthSignUpUseCaseInput,
+        authSignInUseCase: AuthSignInUseCaseInput,
+        authSignOutUseCase: AuthSignOutUseCaseInput,
+        authUserFetchUseCase: AuthUserFetchUseCaseInput
     ) {
         self.authSignUpUseCase = authSignUpUseCase
         self.authSignInUseCase = authSignInUseCase

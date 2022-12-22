@@ -7,17 +7,26 @@
 
 import Foundation
 
-protocol AuthSignInUseCaseInterface {
+protocol AuthSignInUseCaseInput {
     func signIn(requestModel: AuthRequestModel) async
 }
 
-final class AuthSignInUseCase: AuthSignInUseCaseInterface {
+protocol AuthSignUseCaseOutput {
+    func successSignIn()
+    func failInvalidEmail()
+    func failWeakPassword()
+    func failEmailAlreadyInUse()
+    func failNetworkError()
+    func failOtherError()
+}
+
+final class AuthSignInUseCase: AuthSignInUseCaseInput {
     private let authRepository: AuthRepositoryInterface
-    private let authSignInPresenter: AuthSignInPresenterInterface
+    private let output: AuthSignUseCaseOutput
     
-    init(authRepository: AuthRepositoryInterface, authSignInPresenter: AuthSignInPresenterInterface) {
+    init(authRepository: AuthRepositoryInterface, output: AuthSignUseCaseOutput) {
         self.authRepository = authRepository
-        self.authSignInPresenter = authSignInPresenter
+        self.output = output
     }
     
     func signIn(requestModel: AuthRequestModel) async {
@@ -26,17 +35,17 @@ final class AuthSignInUseCase: AuthSignInUseCaseInterface {
         
         switch responceType {
         case .success:
-            authSignInPresenter.successSignIn()
+            output.successSignIn()
         case .invalidEmail:
-            authSignInPresenter.failInvalidEmail()
+            output.failInvalidEmail()
         case .weakPassword:
-            authSignInPresenter.failWeakPassword()
+            output.failWeakPassword()
         case .emailAlreadyInUse:
-            authSignInPresenter.failEmailAlreadyInUse()
+            output.failEmailAlreadyInUse()
         case .networkError:
-            authSignInPresenter.failNetworkError()
+            output.failNetworkError()
         case .otherError:
-            authSignInPresenter.failOtherError()
+            output.failOtherError()
         }
     }
 }

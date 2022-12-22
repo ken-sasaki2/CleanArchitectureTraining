@@ -6,15 +6,8 @@
 //
 
 import Foundation
- 
-protocol RootViewPresenterInterface {
-    func changeProfileView()
-    func changeSignInView()
-    func alreadySignedUpUser()
-    func notSignedUpUser()
-}
 
-final class RootViewPresenter: RootViewPresenterInterface {
+final class RootViewPresenter: RootViewUseCaseOutput {
     
     func changeProfileView() {
         RootViewModel.shared.changeRootView(rootView: .profile)

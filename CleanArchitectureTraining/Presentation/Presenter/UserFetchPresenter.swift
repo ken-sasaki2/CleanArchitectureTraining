@@ -7,13 +7,7 @@
 
 import Foundation
 
-protocol UserFetchPresenterInterface {
-    func outputUserData(outputData: UserFetchOutputData)
-    func failFetchUser()
-    func outputIsUserDataSaved(isSaved: Bool)
-}
-
-final class UserFetchPresenter: UserFetchPresenterInterface {
+final class UserFetchPresenter: UserFetchUseCaseOutput {
     var userProfileVM: UserProfileViewModel
     
     init(userProfileVM: UserProfileViewModel) {

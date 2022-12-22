@@ -7,14 +7,7 @@
 
 import Foundation
 
-protocol UserAddPresenterInterface {
-    func invalidUserName()
-    func invalidGender()
-    func successSaveUser()
-    func failSaveUser()
-}
-
-final class UserAddPresenter: UserAddPresenterInterface {
+final class UserAddPresenter: UserAddUseCaseOutput {
     var userProfileVM: UserProfileViewModel
     
     init(userProfileVM: UserProfileViewModel) {

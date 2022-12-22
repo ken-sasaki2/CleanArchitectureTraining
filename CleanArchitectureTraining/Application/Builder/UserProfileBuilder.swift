@@ -28,7 +28,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userAddPresenter: UserAddPresenter(
+                    output: UserAddPresenter(
                         userProfileVM: userProfileVM
                     )
                 ),
@@ -36,7 +36,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userFetchPresenter: UserFetchPresenter(
+                    output: UserFetchPresenter(
                         userProfileVM: userProfileVM
                     )
                 ),
@@ -44,7 +44,7 @@ final class UserProfileBuilder {
                     userRepository: UserRepository(
                         userDataStore: UserDataStore()
                     ),
-                    userDeletePresenter: UserDeletePresenter(
+                    output: UserDeletePresenter(
                         userProfileVM: userProfileVM
                     )
                 )
@@ -54,7 +54,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignUpPresenter: AuthSignUpPresenter(
+                    output: AuthSignUpPresenter(
                         authSignUpVM: signUpVM
                     )
                 ),
@@ -62,7 +62,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignInPresenter: AuthSignInPresenter(
+                    output: AuthSignInPresenter(
                         authSignInVM: signInVM
                     )
                 ),
@@ -70,7 +70,7 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignOutPresenter: AuthSignOutPresenter(
+                    output: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
                     )
                 ),
@@ -78,14 +78,14 @@ final class UserProfileBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authUserFetchPresenter: AuthUserFetchPresenter(
+                    output: AuthUserFetchPresenter(
                         authUserFetchVM: authUserFetchVM
                     )
                 )
             ),
             rootViewController: RootViewController(
                 rootViewUseCase: RootViewUseCase(
-                    rootViewPresenter: RootViewPresenter()
+                    output: RootViewPresenter()
                 )
             )
         )

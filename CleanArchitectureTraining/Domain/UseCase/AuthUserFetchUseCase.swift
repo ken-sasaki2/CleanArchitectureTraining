@@ -7,27 +7,32 @@
 
 import Foundation
 
-protocol AuthUserFetchUseCaseInterface {
+protocol AuthUserFetchUseCaseInput {
     func fetchAuthCurrentUser() async
 }
 
-final class AuthUserFetchUseCase: AuthUserFetchUseCaseInterface {
+protocol AuthUserFetchUseCaseOutput {
+    func successFetchedUser(model: AuthUserModel)
+    func failFetchedUser()
+}
+
+final class AuthUserFetchUseCase: AuthUserFetchUseCaseInput {
     private let authRepository: AuthRepositoryInterface
-    private let authUserFetchPresenter: AuthUserFetchPresenterInterface
+    private let output: AuthUserFetchUseCaseOutput
     
-    init(authRepository: AuthRepositoryInterface, authUserFetchPresenter: AuthUserFetchPresenterInterface) {
+    init(authRepository: AuthRepositoryInterface, output: AuthUserFetchUseCaseOutput) {
         self.authRepository = authRepository
-        self.authUserFetchPresenter = authUserFetchPresenter
+        self.output = output
     }
     
     func fetchAuthCurrentUser() async {
         let entity = await authRepository.fetchAuthCurrentUser()
         guard let entity = entity else {
-            authUserFetchPresenter.failFetchedUser()
+            output.failFetchedUser()
             return
         }
 
         let model = AuthUserModelTranslator.shared.translate(entity: entity)
-        authUserFetchPresenter.successFetchedUser(model: model)
+        output.successFetchedUser(model: model)
     }
 }

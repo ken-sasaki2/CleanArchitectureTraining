@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RootViewUseCaseInterface {
+protocol RootViewUseCaseInput {
     func successSignUp()
     func successSignIn()
     func successSignOut()
@@ -15,30 +15,37 @@ protocol RootViewUseCaseInterface {
     func notSignedUpUser()
 }
 
-final class RootViewUseCase: RootViewUseCaseInterface {
-    private let rootViewPresenter: RootViewPresenterInterface
+protocol RootViewUseCaseOutput {
+    func changeProfileView()
+    func changeSignInView()
+    func alreadySignedUpUser()
+    func notSignedUpUser()
+}
+
+final class RootViewUseCase: RootViewUseCaseInput {
+    private let output: RootViewUseCaseOutput
     
-    init(rootViewPresenter: RootViewPresenterInterface) {
-        self.rootViewPresenter = rootViewPresenter
+    init(output: RootViewUseCaseOutput) {
+        self.output = output
     }
     
     func successSignUp() {
-        rootViewPresenter.changeProfileView()
+        output.changeProfileView()
     }
     
     func successSignIn() {
-        rootViewPresenter.changeProfileView()
+        output.changeProfileView()
     }
     
     func successSignOut() {
-        rootViewPresenter.changeSignInView()
+        output.changeSignInView()
     }
     
     func alreadySignedUpUser() {
-        rootViewPresenter.alreadySignedUpUser()
+        output.alreadySignedUpUser()
     }
     
     func notSignedUpUser() {
-        rootViewPresenter.notSignedUpUser()
+        output.notSignedUpUser()
     }
 }

@@ -7,26 +7,31 @@
 
 import Foundation
 
-protocol UserDeleteUseCaseInterface {
+protocol UserDeleteUseCaseInput {
     func deleteUser() async throws
 }
 
-final class UserDeleteUseCase: UserDeleteUseCaseInterface {
+protocol UserDeleteUseCaseOutput {
+    func successDeleteUser()
+    func failDeleteUser()
+}
+
+final class UserDeleteUseCase: UserDeleteUseCaseInput {
     private let userRepository: UserRepositoryInterface
-    private let userDeletePresenter: UserDeletePresenterInterface
+    private let output: UserDeleteUseCaseOutput
     
-    init(userRepository: UserRepositoryInterface, userDeletePresenter: UserDeletePresenterInterface) {
+    init(userRepository: UserRepositoryInterface, output: UserDeleteUseCaseOutput) {
         self.userRepository = userRepository
-        self.userDeletePresenter = userDeletePresenter
+        self.output = output
     }
     
     func deleteUser() async throws {
         do {
             try await userRepository.deleteUser()
             userRepository.setIsUserDataSaved(isSaved: false)
-            userDeletePresenter.successDeleteUser()
+            output.successDeleteUser()
         } catch {
-            userDeletePresenter.failDeleteUser()
+            output.failDeleteUser()
         }
     }
 }

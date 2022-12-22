@@ -24,7 +24,7 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignUpPresenter: AuthSignUpPresenter(
+                    output: AuthSignUpPresenter(
                         authSignUpVM: signUpVM
                     )
                 ),
@@ -32,7 +32,7 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignInPresenter: AuthSignInPresenter(
+                    output: AuthSignInPresenter(
                         authSignInVM: signInVM
                     )
                 ),
@@ -40,7 +40,7 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authSignOutPresenter: AuthSignOutPresenter(
+                    output: AuthSignOutPresenter(
                         authSignOutVM: signOutVM
                     )
                 ),
@@ -48,14 +48,14 @@ final class AuthSignInBuilder {
                     authRepository: AuthRepository(
                         authDataStore: AuthDataStore()
                     ),
-                    authUserFetchPresenter: AuthUserFetchPresenter(
+                    output: AuthUserFetchPresenter(
                         authUserFetchVM: AuthUserFetchViewModel()
                     )
                 )
             ),
             rootViewController: RootViewController(
                 rootViewUseCase: RootViewUseCase(
-                    rootViewPresenter: RootViewPresenter()
+                    output: RootViewPresenter()
                 )
             )
         )

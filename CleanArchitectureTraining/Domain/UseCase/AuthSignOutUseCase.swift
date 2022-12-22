@@ -7,25 +7,30 @@
 
 import Foundation
 
-protocol AuthSignOutUseCaseInterface {
+protocol AuthSignOutUseCaseInput {
     func signOut() async throws
 }
 
-final class AuthSignOutUseCase: AuthSignOutUseCaseInterface {
+protocol AuthSignOutUseCaseOutput {
+    func successSignOut()
+    func failSignOut()
+}
+
+final class AuthSignOutUseCase: AuthSignOutUseCaseInput {
     private let authRepository: AuthRepositoryInterface
-    private let authSignOutPresenter: AuthSignOutPresenterInterface
+    private let output: AuthSignOutUseCaseOutput
     
-    init(authRepository: AuthRepositoryInterface, authSignOutPresenter: AuthSignOutPresenterInterface) {
+    init(authRepository: AuthRepositoryInterface, output: AuthSignOutUseCaseOutput) {
         self.authRepository = authRepository
-        self.authSignOutPresenter = authSignOutPresenter
+        self.output = output
     }
     
     func signOut() async throws {
         do {
             try await authRepository.signOut()
-            authSignOutPresenter.successSignOut()
+            output.successSignOut()
         } catch {
-            authSignOutPresenter.failSignOut()
+            output.failSignOut()
         }
     }
 }
