@@ -85,7 +85,7 @@ final class UserProfileBuilder {
             ),
             rootViewController: RootViewController(
                 rootViewUseCase: RootViewUseCase(
-                    rootViewPresenter: RootViewPresenter()
+                    output: RootViewPresenter()
                 )
             )
         )

@@ -55,7 +55,7 @@ final class AuthSignInBuilder {
             ),
             rootViewController: RootViewController(
                 rootViewUseCase: RootViewUseCase(
-                    rootViewPresenter: RootViewPresenter()
+                    output: RootViewPresenter()
                 )
             )
         )
